@@ -3,465 +3,1422 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Shibansanjai Pandian | Aerodynamics and CFD – MSc, University of Southampton</title>
-<meta name="description" content="Shibansanjai Pandian, MSc Aerodynamics and Computation student at the University of Southampton. Wind tunnel testing with the Southampton University Formula Student Team, CFD with ANSYS Fluent. Seeking graduate aerodynamics roles in the automotive industry.">
+<title>Shibansanjai Pandian | Aerodynamics &amp; CFD | MSc Southampton</title>
+<meta name="description" content="Shibansanjai Pandian: MSc Aerodynamics and Computation student at the University of Southampton, aerodynamics team member at Southampton University Formula Student Team, with CFD experience in ANSYS Fluent and OpenFOAM. Seeking graduate aerodynamics roles in motorsport, automotive and aerospace.">
 <meta name="author" content="Shibansanjai Pandian">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://shibansanjai.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23060A10'/%3E%3Cpath d='M8 36 C 18 20, 40 18, 58 32 C 40 34, 22 40, 8 36 Z' fill='%235CC8FF'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#060A10">
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Shibansanjai Pandian | Aerodynamics and CFD">
-<meta property="og:description" content="MSc Aerodynamics and Computation student, University of Southampton. Wind tunnel testing with SUFST and CFD.">
+<meta property="og:site_name" content="Shibansanjai Pandian">
+<meta property="og:title" content="Shibansanjai Pandian | Aerodynamics &amp; CFD">
+<meta property="og:description" content="MSc Aerodynamics and Computation, University of Southampton. Formula Student aerodynamics, ANSYS Fluent and OpenFOAM. Live wind-tunnel simulation inside.">
 <meta property="og:url" content="https://shibansanjai.github.io/">
-<meta name="twitter:card" content="summary">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Shibansanjai Pandian",
-  "jobTitle": "MSc Aerodynamics and Computation student",
-  "url": "https://shibansanjai.github.io/",
-  "email": "mailto:shibansanjaip@gmail.com",
-  "sameAs": ["https://www.linkedin.com/in/28ss"],
-  "alumniOf": [
-    {"@type": "CollegeOrUniversity", "name": "University of Southampton"},
-    {"@type": "CollegeOrUniversity", "name": "Karunya Institute of Technology and Sciences"}
-  ],
-  "knowsAbout": ["Aerodynamics", "Computational Fluid Dynamics", "Wind tunnel testing", "Race car aerodynamics", "ANSYS Fluent", "STAR-CCM+", "OpenFOAM"]
-}
-</script>
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<meta property="og:image" content="https://shibansanjai.github.io/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="profile:first_name" content="Shibansanjai">
+<meta property="profile:last_name" content="Pandian">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shibansanjai Pandian | Aerodynamics &amp; CFD">
+<meta name="twitter:image" content="https://shibansanjai.github.io/og-image.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Shibansanjai Pandian", "url": "https://shibansanjai.github.io/", "image": "https://shibansanjai.github.io/og-image.jpg", "email": "mailto:shibansanjaip@gmail.com", "jobTitle": "MSc Aerodynamics and Computation student", "description": "Aerodynamics and CFD engineer in training; wind tunnel testing with Southampton University Formula Student Team.", "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Southampton"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Karunya Institute of Technology and Sciences"}], "address": {"@type": "PostalAddress", "addressLocality": "Southampton", "addressCountry": "GB"}, "knowsAbout": ["Aerodynamics", "Computational Fluid Dynamics", "ANSYS Fluent", "OpenFOAM", "Wind tunnel testing", "Race car aerodynamics", "Turbulence modelling", "CATIA", "Python", "MATLAB"], "sameAs": ["https://www.linkedin.com/in/28ss"]}</script>
+<style>
+:root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; font: 14px/1.5 system-ui, sans-serif; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:ital,wdth,wght@0,75..125,400..800;1,75..125,600..800&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;500;700;800;900&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: pit-wall screen — timing-tower index on the left, sections as numbered turns with a kerb strip; hero = live inverted-wing flow solution. */
-/* Palette: 60-30-10 — carbon neutral (60), steel blue for trust and data (30), one signal orange accent (10).
-   Blue/orange is the colour-blind-safe complementary pair; dark-first like a pit-wall screen, light variant for daylight viewing. */
-:root{
-  --bg:#0C0E11;          /* carbon */
-  --panel:#13171C;
-  --ink:#ECEFF2;
-  --muted:#8C96A0;
-  --rule:#232A31;
-  --accent:#5B9CFF;      /* steel blue: links, labels, data */
-  --signal:#FF7A1A;      /* signal orange: actions, kerbs, downforce */
-  --on-signal:#0C0E11;
-  --kerb:#FF7A1A;
-  --kerb-alt:#ECEFF2;
-  --flow:rgba(91,156,255,.42);
-  --suction:#5B9CFF; --pressure:#FF7A1A;
-  --display:"Saira", "Arial Narrow", Arial, sans-serif;
-  --body:"Barlow", "Helvetica Neue", Arial, sans-serif;
-  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
-  color-scheme:dark;
+/* Layout: a night run in the wind tunnel. Full-bleed live flow field, slanted livery type, a telemetry trace for the career, schematic spec sheets for projects. Colour story = the Cp contour map. */
+:root {
+  --bg: #F1F3F6;
+  --bg-2: #E6EAF0;
+  --panel: #FFFFFF;
+  --fg: #0A0F16;
+  --muted: #5B6676;
+  --line: #CDD4DE;
+  --accent: #1452D9;
+  --accent-ink: #FFFFFF;
+  --hot: #D9452B;
+  --stream: rgba(10, 15, 22, 0.16);
+  --foil-fill: #0A0F16;
+  --tyre: #1E2631;
+  --rim: #8A96A6;
+  --car: #12161C;
+  --car-hi: #3E4857;
+  --car-edge: rgba(10, 15, 22, 0.85);
+  --smoke: rgba(20, 30, 45, 0.55);
+  --smoke-glow: rgba(20, 30, 45, 0.08);
+  --scrim: rgba(241, 243, 246, 0.92);
+  --cp: linear-gradient(90deg, #2B4EC9, #36A3C9, #7CC08A, #E8C547, #D9452B);
+  --f-display: "Saira Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --f-body: "Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
-@media (prefers-color-scheme: light){
-  :root:not([data-theme="dark"]){
-    --bg:#F2F4F6; --panel:#FFFFFF; --ink:#11161C; --muted:#56616C; --rule:#D9DEE4;
-    --accent:#1F5FC4; --signal:#F06A0A; --on-signal:#11161C; --kerb:#F06A0A; --kerb-alt:#11161C;
-    --flow:rgba(31,95,196,.34); --suction:#1F5FC4; --pressure:#E5630A; color-scheme:light;
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #060A10; --bg-2: #0B111A; --panel: #0E1520; --fg: #E9EEF5; --muted: #8592A3; --line: #1B2634;
+    --accent: #5CC8FF; --accent-ink: #060A10; --hot: #FF7457; --stream: rgba(233, 238, 245, 0.11);
+    --foil-fill: #E9EEF5; --tyre: #1C2530; --rim: #66748A; --car: #222A35; --car-hi: #4D5A6C; --car-edge: rgba(233, 238, 245, 0.32); --smoke: rgba(236, 243, 250, 0.62); --smoke-glow: rgba(236, 243, 250, 0.09); --scrim: rgba(6, 10, 16, 0.9); color-scheme: dark;
   }
 }
-:root[data-theme="light"]{
-  --bg:#F2F4F6; --panel:#FFFFFF; --ink:#11161C; --muted:#56616C; --rule:#D9DEE4;
-  --accent:#1F5FC4; --signal:#F06A0A; --on-signal:#11161C; --kerb:#F06A0A; --kerb-alt:#11161C;
-  --flow:rgba(31,95,196,.34); --suction:#1F5FC4; --pressure:#E5630A; color-scheme:light;
+:root[data-theme="dark"] {
+  --bg: #060A10; --bg-2: #0B111A; --panel: #0E1520; --fg: #E9EEF5; --muted: #8592A3; --line: #1B2634;
+  --accent: #5CC8FF; --accent-ink: #060A10; --hot: #FF7457; --stream: rgba(233, 238, 245, 0.11);
+  --foil-fill: #E9EEF5; --tyre: #1C2530; --rim: #66748A; --car: #222A35; --car-hi: #4D5A6C; --car-edge: rgba(233, 238, 245, 0.32); --smoke: rgba(236, 243, 250, 0.62); --smoke-glow: rgba(236, 243, 250, 0.09); --scrim: rgba(6, 10, 16, 0.9); color-scheme: dark;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6;padding-inline:0;padding-block:0;--maxw:1400px;--gutter:clamp(16px,4vw,56px);--inset:max(var(--gutter),calc((100% - var(--maxw))/2))}
-a{color:var(--accent);text-underline-offset:3px}
-a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.wrap{max-width:calc(var(--maxw) + 2*var(--gutter));margin:0 auto;padding-inline:var(--gutter)}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: var(--accent); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+:root { --gut: clamp(20px, 4.5vw, 96px); }
+.wrap { max-width: none; margin: 0; padding-left: max(var(--gut), env(safe-area-inset-left, 0px)); padding-right: max(var(--gut), env(safe-area-inset-right, 0px)); }
+.mono { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+h1, h2, h3, h4 { margin: 0; text-wrap: balance; }
+.slant { display: inline-block; transform: skewX(-9deg); }
+
+/* ---------- nav + Cp progress ---------- */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); }
+.nav { position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; z-index: 15; pointer-events: none; }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 16px; }
+.nav .wrap > * { pointer-events: auto; }
+.mark { font-family: var(--f-display); font-weight: 900; font-size: 20px; letter-spacing: 0.06em; color: var(--fg); text-decoration: none; display: flex; align-items: center; gap: 10px; padding: 6px 12px 6px 8px; background: var(--scrim); border: 1px solid var(--line); border-radius: 999px; backdrop-filter: blur(10px); }
+.mark svg { width: 38px; height: 14px; }
+.nav ul { list-style: none; display: flex; gap: 4px; margin: 0; padding: 4px; background: var(--scrim); border: 1px solid var(--line); border-radius: 999px; backdrop-filter: blur(10px); }
+.nav ul a { display: block; padding: 6px 14px; color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 500; border-radius: 999px; }
+.nav ul a:hover { color: var(--fg); background: var(--bg-2); }
+@media (max-width: 680px) { .nav ul { display: none; } }
+.progress { position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; height: 3px; z-index: 16; pointer-events: none; }
+.progress i { display: block; height: 100%; background: var(--cp); background-size: 100vw 100%; width: 0; }
 
 /* ---------- hero ---------- */
-.hero{position:relative;background:var(--panel);border-bottom:1px solid var(--rule);overflow:hidden}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;border-top:1px solid var(--rule);background:repeating-linear-gradient(90deg,var(--kerb) 0 28px,var(--kerb-alt) 28px 56px)}
-#flow{position:absolute;inset:0;width:100%;height:100%;display:block}
-.hero-inner{position:relative;display:grid;gap:1.1rem;padding-block:clamp(2rem,6vw,4.5rem) 1.5rem;padding-inline:var(--inset)}
-.hero-inner>*{max-width:720px}
-.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.eyebrow b{color:var(--accent);font-weight:500}
-h1{font-family:var(--display);font-style:italic;font-stretch:118%;font-weight:800;font-size:clamp(2.4rem,7.4vw,5.2rem);line-height:.92;letter-spacing:-.015em;margin:0;text-transform:uppercase;text-wrap:balance}
-.lede{font-size:clamp(1.05rem,2vw,1.28rem);max-width:38ch;margin:0}
-.lede strong{font-weight:600}
-.actions{display:flex;flex-wrap:wrap;gap:.7rem}
-.btn{font-family:var(--display);font-stretch:110%;font-weight:700;font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;padding:.6rem 1.05rem;border:1px solid var(--signal);background:var(--signal);color:var(--on-signal);text-decoration:none;cursor:pointer;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
-.btn.ghost{background:transparent;color:var(--accent);border-color:var(--accent);clip-path:none}
-/* telemetry strip */
-.telemetry{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding-inline:var(--inset);border-top:1px solid var(--rule);background:color-mix(in srgb,var(--panel) 86%,transparent);margin-bottom:6px}
-.telemetry div{padding:.65rem clamp(.75rem,2.5vw,1.5rem);border-right:1px solid var(--rule);min-width:0}
-.telemetry div:last-child{border-right:0}
-.telemetry dt{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.telemetry dd{margin:0;font-family:var(--display);font-stretch:112%;font-weight:700;font-size:1.25rem;font-variant-numeric:tabular-nums;line-height:1.2}
-.telemetry dd.down{color:var(--signal)}
-.figcap{position:relative;font-family:var(--mono);font-size:.7rem;color:var(--muted);padding:.55rem var(--inset) .9rem;border-top:1px solid var(--rule);background:color-mix(in srgb,var(--panel) 86%,transparent)}
-.legend{display:inline-flex;gap:.9rem;margin-left:.5rem;flex-wrap:wrap}
-.legend i{display:inline-block;width:.6rem;height:.6rem;margin-right:.3rem;vertical-align:middle}
+.hero { position: relative; min-height: 900px; display: flex; flex-direction: column; isolation: isolate; border-bottom: 1px solid var(--line); }
+.hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; z-index: -2; }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(90deg, var(--scrim) 0%, color-mix(in srgb, var(--scrim) 55%, transparent) 26%, transparent 44%); }
+.hero-inner { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; padding-block: 120px 260px; pointer-events: none; }
+.hero-inner > * { pointer-events: auto; }
+.run-id { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.run-id span b { color: var(--fg); font-weight: 500; }
+.hero h1 { font-family: var(--f-display); font-weight: 900; text-transform: uppercase; line-height: 0.82; letter-spacing: -0.005em; margin: 22px 0 26px; font-size: clamp(60px, 8vw, 190px); }
+.hero h1 .l1 { display: block; width: fit-content; color: transparent; -webkit-text-stroke: 1.5px var(--fg); }
+.hero h1 .l2 { display: block; width: fit-content; background: var(--cp); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: 0.08em; }
+.lede { font-size: clamp(17px, 1.6vw, 20px); max-width: 30em; margin: 0 0 30px; }
+.lede b { font-weight: 600; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 24px; font-weight: 600; font-size: 15px; text-decoration: none; color: var(--fg); background: var(--scrim); border: 1px solid var(--line); clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%); transition: transform .2s; }
+.btn.primary { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.btn:hover { transform: translateX(4px); }
 
-/* ---------- report body ---------- */
-.report{display:grid;grid-template-columns:230px minmax(0,1fr);gap:clamp(2rem,4vw,4rem);padding-block:3.5rem 4rem}
-nav.tower{position:sticky;top:calc(env(safe-area-inset-top,0px) + 20px);align-self:start;background:var(--panel);border:1px solid var(--rule)}
-nav.tower .head{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:.55rem .8rem;border-bottom:1px solid var(--rule)}
-nav.tower ol{list-style:none;margin:0;padding:0}
-nav.tower a{display:grid;grid-template-columns:2.2rem 1fr;align-items:center;padding:.42rem .8rem;color:var(--ink);text-decoration:none;font-family:var(--display);font-stretch:108%;font-weight:600;font-size:.92rem;text-transform:uppercase;letter-spacing:.03em;border-left:3px solid transparent;border-bottom:1px solid var(--rule)}
-nav.tower li:last-child a{border-bottom:0}
-nav.tower a span{font-family:var(--mono);font-weight:500;font-size:.74rem;color:var(--muted)}
-nav.tower a:hover,nav.tower a.on{border-left-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--panel))}
-nav.tower a.on span{color:var(--accent)}
-main{min-width:0;display:grid;gap:3.5rem}
-section{display:grid;gap:1.25rem;scroll-margin-top:20px}
-.sec-head{display:grid;gap:.45rem}
-.sec-head .turn{font-family:var(--mono);font-size:.74rem;color:var(--accent);letter-spacing:.08em;text-transform:uppercase}
-h2{font-family:var(--display);font-style:italic;font-stretch:115%;font-weight:800;font-size:clamp(1.5rem,3vw,2rem);margin:0;text-transform:uppercase;letter-spacing:-.005em;line-height:1}
-.kerb{height:4px;width:96px;background:repeating-linear-gradient(90deg,var(--kerb) 0 12px,var(--kerb-alt) 12px 24px)}
-h3{font-family:var(--display);font-stretch:106%;font-weight:700;font-size:1.15rem;margin:0;line-height:1.25;text-wrap:balance}
-p{margin:0;max-width:78ch}
-
-.entry{display:grid;grid-template-columns:150px minmax(0,1fr);gap:.4rem 1.5rem;padding-block:1rem;border-bottom:1px solid var(--rule)}
-.entry:last-child{border-bottom:0}
-.when{font-family:var(--mono);font-size:.78rem;color:var(--muted);padding-top:.25rem;font-variant-numeric:tabular-nums}
-.org{font-family:var(--mono);font-size:.8rem;color:var(--accent);margin-top:.15rem}
-.entry ul{margin:.6rem 0 0;padding-left:1.1rem;display:grid;gap:.35rem;max-width:80ch}
-.entry li::marker{color:var(--signal)}
-.entry.live .when::before{content:"● ";color:var(--signal)}
-
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1rem}
-.proj{background:var(--panel);border:1px solid var(--rule);padding:1.25rem;display:grid;gap:.75rem;align-content:start;min-width:0}
-.proj.lead{grid-column:1/-1}
-.tag{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacing:.04em}
-.spec{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:.35rem 1rem;margin:0;font-size:.98rem}
-.spec dt{font-family:var(--mono);font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding-top:.25rem}
-.spec dd{margin:0}
-.podium{grid-column:1/-1;display:grid;grid-template-columns:auto minmax(0,1fr);gap:1.25rem;align-items:center;border:1px solid var(--signal);border-left:6px solid var(--signal);background:var(--panel);padding:1.25rem}
-.podium .pos{font-family:var(--display);font-style:italic;font-stretch:125%;font-weight:800;font-size:clamp(2.6rem,6vw,3.6rem);line-height:.9;color:var(--signal)}
-.podium .pos small{display:block;font-family:var(--mono);font-style:normal;font-weight:500;font-size:.66rem;letter-spacing:.1em;color:var(--muted);text-align:center;margin-top:.3rem}
-
-.setup{border:1px solid var(--rule);background:var(--panel)}
-.setup .row{display:grid;grid-template-columns:170px minmax(0,1fr);gap:1rem;padding:.7rem 1rem;border-bottom:1px solid var(--rule)}
-.setup .row:last-child{border-bottom:0}
-.setup dt{font-family:var(--mono);font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;padding-top:.2rem}
-.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:0}
-.chips span{font-family:var(--display);font-stretch:104%;font-weight:600;font-size:.88rem;padding:.12rem .55rem;border:1px solid var(--rule);background:var(--bg)}
-.modules{font-size:.96rem;color:var(--muted);margin-top:.4rem}
-
-.contact{position:relative;display:grid;gap:1rem;background:var(--panel);border:1px solid var(--accent);border-top:6px solid var(--accent);padding:clamp(1.5rem,4vw,2.5rem);padding-bottom:calc(clamp(1.5rem,4vw,2.5rem) + 6px);overflow:hidden}
-.contact::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;border-top:1px solid var(--rule);background:repeating-linear-gradient(90deg,var(--kerb) 0 28px,var(--kerb-alt) 28px 56px)}
-.contact-row{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
-.addr{font-family:var(--mono);font-size:.95rem;user-select:all;padding:.5rem .75rem;border:1px solid var(--rule);background:var(--bg);word-break:break-all}
-#copied{font-family:var(--mono);font-size:.78rem;color:var(--accent)}
-footer{font-family:var(--mono);font-size:.72rem;color:var(--muted);padding-block:0 2.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
-
-@media (max-width:820px){
-  .report{grid-template-columns:minmax(0,1fr);gap:2rem;padding-block:2rem 3rem}
-  nav.tower{position:static}
-  nav.tower ol{display:flex;flex-wrap:wrap}
-  nav.tower li{flex:1 1 33%}
-  nav.tower a{border-bottom:1px solid var(--rule);border-right:1px solid var(--rule)}
-  .entry,.setup .row{grid-template-columns:minmax(0,1fr)}
-  .when{padding-top:0}
-  .telemetry{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .hero-inner{padding-bottom:140px}
-  .telemetry div:nth-child(2){border-right:0}
-  .telemetry div:nth-child(-n+2){border-bottom:1px solid var(--rule)}
+.hud { position: absolute; right: max(var(--gut), env(safe-area-inset-right, 0px)); bottom: 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; padding: 12px 16px; background: var(--scrim); border: 1px solid var(--line); backdrop-filter: blur(10px); max-width: calc(100% - 40px); }
+.hud .ctrl { display: flex; align-items: center; gap: 10px; }
+.hud input { width: 150px; accent-color: var(--accent); }
+.ro { font-family: var(--f-mono); font-size: 13px; font-variant-numeric: tabular-nums; color: var(--muted); }
+.ro b { color: var(--fg); font-weight: 500; display: inline-block; min-width: 3.4em; }
+.seg { display: flex; border: 1px solid var(--line); }
+.seg button { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 12px; background: transparent; color: var(--muted); border: 0; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.seg button:hover:not([aria-pressed="true"]) { color: var(--fg); }
+.ro b#r-df { min-width: 5.5em; }
+.legend { display: flex; align-items: center; gap: 8px; }
+.legend .bar { width: 70px; height: 5px; background: var(--cp); }
+.hint { position: absolute; left: max(var(--gut), env(safe-area-inset-left, 0px)); bottom: 32px; }
+.hud label.mono { text-transform: none; letter-spacing: 0.04em; }
+@media (max-width: 900px) {
+  .hero { min-height: 0; }
+  .hero::before { background: linear-gradient(180deg, var(--scrim) 0%, color-mix(in srgb, var(--scrim) 70%, transparent) 50%, transparent 66%); }
+  .hero-inner { justify-content: flex-start; padding-block: 92px var(--stage, 400px); }
+  .hero h1 { font-size: clamp(44px, 12.5vw, 120px); }
+  .hero h1 .l1 { font-size: 0.8em; }
+  .hint { display: none; }
+  .hud { left: max(var(--gut), env(safe-area-inset-left, 0px)); right: max(var(--gut), env(safe-area-inset-right, 0px)); max-width: none; }
+  .hud input { width: 110px; }
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
 
+/* ---------- section scaffolding ---------- */
+section { padding-block: 120px 0; }
+@media (max-width: 720px) { section { padding-block: 80px 0; } }
+.sh { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 40px; margin-bottom: 44px; }
+.sh h2 { font-family: var(--f-display); font-weight: 800; text-transform: uppercase; line-height: 0.88; font-size: clamp(48px, 7.5vw, 104px); }
+.sh p { max-width: 26em; color: var(--muted); margin: 0; }
+
+/* ---------- telemetry ---------- */
+.tele-scroll { overflow-x: auto; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.tele { min-width: 760px; position: relative; padding-block: 8px 4px; }
+.t-row { display: grid; grid-template-columns: 220px minmax(0, 1fr); align-items: center; height: 34px; }
+.t-row .lab { font-size: 13.5px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 12px; }
+.t-row .lab small { color: var(--muted); font-weight: 400; font-size: 12px; }
+.track { position: relative; height: 100%; }
+.track::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 1px dashed var(--line); }
+.bar { position: absolute; top: 50%; height: 12px; transform: translateY(-50%) skewX(-18deg); }
+.bar.b-edu { background: var(--accent); }
+.bar.b-eng { background: var(--cp); }
+.bar.b-lead { background: transparent; border: 1.5px solid var(--muted); }
+.bar.open { -webkit-mask: linear-gradient(90deg, #000 35%, transparent); mask: linear-gradient(90deg, #000 35%, transparent); }
+.dot { position: absolute; top: 50%; width: 11px; height: 11px; transform: translate(-50%, -50%) rotate(45deg); background: var(--hot); }
+.axis { display: grid; grid-template-columns: 220px minmax(0, 1fr); height: 28px; }
+.axis .ticks { position: relative; }
+.axis .ticks span { position: absolute; top: 6px; transform: translateX(-50%); font-family: var(--f-mono); font-size: 11px; color: var(--muted); }
+.vline { position: absolute; top: 0; bottom: 28px; border-left: 1px solid var(--line); pointer-events: none; }
+.vline.now { border-left: 1.5px solid var(--hot); }
+.vline.now::after { content: "NOW"; position: absolute; top: -1px; left: 5px; font-family: var(--f-mono); font-size: 10px; letter-spacing: .1em; color: var(--hot); }
+.t-key { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 16px; }
+.t-key span { display: inline-flex; align-items: center; gap: 8px; }
+.t-key i { width: 22px; height: 9px; transform: skewX(-18deg); display: inline-block; }
+
+
+#career .sh h2 { font-size: clamp(40px, 5vw, 72px); }
+#career .sh { margin-bottom: 28px; }
+#career .tele { min-width: 640px; padding-block: 6px 2px; }
+#career .t-row { height: 24px; grid-template-columns: 200px minmax(0, 1fr); }
+#career .axis { grid-template-columns: 200px minmax(0, 1fr); height: 24px; }
+#career .t-row .lab { font-size: 12.5px; }
+#career .bar { height: 8px; }
+#career .dot { width: 8px; height: 8px; }
+#career .vline { bottom: 24px; }
+#career .log { margin-top: 48px; }
+#career .run { padding: 24px 28px; }
+#career .run .when b { font-size: 32px; }
+#career .run h3 { font-size: 26px; }
+/* ---------- run log ---------- */
+.log { margin-top: 72px; display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.run { background: var(--bg); display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 32px; padding: 34px 32px; position: relative; overflow: hidden; }
+.run::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--cp); transform: scaleY(0); transform-origin: top; transition: transform .45s ease; }
+.run:hover::after { transform: scaleY(1); }
+@media (max-width: 760px) { .run { grid-template-columns: 1fr; gap: 10px; padding: 26px 20px; } }
+.run .when { font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.run .when b { display: block; font-family: var(--f-display); font-size: 46px; line-height: 1; font-weight: 800; color: var(--fg); margin-bottom: 8px; }
+.run h3 { font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 32px; line-height: 1; }
+.run .org { color: var(--accent); margin: 6px 0 14px; font-weight: 600; font-size: 15px; }
+.run ul { margin: 0; padding-left: 18px; max-width: 64ch; }
+.run li { margin-bottom: 6px; }
+.run li::marker { content: "› "; color: var(--accent); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+.tag { font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.04em; padding: 4px 9px; border: 1px solid var(--line); color: var(--muted); }
+
+/* ---------- projects ---------- */
+.feature { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); border: 1px solid var(--line); background: var(--panel); }
+@media (max-width: 900px) { .feature { grid-template-columns: 1fr; } }
+.feature .viz { border-right: 1px solid var(--line); padding: 24px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px; background: var(--bg-2); min-width: 0; }
+@media (max-width: 900px) { .feature .viz { border-right: 0; border-bottom: 1px solid var(--line); } }
+.feature .viz svg { width: 100%; height: auto; display: block; }
+.feature .body { padding: 34px; min-width: 0; }
+.feature h3 { font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: clamp(32px, 3.4vw, 46px); line-height: 0.95; margin: 12px 0 16px; }
+.feature p { margin: 0 0 14px; }
+.spec { margin: 22px 0 0; display: grid; grid-template-columns: auto minmax(0, 1fr); }
+.spec dt, .spec dd { padding: 9px 0; border-top: 1px solid var(--line); margin: 0; }
+.spec dt { font-family: var(--f-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); padding-right: 22px; padding-top: 12px; }
+.spec dd { font-weight: 500; }
+.cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
+@media (max-width: 1080px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .cards { grid-template-columns: 1fr; } }
+.card { border: 1px solid var(--line); background: var(--panel); display: flex; flex-direction: column; transition: transform .25s, border-color .25s; }
+.card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.card .sk { position: relative; aspect-ratio: 16 / 9; max-width: 100%; background: var(--bg-2); border-bottom: 1px solid var(--line); }
+.card .sk svg { width: 100%; height: 100%; display: block; }
+.card .in { padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.card h3 { font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 25px; line-height: 1; }
+.card p { margin: 0; font-size: 15px; }
+.card .tags { margin-top: auto; padding-top: 8px; }
+.badge { position: absolute; top: 12px; left: 12px; font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 8px; background: var(--hot); color: #fff; }
+.flowdash { stroke-dasharray: 6 8; animation: dash 1.6s linear infinite; }
+@keyframes dash { to { stroke-dashoffset: -28; } }
+.cap { font-family: var(--f-mono); font-size: 10.5px; fill: var(--muted); letter-spacing: .06em; }
+.cap.h { fill: var(--hot); }
+
+/* ---------- toolchain ---------- */
+.tools { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+@media (max-width: 900px) { .tools { grid-template-columns: 1fr; } }
+.tool { background: var(--bg); padding: 26px 24px; display: flex; flex-direction: column; gap: 14px; }
+.tool.wide { grid-column: span 2; }
+@media (max-width: 900px) { .tool.wide { grid-column: auto; } }
+.tool h3 { font-family: var(--f-display); font-weight: 700; text-transform: uppercase; font-size: 24px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { padding: 7px 12px; border: 1px solid var(--line); font-weight: 500; font-size: 14.5px; background: var(--panel); }
+.chip.k { border-color: var(--accent); color: var(--accent); }
+
+/* ---------- education & leadership ---------- */
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; }
+@media (max-width: 900px) { .two { grid-template-columns: 1fr; gap: 72px; } }
+.edu { padding-block: 24px; border-top: 1px solid var(--line); }
+.edu.first { border-top: 2px solid var(--fg); }
+.edu h3 { font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 30px; line-height: 1; margin: 8px 0 6px; }
+.edu p { margin: 6px 0 0; }
+.grade { display: flex; align-items: baseline; gap: 12px; margin-top: 14px; }
+.grade b { font-family: var(--f-display); font-size: 56px; font-weight: 900; line-height: 1; background: var(--cp); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.mods { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.stat { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 20px; padding-block: 20px; border-top: 1px solid var(--line); align-items: start; }
+.stat.first { border-top: 2px solid var(--fg); }
+.stat .n { font-family: var(--f-display); font-weight: 900; font-size: 60px; line-height: 0.85; font-variant-numeric: tabular-nums; }
+.stat h4 { font-size: 16px; margin-bottom: 4px; }
+.stat p { margin: 0; color: var(--muted); font-size: 15px; }
+
+
+/* ---------- interaction layer ---------- */
+.mark { font-family: var(--f-display); font-weight: 700; font-size: 17px; letter-spacing: 0.04em; text-transform: uppercase; gap: 10px; padding: 8px 16px 8px 14px; transition: border-color .2s, background .2s; }
+.mark .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--hot); box-shadow: 0 0 0 0 var(--hot); animation: ping 2s infinite; }
+@keyframes ping { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--hot) 60%, transparent); } 70% { box-shadow: 0 0 0 9px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+.mark .arr { color: var(--accent); transition: transform .2s; }
+.mark:hover { border-color: var(--accent); }
+.mark:hover .arr { transform: translateX(4px); }
+.nav ul a { position: relative; transition: color .2s, background .2s; }
+.nav ul a[aria-current="true"] { color: var(--bg); background: var(--fg); }
+.nav ul a:hover:not([aria-current="true"]) { color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); }
+
+.ix { position: relative; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, background-color .25s; }
+.ix:hover { background-image: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--accent) 13%, transparent), transparent 70%); }
+.run.ix:hover, .tool.ix:hover, .stat.ix:hover, .edu.ix:hover { background-color: var(--bg-2); }
+.tool.ix:hover h3, .stat.ix:hover h4, .edu.ix:hover h3, .run.ix:hover h3 { color: var(--accent); }
+.stat.ix, .edu.ix { padding-inline: 14px; margin-inline: -14px; }
+.chip { transition: border-color .2s, color .2s, transform .2s; }
+.chip:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.tag { transition: border-color .2s, color .2s; }
+.ix:hover .tag { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.proj { cursor: pointer; outline-offset: 4px; }
+.feature.proj:hover { border-color: var(--accent); box-shadow: 0 18px 40px -24px color-mix(in srgb, var(--accent) 60%, transparent); }
+.card.proj:hover { box-shadow: 0 18px 40px -24px color-mix(in srgb, var(--accent) 60%, transparent); }
+.more { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.more i { font-style: normal; transition: transform .2s; }
+.proj:hover .more i, .proj:focus-visible .more i { transform: translateX(5px); }
+.card .more { margin-top: 10px; }
+.chan .row.ix { padding-inline: 12px; margin-inline: -12px; }
+.chan .row.ix:hover { background-color: color-mix(in srgb, var(--fg) 4%, transparent); }
+
+/* telemetry interaction */
+.tele:hover .t-row:not(:hover) { opacity: .38; }
+.t-row { transition: opacity .2s, background-color .2s; cursor: default; }
+.t-row:hover { background: color-mix(in srgb, var(--accent) 10%, transparent); }
+.t-row:hover .lab { color: var(--accent); }
+.t-row:hover .bar, .t-row:hover .dot { filter: brightness(1.2) saturate(1.2); outline: 2px solid color-mix(in srgb, var(--accent) 55%, transparent); outline-offset: 2px; }
+.t-read { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; padding-block: 12px; min-height: 46px; border-bottom: 1px solid var(--line); }
+.t-read b { font-weight: 500; font-size: 15px; }
+.t-read.on b { color: var(--accent); }
+
+/* certificates */
+.certs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; list-style: none; margin: 0; padding: 0; }
+@media (max-width: 1100px) { .certs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .certs { grid-template-columns: 1fr; } }
+.cert { border: 1px solid var(--line); background-color: var(--panel); padding: 22px; display: flex; flex-direction: column; gap: 16px; }
+.cert:hover { border-color: var(--accent); transform: translateY(-4px); }
+.cert .ci { align-self: flex-start; padding: 8px 16px; display: inline-block; font-family: var(--f-mono); font-size: 12px; font-weight: 500; letter-spacing: .04em; color: var(--accent-ink); background: var(--accent); clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%); transition: background .25s; }
+.cert:hover .ci { background: var(--hot); }
+.cert h3 { font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 23px; line-height: 1; margin: 6px 0 8px; }
+.cert p { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+/* project summary dialog */
+.modal[hidden] { display: none !important; }
+.modal { position: fixed; inset: 0; z-index: 40; display: grid; place-items: center; padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.m-back { position: absolute; inset: 0; background: color-mix(in srgb, var(--bg) 70%, transparent); backdrop-filter: blur(6px); animation: fade .2s ease; }
+.m-panel { position: relative; width: min(980px, 100%); max-height: calc(100% - 8px); overflow: auto; background: var(--panel); border: 1px solid var(--line); display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); animation: rise .28s cubic-bezier(.2,.8,.2,1); box-shadow: 0 30px 80px -30px rgba(0,0,0,.6); }
+.m-panel::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--cp); }
+@media (max-width: 760px) { .m-panel { grid-template-columns: 1fr; } }
+.m-viz { background: var(--bg-2); border-right: 1px solid var(--line); padding: 28px; display: grid; place-items: center; min-width: 0; }
+.m-viz svg { width: 100%; height: auto; }
+@media (max-width: 760px) { .m-viz { border-right: 0; border-bottom: 1px solid var(--line); } }
+.m-body { padding: 32px; min-width: 0; }
+.m-body h3 { font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: clamp(28px, 3.2vw, 40px); line-height: .95; margin: 10px 0 12px; }
+.m-lede { font-size: 17px; margin: 0 0 22px; }
+.m-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-bottom: 18px; }
+@media (max-width: 520px) { .m-grid { grid-template-columns: 1fr; } }
+.m-grid > div { background: var(--panel); padding: 14px 16px; }
+.m-grid h4 { font-family: var(--f-mono); font-size: 11px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0 0 6px; }
+.m-grid p { margin: 0; font-size: 15px; }
+.m-x { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border: 1px solid var(--line); background: var(--panel); color: var(--fg); cursor: pointer; font-size: 15px; z-index: 1; transition: border-color .2s, color .2s, transform .2s; }
+.m-x:hover { border-color: var(--hot); color: var(--hot); transform: rotate(90deg); }
+@keyframes fade { from { opacity: 0; } }
+@keyframes rise { from { opacity: 0; transform: translateY(18px) scale(.98); } }
+@media (prefers-reduced-motion: reduce) { .m-back, .m-panel, .mark .pulse { animation: none; } .ix, .chip, .cert { transition: none; } }
+/* ---------- contact ---------- */
+.contact { margin-top: 140px; padding-block: 0; border-top: 1px solid var(--line); }
+.contact .band { height: 6px; background: var(--cp); }
+.contact .wrap { padding-block: 80px 70px; }
+.contact h2 { font-family: var(--f-display); font-weight: 900; text-transform: uppercase; font-size: clamp(46px, 9.5vw, 156px); line-height: 0.84; margin-top: 10px; }
+.contact h2 .o { color: transparent; -webkit-text-stroke: 1.5px var(--fg); }
+.c-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; margin-top: 44px; align-items: end; }
+@media (max-width: 820px) { .c-grid { grid-template-columns: 1fr; } }
+.c-grid p { margin: 0; max-width: 32em; font-size: 18px; }
+.chan .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 16px; border-top: 1px solid var(--line); flex-wrap: wrap; }
+.chan .row:last-child { border-bottom: 1px solid var(--line); }
+.chan .val { font-family: var(--f-display); font-weight: 700; font-size: clamp(22px, 2.6vw, 30px); color: var(--fg); text-decoration: none; word-break: break-all; user-select: all; }
+.chan .rowlink { cursor: pointer; text-decoration: none; color: inherit; }
+.chan .rowlink:hover .val { color: var(--accent); }
+.chan .rowlink .go { transition: color .2s, transform .2s; }
+.chan .rowlink:hover .go { color: var(--accent); transform: translateX(4px); }
+.cbtns { display: inline-flex; gap: 8px; }
+a.copy { text-decoration: none; display: inline-block; }
+.copy { font-family: var(--f-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.08em; padding: 8px 12px; background: var(--fg); color: var(--bg); border: 0; cursor: pointer; }
+footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); }
+
+
+/* ---------- phones ---------- */
+.menu-btn { display: none; }
+.swipe { display: none; }
+@media (max-width: 680px) {
+  .menu-btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; padding: 10px 14px; color: var(--fg); background: var(--scrim); border: 1px solid var(--line); border-radius: 999px; backdrop-filter: blur(10px); cursor: pointer; }
+  .menu-btn .bars { display: grid; gap: 4px; } .menu-btn .bars i { display: block; width: 14px; height: 1.5px; background: currentColor; transition: transform .2s; }
+  .menu-btn[aria-expanded="true"] .bars i:first-child { transform: translateY(2.75px) rotate(45deg); }
+  .menu-btn[aria-expanded="true"] .bars i:last-child { transform: translateY(-2.75px) rotate(-45deg); }
+  .nav .wrap { position: relative; }
+  .nav ul { display: none; position: absolute; top: calc(100% - 4px); right: max(var(--gut), env(safe-area-inset-right, 0px)); flex-direction: column; gap: 2px; padding: 6px; border-radius: 14px; min-width: 200px; box-shadow: 0 20px 40px -20px rgba(0,0,0,.5); }
+  .nav ul.open { display: flex; }
+  .nav ul a { padding: 12px 16px; font-size: 15px; border-radius: 10px; }
+  .mark { font-size: 13px; padding: 8px 12px; white-space: nowrap; }
+  .stat.ix, .edu.ix { padding-inline: 0; margin-inline: 0; }
+  .mark .arr { display: none; }
+
+  .hero { --stage: 380px; }
+  .lede { font-size: 16px; margin-bottom: 22px; }
+  .run-id { font-size: 10.5px; gap: 4px 12px; }
+  .hud { gap: 10px 16px; padding: 12px; bottom: 16px; }
+  .hud .ctrl { flex: 1 1 100%; }
+  .hud .ctrl input { flex: 1; width: auto; min-width: 0; }
+
+  section { padding-block: 64px 0; }
+  .sh { margin-bottom: 24px; }
+  .sh h2 { font-size: clamp(40px, 13vw, 64px); }
+
+  #career .tele { min-width: 0; }
+  #career .t-row, #career .axis { grid-template-columns: 116px minmax(0, 1fr); }
+  #career .t-row { height: 26px; }
+  #career .t-row .lab { font-size: 11px; padding-right: 8px; }
+  #career .t-row .lab small { display: none; }
+  .axis .ticks span { font-size: 10px; }
+  .vline.now::after { font-size: 9px; left: 3px; }
+  .t-read { min-height: 60px; }
+  #career .log { margin-top: 32px; }
+  #career .run { padding: 22px 18px; }
+  #career .run .when b { font-size: 28px; margin-bottom: 4px; }
+  #career .run h3 { font-size: 24px; }
+
+  .feature .body { padding: 22px 18px; }
+  .feature .body p + p, .feature .spec { display: none; }
+  .feature .viz { padding: 16px; }
+  .swipe { display: block; color: var(--accent); }
+  .cards { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 12px; margin-inline: calc(-1 * var(--gut)); padding: 4px var(--gut) 14px; scrollbar-width: none; }
+  .cards::-webkit-scrollbar { display: none; }
+  .cards .card { flex: 0 0 82%; scroll-snap-align: start; scroll-margin-left: var(--gut); }
+  .card:hover { transform: none; }
+
+  .tool { padding: 20px 18px; }
+  .stat { grid-template-columns: 1fr; gap: 8px; padding-block: 18px; }
+  .stat .n { font-size: 46px; }
+  .grade b { font-size: 44px; }
+  .cert { flex-direction: row; align-items: flex-start; gap: 14px; padding: 18px; }
+  .cert .ci { flex: 0 0 auto; }
+  .cert h3 { font-size: 20px; }
+  .contact { margin-top: 90px; }
+  .contact .wrap { padding-block: 56px 48px; }
+  .c-grid p { font-size: 16px; }
+  .chan .val { font-size: 21px; }
+  .m-body { padding: 22px 18px; }
+  .m-viz { padding: 18px; }
+  .m-x { top: 8px; right: 8px; }
+  footer .wrap { flex-direction: column; gap: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .flowdash { animation: none; }
+  .card, .btn, .run::after { transition: none; }
+}
+</style>
 </head>
 <body>
-<header class="hero" aria-labelledby="name">
-    <canvas id="flow" aria-hidden="true"></canvas>
-    <div class="hero-inner">
-      <div class="eyebrow"><b>Aerodynamics</b> · MSc Aerodynamics and Computation · University of Southampton</div>
-      <h1 id="name">Shibansanjai Pandian</h1>
-      <p class="lede">Wind tunnel testing with the <strong>Southampton University Formula Student Team</strong>, backed by <strong>CFD</strong>. Looking for a graduate aerodynamics role in the automotive industry.</p>
-      <div class="actions">
-        <a class="btn" href="#contact">Get in touch</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/28ss" target="_blank" rel="noopener">LinkedIn</a>
+<div class="progress" aria-hidden="true"><i id="prog"></i></div>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="#contact"><span class="pulse" aria-hidden="true"></span><span class="slant">Let's talk aerodynamics</span><span class="arr" aria-hidden="true">→</span></a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="navlist"><span class="bars" aria-hidden="true"><i></i><i></i></span>Menu</button>
+    <ul id="navlist">
+      <li><a href="#career">Career</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#toolchain">Toolchain</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="flow" role="img" aria-label="Live flow simulation around an F1-style car on a rolling road in a wind tunnel, coloured by pressure coefficient"></canvas>
+  <div class="hero-inner wrap">
+    <div class="run-id mono">
+      <span>Run <b>001</b></span><span>Model <b>full car</b></span><span>Ground <b>rolling road</b></span><span>Solver <b>panel method</b></span><span>Base <b>Southampton</b></span>
+    </div>
+    <h1 data-fit><span class="l1 slant">Shibansanjai</span><span class="l2 slant">Pandian</span></h1>
+    <p class="lede">Aerodynamics &amp; CFD engineer in training. <b>MSc Aerodynamics and Computation</b> at Southampton, wind tunnel testing with <b>Formula Student</b>, and six months of Fluent research at <b>DRDO</b>.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">See the work →</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+  </div>
+  <div class="hint mono">Hover the flow for smoke · drag the front flap · click the rear wing</div>
+  <div class="hud">
+    <div class="seg" role="group" aria-label="DRS position">
+      <button type="button" id="drs-closed" aria-pressed="true">DRS off</button>
+      <button type="button" id="drs-open" aria-pressed="false">DRS on</button>
+    </div>
+    <div class="ctrl"><label class="mono" for="fw">Front flap</label><input id="fw" type="range" min="12" max="28" step="2" value="22"><span class="ro"><b id="r-fw">22°</b></span></div>
+    <div class="ro">C<sub>L</sub> <b id="r-cl">…</b></div>
+    <div class="ro">Balance <b id="r-bal">…</b></div>
+    <div class="ro">Downforce <b id="r-df">…</b></div>
+  </div>
+</header>
+
+<main>
+  <section id="career">
+    <div class="wrap">
+      <div class="sh">
+        <h2 data-fit><span class="slant">Telemetry</span></h2>
+        <p>Study, research and leadership on one trace, from July 2022 to the end of the MSc.</p>
+      </div>
+      <div class="tele-scroll">
+        <div class="tele" id="tele">
+          <div class="t-row" data-when="Sep 2026 – Sep 2027 · University of Southampton"><div class="lab">MSc Aerodynamics &amp; Computation</div><div class="track"><span class="bar b-edu" data-s="2026.67" data-e="2027.71"></span></div></div>
+          <div class="t-row" data-when="Sep 2026 – present · wind tunnel testing"><div class="lab">SUFST aerodynamics</div><div class="track"><span class="bar b-eng open" data-s="2026.67" data-e="2027.4"></span></div></div>
+          <div class="t-row" data-when="Jan – May 2026 · four strut injector geometries"><div class="lab">B.Tech dissertation <small>scramjet</small></div><div class="track"><span class="bar b-eng" data-s="2026.0" data-e="2026.42"></span></div></div>
+          <div class="t-row" data-when="Aug 2025 – Feb 2026 · avionics rack cooling CFD"><div class="lab">DRDO-CABS research intern</div><div class="track"><span class="bar b-eng" data-s="2025.58" data-e="2026.17"></span></div></div>
+          <div class="t-row" data-when="2025 · OpenRocket trajectory and stability"><div class="lab">Sounding rocket <small>2025</small></div><div class="track"><span class="dot" data-p="2025.5"></span></div></div>
+          <div class="t-row" data-when="Oct 2024 · third prize, conceptual design"><div class="lab">AeSI design competition <small>3rd</small></div><div class="track"><span class="dot" data-p="2024.79"></span></div></div>
+          <div class="t-row" data-when="Dec 2023 – Jan 2024 · 60 villages in 30 days"><div class="lab">Garuda Aerospace intern</div><div class="track"><span class="bar b-eng" data-s="2023.92" data-e="2024.08"></span></div></div>
+          <div class="t-row" data-when="2023 · measured lift validated against prediction"><div class="lab">Aerofoil tunnel test <small>2023</small></div><div class="track"><span class="dot" data-p="2023.5"></span></div></div>
+          <div class="t-row" data-when="Jul 2023 – Dec 2025 · 20+ events, 800 students"><div class="lab">Gravitace coordinator</div><div class="track"><span class="bar b-lead" data-s="2023.5" data-e="2026.0"></span></div></div>
+          <div class="t-row" data-when="Sep 2023 – Dec 2025 · 600+ units of blood collected"><div class="lab">NSS board member</div><div class="track"><span class="bar b-lead" data-s="2023.67" data-e="2026.0"></span></div></div>
+          <div class="t-row" data-when="Aug 2022 – May 2023 · 250-member club"><div class="lab">Rotaract coordinator</div><div class="track"><span class="bar b-lead" data-s="2022.58" data-e="2023.42"></span></div></div>
+          <div class="t-row" data-when="Jul 2022 – May 2026 · First Class, 76.1%"><div class="lab">B.Tech Aerospace Engineering</div><div class="track"><span class="bar b-edu" data-s="2022.5" data-e="2026.42"></span></div></div>
+          <div class="axis"><div></div><div class="ticks" id="ticks"></div></div>
+        </div>
+      </div>
+      <div class="t-read" id="t-read"><span class="mono">Hover a row</span><b id="t-what">to read its dates and headline</b></div>
+      <div class="t-key mono">
+        <span><i style="background:var(--accent)"></i>Education</span>
+        <span><i style="background:var(--cp)"></i>Engineering</span>
+        <span><i style="border:1.5px solid var(--muted)"></i>Leadership</span>
+        <span><i style="background:var(--hot);width:10px;height:10px;transform:rotate(45deg)"></i>Project or award</span>
+      </div>
+
+      <div class="log">
+        <article class="run ix">
+          <div class="when"><b>Now</b>Sep 2026 — present<br>Southampton, UK</div>
+          <div>
+            <h3>Aerodynamics Team Member</h3>
+            <div class="org">Southampton University Formula Student Team</div>
+            <ul>
+              <li>Conducting wind tunnel testing in the aerodynamics department, building hands-on experimental skills.</li>
+              <li>Supporting the car's aerodynamic development through testing, inside a multidisciplinary student team.</li>
+            </ul>
+            <div class="tags"><span class="tag">Wind tunnel</span><span class="tag">Race car aero</span><span class="tag">Experimental methods</span></div>
+          </div>
+        </article>
+        <article class="run ix">
+          <div class="when"><b>6 months</b>Aug 2025 — Feb 2026<br>India</div>
+          <div>
+            <h3>Research Intern</h3>
+            <div class="org">DRDO Centre for Airborne Systems</div>
+            <ul>
+              <li>Ran CFD and thermal analysis in ANSYS Fluent on the Thermal Analysis of Avionics Rack System project, finding the optimal inlet air velocity and temperature for rack cooling.</li>
+              <li>Built a reliable simulation method through mesh-independence studies, working with senior systems engineers.</li>
+              <li>Produced CATIA models and system layouts to support airborne system packaging decisions.</li>
+            </ul>
+            <div class="tags"><span class="tag">ANSYS Fluent</span><span class="tag">Thermal analysis</span><span class="tag">Mesh independence</span><span class="tag">CATIA</span></div>
+          </div>
+        </article>
+        <article class="run ix">
+          <div class="when"><b>60 villages</b>in 30 days<br>Dec 2023 — Jan 2024</div>
+          <div>
+            <h3>Student Intern</h3>
+            <div class="org">Garuda Aerospace</div>
+            <ul>
+              <li>Delivered agricultural drone demonstrations across about 60 villages in 30 days.</li>
+              <li>Trained farmers in the safe use of drones for fertiliser and pesticide application, explaining technical points to non-specialists.</li>
+            </ul>
+            <div class="tags"><span class="tag">UAV operations</span><span class="tag">Field outreach</span></div>
+          </div>
+        </article>
       </div>
     </div>
-    <dl class="telemetry" aria-label="Live values from the flow solution above">
-      <div><dt>Section</dt><dd>Inverted wing</dd></div>
-      <div><dt>Angle of attack</dt><dd id="t-alpha">—</dd></div>
-      <div><dt>Lift coefficient C<sub>L</sub></dt><dd class="down" id="t-cl">—</dd></div>
-      <div><dt>Result</dt><dd>Downforce ↓</dd></div>
-    </dl>
-    <div class="figcap">Fig. 0 — Potential flow past an inverted Joukowski wing section, Kutta condition at the trailing edge. Surface shaded by pressure coefficient:
-      <span class="legend"><span><i style="background:var(--suction)"></i>suction, low pressure (Cp &lt; 0)</span><span><i style="background:var(--pressure)"></i>high pressure (Cp &gt; 0)</span></span>
-    </div>
-  </header>
+  </section>
 
-<div class="wrap">
+  <section id="projects">
+    <div class="wrap">
+      <div class="sh">
+        <h2 data-fit><span class="slant">Projects</span></h2>
+        <p>Supersonic combustion to subsonic tunnels. Click any project for its summary. Drawings are schematics, not results.</p>
+        <span class="swipe mono" aria-hidden="true">Swipe for more projects →</span>
+      </div>
 
-  <div class="report">
-    <nav class="tower" aria-label="Sections">
-      <div class="head">Timing tower</div>
-      <ol>
-        <li><a href="#profile"><span>T1</span>Profile</a></li>
-        <li><a href="#experience"><span>T2</span>Experience</a></li>
-        <li><a href="#projects"><span>T3</span>Projects</a></li>
-        <li><a href="#skills"><span>T4</span>Skills</a></li>
-        <li><a href="#education"><span>T5</span>Education</a></li>
-        <li><a href="#leadership"><span>T6</span>Leadership</a></li>
-        <li><a href="#contact"><span>T7</span>Contact</a></li>
-      </ol>
-    </nav>
-
-    <main>
-      <section id="profile">
-        <div class="sec-head"><span class="turn">Turn 1</span><h2>Profile</h2><div class="kerb"></div></div>
-        <p>MSc Aerodynamics and Computation student at the University of Southampton with a First Class Bachelor of Technology in Aerospace Engineering. I conduct wind tunnel testing for the Southampton University Formula Student Team (SUFST), building on ANSYS Fluent experience from optimising avionics rack cooling at DRDO and comparing scramjet injector geometries in my dissertation.</p>
-        <p>Away from the tunnel, I have organised 20+ technical events for 800 students and trained farmers across 60 villages in the safe use of agricultural drones, which taught me to plan, lead and explain technical work clearly.</p>
-      </section>
-
-      <section id="experience">
-        <div class="sec-head"><span class="turn">Turn 2</span><h2>Engineering experience</h2><div class="kerb"></div></div>
-        <div>
-          <article class="entry live">
-            <div class="when">Sept 2026 – Present</div>
-            <div>
-              <h3>Aerodynamics Team Member</h3>
-              <div class="org">Southampton University Formula Student Team (SUFST) · UK</div>
-              <ul>
-                <li>Conducting wind tunnel testing within the aerodynamics department, developing hands-on experimental aerodynamics skills.</li>
-                <li>Collaborating with team members to support the car's aerodynamic development through testing.</li>
-              </ul>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="when">Aug 2025 – Feb 2026</div>
-            <div>
-              <h3>Research Intern</h3>
-              <div class="org">DRDO – Centre for Airborne Systems (CABS) · Bengaluru, India</div>
-              <ul>
-                <li>Project: Thermal Analysis of Avionics Rack System. Used ANSYS Fluent to identify the optimal inlet air velocity and temperature for rack cooling.</li>
-                <li>Produced CATIA CAD models and system layouts to support airborne system packaging decisions.</li>
-                <li>Developed a reliable simulation methodology through mesh-independence studies, working with senior systems engineers.</li>
-              </ul>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="when">Dec 2023 – Jan 2024</div>
-            <div>
-              <h3>Student Intern</h3>
-              <div class="org">Garuda Aerospace · Jabalpur, India</div>
-              <ul>
-                <li>Delivered agricultural drone demonstrations across approximately 60 villages in 30 days.</li>
-                <li>Trained farmers in the safe use of drones for fertiliser and pesticide application, explaining technical guidance to non-specialist audiences.</li>
-              </ul>
-            </div>
-          </article>
+      <article class="feature ix proj" data-p="scramjet" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open summary: scramjet strut injector dissertation">
+        <div class="viz">
+          <span class="mono">Schematic · strut injector in a scramjet combustor</span>
+          <svg viewBox="0 0 520 250" role="img" aria-label="Schematic of a supersonic combustor duct with a central wedge strut, oblique shocks and fuel injection">
+            <defs>
+              <linearGradient id="g-cp" x1="0" x2="1"><stop offset="0" stop-color="#2B4EC9"/><stop offset=".3" stop-color="#36A3C9"/><stop offset=".55" stop-color="#7CC08A"/><stop offset=".8" stop-color="#E8C547"/><stop offset="1" stop-color="#D9452B"/></linearGradient>
+              <linearGradient id="g-fuel" x1="0" x2="1"><stop offset="0" stop-color="#D9452B" stop-opacity=".85"/><stop offset="1" stop-color="#E8C547" stop-opacity="0"/></linearGradient>
+            </defs>
+            <path d="M10 60 H230 L510 48" fill="none" stroke="var(--fg)" stroke-width="2.5"/>
+            <path d="M10 190 H510" fill="none" stroke="var(--fg)" stroke-width="2.5"/>
+            <g stroke="url(#g-cp)" stroke-width="1.3" fill="none" opacity=".9">
+              <path class="flowdash" d="M10 80 H150 L170 86 L330 92 H510"/>
+              <path class="flowdash" d="M10 100 H150 L170 108 L330 112 H510"/>
+              <path class="flowdash" d="M10 150 H150 L170 142 L330 138 H510"/>
+              <path class="flowdash" d="M10 170 H150 L170 164 L330 160 H510"/>
+            </g>
+            <path d="M250 114 Q 360 108 510 96 L510 154 Q 360 142 250 136 Z" fill="url(#g-fuel)"/>
+            <path d="M150 125 L250 114 L250 136 Z" fill="var(--fg)"/>
+            <g stroke="var(--hot)" stroke-width="1.4" fill="none">
+              <path d="M150 125 L232 60"/><path d="M150 125 L232 190"/>
+              <path d="M232 60 L320 190" stroke-dasharray="4 4"/><path d="M232 190 L320 60" stroke-dasharray="4 4"/>
+            </g>
+            <g fill="var(--accent)"><circle cx="250" cy="119" r="2.5"/><circle cx="250" cy="125" r="2.5"/><circle cx="250" cy="131" r="2.5"/></g>
+            <text class="cap" x="12" y="30">M∞ &gt; 1  →</text>
+            <text class="cap h" x="236" y="30">OBLIQUE SHOCKS</text>
+            <text class="cap" x="120" y="230">STRUT + FUEL INJECTION</text>
+            <text class="cap" x="370" y="230">MIXING · COMBUSTION</text>
+          </svg>
+          <div class="tags" style="margin-top:0"><span class="tag">4 strut-base geometries</span><span class="tag">Compared head to head</span></div>
         </div>
-      </section>
+        <div class="body">
+          <div class="mono">B.Tech dissertation · Jan — May 2026</div>
+          <h3>Strut injectors in a supersonic scramjet combustor</h3>
+          <p>A numerical study of four strut-base injector geometries in the DLR scramjet combustor, run in ANSYS Fluent.</p>
+          <p>I compared combustion efficiency and total-pressure loss across all four designs to find which geometry suits which operating condition.</p>
+          <dl class="spec">
+            <dt>Case</dt><dd>DLR scramjet combustor</dd>
+            <dt>Solver</dt><dd>Density-based, Roe-FDS flux</dd>
+            <dt>Turbulence</dt><dd>SST k-ω</dd>
+            <dt>Outputs</dt><dd>Combustion efficiency, total-pressure loss</dd>
+          </dl>
+          <span class="more">Open summary <i>→</i></span>
+        </div>
+      </article>
 
-      <section id="projects">
-        <div class="sec-head"><span class="turn">Turn 3</span><h2>Engineering projects</h2><div class="kerb"></div></div>
-        <div class="projects">
-          <article class="proj lead">
-            <div class="tag">Bachelor of Technology dissertation · Jan – May 2026</div>
-            <h3>Numerical Investigation of Strut Injector Geometries in a Supersonic Scramjet Combustor</h3>
-            <dl class="spec">
-              <dt>Geometries</dt><dd>Four strut bases: flat, 45° inward, 45° outward, semi-circular</dd>
-              <dt>Case</dt><dd>DLR scramjet combustor configuration</dd>
-              <dt>Method</dt><dd>ANSYS Fluent, SST k-ω turbulence model, density-based solver with Roe-FDS flux scheme</dd>
-              <dt>Measured</dt><dd>Combustion efficiency and total-pressure loss, to find the best-suited design for different operating conditions</dd>
-            </dl>
-          </article>
-          <article class="proj">
-            <div class="tag">Wind tunnel · 2023</div>
-            <h3>Scaled airfoil test</h3>
-            <p>Fabricated a scaled airfoil model and tested it in a subsonic wind tunnel, comparing measured lift against predicted values.</p>
-          </article>
-          <article class="proj">
-            <div class="tag">Simulation · 2025</div>
-            <h3>Sounding rocket design</h3>
-            <p>Modelled the trajectory and stability of a sounding rocket in OpenRocket.</p>
-          </article>
-          <div class="podium">
-            <div class="pos">P3<small>OCT 2024</small></div>
-            <div style="display:grid;gap:.35rem;min-width:0">
-              <div class="tag">Conceptual Design Competition · Third Prize</div>
-              <h3>AeSI Industry Academia Conclave 2024</h3>
-              <p>Team of three. We designed a sustainable and efficient aircraft bracket and presented it to industry experts from the Indian Air Force, Boeing and Honeywell.</p>
-            </div>
+      <div class="cards">
+        <article class="card ix proj" data-p="rack" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open summary: Avionics rack cooling">
+          <div class="sk">
+            <svg viewBox="0 0 320 180" aria-hidden="true">
+              <defs><linearGradient id="g-heat" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#2B4EC9"/><stop offset=".5" stop-color="#7CC08A"/><stop offset="1" stop-color="#D9452B"/></linearGradient></defs>
+              <rect x="110" y="24" width="100" height="132" fill="none" stroke="var(--fg)" stroke-width="2"/>
+              <g fill="url(#g-heat)" opacity=".85"><rect x="122" y="36" width="14" height="108"/><rect x="146" y="36" width="14" height="108"/><rect x="170" y="36" width="14" height="108"/><rect x="194" y="36" width="6" height="108"/></g>
+              <g stroke="#2B4EC9" stroke-width="1.6" fill="none"><path class="flowdash" d="M30 140 H105"/><path class="flowdash" d="M30 120 H105"/></g>
+              <g stroke="#D9452B" stroke-width="1.6" fill="none"><path class="flowdash" d="M215 50 H290"/><path class="flowdash" d="M215 70 H290"/></g>
+              <text class="cap" x="30" y="108">COLD INLET</text><text class="cap" x="226" y="40">HOT OUTLET</text>
+            </svg>
           </div>
-        </div>
-      </section>
+          <div class="in">
+            <div class="mono">DRDO-CABS · 2025–26</div>
+            <h3>Avionics rack cooling</h3>
+            <p>Thermal CFD to find the inlet air velocity and temperature that keep an airborne rack cool, backed by a mesh-independence study.</p>
+            <div class="tags"><span class="tag">Fluent</span><span class="tag">Thermal</span></div>
+            <span class="more">Open summary <i>→</i></span>
+          </div>
+        </article>
+        <article class="card ix proj" data-p="tunnel" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open summary: Aerofoil tunnel test">
+          <div class="sk">
+            <svg viewBox="0 0 320 180" aria-hidden="true">
+              <path d="M10 30 H310 M10 150 H310" stroke="var(--fg)" stroke-width="2"/>
+              <g stroke="var(--muted)" stroke-width="1" fill="none">
+                <path class="flowdash" d="M10 60 C 100 60, 120 52, 170 54 S 260 62, 310 62"/>
+                <path class="flowdash" d="M10 120 C 100 120, 120 112, 170 114 S 260 122, 310 122"/>
+              </g>
+              <path d="M110 92 C 120 74, 170 72, 225 92 C 180 96, 130 100, 110 92 Z" fill="var(--fg)"/>
+              <path d="M165 96 V 150" stroke="var(--accent)" stroke-width="2"/>
+              <rect x="152" y="150" width="26" height="10" fill="var(--accent)"/>
+              <path d="M168 70 V 40" stroke="var(--hot)" stroke-width="2"/><path d="M162 48 L168 38 L174 48" fill="none" stroke="var(--hot)" stroke-width="2"/>
+              <text class="cap h" x="178" y="46">LIFT</text>
+              <text class="cap" x="186" y="172">BALANCE</text>
+            </svg>
+          </div>
+          <div class="in">
+            <div class="mono">Independent · 2023</div>
+            <h3>Aerofoil tunnel test</h3>
+            <p>Built a scaled aerofoil model and tested it in a subsonic wind tunnel, validating measured lift against prediction.</p>
+            <div class="tags"><span class="tag">Wind tunnel</span><span class="tag">Validation</span></div>
+            <span class="more">Open summary <i>→</i></span>
+          </div>
+        </article>
+        <article class="card ix proj" data-p="rocket" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open summary: Sounding rocket">
+          <div class="sk">
+            <svg viewBox="0 0 320 180" aria-hidden="true">
+              <path d="M20 160 H300" stroke="var(--line)" stroke-width="1.5"/>
+              <path d="M40 160 C 70 60, 120 26, 170 26 C 220 26, 260 90, 290 160" fill="none" stroke="url(#g-cp)" stroke-width="2.5"/>
+              <circle cx="170" cy="26" r="5" fill="var(--hot)"/>
+              <text class="cap h" x="180" y="22">APOGEE</text>
+              <g transform="translate(36 140) rotate(18)"><path d="M0 0 L5 -16 L10 0 Z" fill="var(--fg)"/><rect x="2" y="0" width="6" height="12" fill="var(--fg)"/></g>
+              <text class="cap" x="20" y="176">LAUNCH</text>
+            </svg>
+          </div>
+          <div class="in">
+            <div class="mono">Independent · 2025</div>
+            <h3>Sounding rocket</h3>
+            <p>Modelled the trajectory and stability of a sounding rocket in OpenRocket, applying flight dynamics.</p>
+            <div class="tags"><span class="tag">OpenRocket</span><span class="tag">Stability</span></div>
+            <span class="more">Open summary <i>→</i></span>
+          </div>
+        </article>
+        <article class="card ix proj" data-p="bracket" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open summary: Aircraft bracket">
+          <div class="sk">
+            <span class="badge">Third prize</span>
+            <svg viewBox="0 0 320 180" aria-hidden="true">
+              <path d="M70 150 H250 V128 H170 L120 48 H90 V150 Z" fill="none" stroke="var(--fg)" stroke-width="2"/>
+              <g fill="none" stroke="var(--accent)" stroke-width="1.2">
+                <path d="M90 150 L120 128 L90 110 L120 92 L90 74 L112 58"/>
+                <path d="M120 128 L150 128 L120 92"/>
+                <path d="M150 128 L132 66"/>
+                <path d="M170 128 L210 150 L250 128"/>
+              </g>
+              <g fill="var(--hot)"><circle cx="105" cy="140" r="4"/><circle cx="230" cy="139" r="4"/></g>
+              <text class="cap" x="190" y="104">LIGHTENED</text><text class="cap" x="190" y="118">TRUSS</text>
+            </svg>
+          </div>
+          <div class="in">
+            <div class="mono">AeSI Conclave · Oct 2024</div>
+            <h3>Aircraft bracket</h3>
+            <p>With a team of three, designed a sustainable, efficient bracket and pitched it to the Indian Air Force, Boeing and Honeywell.</p>
+            <div class="tags"><span class="tag">Concept design</span><span class="tag">Team of 3</span></div>
+            <span class="more">Open summary <i>→</i></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-      <section id="skills">
-        <div class="sec-head"><span class="turn">Turn 4 · Setup sheet</span><h2>Technical skills</h2><div class="kerb"></div></div>
-        <dl class="setup">
-          <div class="row"><dt>CFD and simulation</dt><dd class="chips"><span>ANSYS Fluent</span><span>Fluent Meshing</span><span>STAR-CCM+</span><span>OpenFOAM</span><span>ANSYS Workbench</span><span>OpenRocket</span></dd></div>
-          <div class="row"><dt>Experimental</dt><dd class="chips"><span>Subsonic wind tunnel testing</span></dd></div>
-          <div class="row"><dt>CAD</dt><dd class="chips"><span>CATIA</span><span>SolidWorks</span><span>AutoCAD</span></dd></div>
-          <div class="row"><dt>Programming</dt><dd class="chips"><span>Python (data post-processing)</span><span>MATLAB</span></dd></div>
-          <div class="row"><dt>Certifications</dt><dd class="chips"><span>CFD in Automotive Industry</span><span>OpenFOAM Intermediate</span><span>Python for Engineers and Scientists</span><span>MATLAB Master Class</span></dd></div>
-          <div class="row"><dt>Languages</dt><dd class="chips"><span>English (IELTS Academic 7.5)</span><span>Tamil (native)</span></dd></div>
-        </dl>
-      </section>
+  <section id="toolchain">
+    <div class="wrap">
+      <div class="sh">
+        <h2 data-fit><span class="slant">Toolchain</span></h2>
+        <p>Mesh it, solve it, test it, plot it. Highlighted tools are my core toolset.</p>
+      </div>
+      <div class="tools">
+        <div class="tool wide ix"><span class="mono">Solve</span><h3>CFD &amp; simulation</h3><div class="chips"><span class="chip k">ANSYS Fluent</span><span class="chip">Fluent Meshing</span><span class="chip k">OpenFOAM</span><span class="chip">ANSYS Workbench</span><span class="chip">OpenRocket</span></div></div>
+        <div class="tool ix"><span class="mono">Test</span><h3>Experimental</h3><div class="chips"><span class="chip k">Subsonic wind tunnel</span></div></div>
+        <div class="tool ix"><span class="mono">Design</span><h3>CAD</h3><div class="chips"><span class="chip k">CATIA</span><span class="chip">SolidWorks</span><span class="chip">AutoCAD</span></div></div>
+        <div class="tool ix"><span class="mono">Post-process</span><h3>Code</h3><div class="chips"><span class="chip">Python</span><span class="chip">MATLAB</span></div></div>
+        <div class="tool ix"><span class="mono">Communicate</span><h3>Languages</h3><div class="chips"><span class="chip">English · IELTS 7.5</span><span class="chip">Tamil · native</span></div></div>
+      </div>
+    </div>
+  </section>
 
-      <section id="education">
-        <div class="sec-head"><span class="turn">Turn 5</span><h2>Education</h2><div class="kerb"></div></div>
-        <div>
-          <article class="entry live">
-            <div class="when">Sept 2026 – Sept 2027</div>
-            <div>
-              <h3>MSc Aerodynamics and Computation</h3>
-              <div class="org">University of Southampton · UK</div>
-              <p class="modules">Race Car Aerodynamics · Experimental Methods for Aerodynamics · Applications of CFD · Computational Aerodynamics · Turbulence · Data-Driven Fluid Mechanics</p>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="when">Jul 2022 – May 2026</div>
-            <div>
-              <h3>Bachelor of Technology in Aerospace Engineering, First Class (76.1%)</h3>
-              <div class="org">Karunya Institute of Technology and Sciences · India</div>
-              <p class="modules">Aerodynamics · Computational Fluid Dynamics · Gas Dynamics · Heat and Mass Transfer · Propulsion · Aircraft Stability and Control</p>
-            </div>
-          </article>
+  <section id="education">
+    <div class="wrap two">
+      <div>
+        <div class="sh"><h2 data-fit><span class="slant">Study</span></h2></div>
+        <div class="edu first ix">
+          <div class="mono">Sep 2026 — Sep 2027 · University of Southampton</div>
+          <h3>MSc Aerodynamics and Computation</h3>
+          <div class="mods"><span class="tag">Applications of CFD</span><span class="tag">Computational Aerodynamics</span><span class="tag">Turbulence</span><span class="tag">Race Car Aerodynamics</span><span class="tag">Experimental Methods</span><span class="tag">Data-Driven Fluid Mechanics</span></div>
         </div>
-      </section>
+        <div class="edu ix">
+          <div class="mono">Jul 2022 — May 2026 · Karunya Institute, India</div>
+          <h3>B.Tech Aerospace Engineering</h3>
+          <div class="grade"><b>76.1%</b><span class="mono">First Class</span></div>
+          <p>Completed alongside a six-month DRDO internship. Outstanding grade in FEA lab; final-year Aircraft Design Project.</p>
+        </div>
+      </div>
+      <div>
+        <div class="sh"><h2 data-fit><span class="slant">Leadership</span></h2></div>
+        <div class="stat first ix"><span class="n slant">20+</span><div><h4>Gravitace Technical Fest</h4><p>Student coordinator. Organised technical events and workshops for 800 students and ran event-day operations as main point of contact. 2023–2025.</p></div></div>
+        <div class="stat ix"><span class="n slant">600+</span><div><h4>National Service Scheme</h4><p>Board member. Units of blood collected at donation camps run with a 250-member team, plus AIDS awareness and cleanliness drives. 2023–2025.</p></div></div>
+        <div class="stat ix"><span class="n slant">250</span><div><h4>Rotaract Club</h4><p>Student coordinator for a 250-member club. CPR awareness camps and visits to old age homes and orphanages. 2022–2023.</p></div></div>
+      </div>
+    </div>
+  </section>
 
-      <section id="leadership">
-        <div class="sec-head"><span class="turn">Turn 6</span><h2>Leadership and volunteering</h2><div class="kerb"></div></div>
-        <div>
-          <article class="entry">
-            <div class="when">Jul 2023 – Dec 2025</div>
-            <div>
-              <h3>Student Coordinator, Gravitace Technical Fest</h3>
-              <div class="org">Karunya Institute of Technology and Sciences</div>
-              <ul><li>Organised and promoted 20+ departmental technical events and workshops attended by 800 students, and led event-day operations.</li></ul>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="when">Sept 2023 – Dec 2025</div>
-            <div>
-              <h3>Board Member, National Service Scheme (NSS)</h3>
-              <div class="org">Karunya Institute of Technology and Sciences</div>
-              <ul><li>Organised blood donation camps with a 250-member team, collecting 600+ units of blood.</li></ul>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="when">Aug 2022 – May 2023</div>
-            <div>
-              <h3>Student Coordinator, Rotaract Club</h3>
-              <div class="org">Karunya Institute of Technology and Sciences</div>
-              <ul><li>Organised activities for a 250-member club, including community CPR awareness camps.</li></ul>
-            </div>
-          </article>
-        </div>
-      </section>
+  <section id="certificates">
+    <div class="wrap">
+      <div class="sh">
+        <h2 data-fit><span class="slant">Certificates</span></h2>
+        <p>Short courses taken in 2026 to sharpen the CFD and post-processing workflow alongside the MSc.</p>
+      </div>
+      <div class="certs">
+        <article class="cert ix"><span class="ci" aria-hidden="true">CFD · Auto</span><div><div class="mono">Udemy · 2026</div><h3>CFD in Automotive Industry</h3><p>Applying CFD to vehicle aerodynamics.</p></div></article>
+        <article class="cert ix"><span class="ci" aria-hidden="true">OpenFOAM</span><div><div class="mono">Udemy · 2026</div><h3>OpenFOAM Intermediate</h3><p>Open-source CFD case set-up and solving.</p></div></article>
+        <article class="cert ix"><span class="ci" aria-hidden="true">Python</span><div><div class="mono">Udemy · 2026</div><h3>Python for Engineers and Scientists</h3><p>Basic to advanced, used for data post-processing.</p></div></article>
+        <article class="cert ix"><span class="ci" aria-hidden="true">MATLAB</span><div><div class="mono">Udemy · 2026</div><h3>MATLAB Master Class</h3><p>Numerical computing and analysis.</p></div></article>
+      </div>
+    </div>
+  </section>
 
-      <section id="contact" class="contact">
-        <div class="sec-head"><span class="turn">Turn 7 · Pit lane</span><h2>Contact</h2></div>
-        <p>Open to graduate aerodynamics and CFD roles in the UK automotive and motorsport industry, available from September 2027.</p>
-        <div class="contact-row">
-          <a class="addr" id="email" href="mailto:shibansanjaip@gmail.com">shibansanjaip@gmail.com</a>
-          <button class="btn" id="copy" type="button">Copy email</button>
-          <a class="btn ghost" href="https://www.linkedin.com/in/28ss" target="_blank" rel="noopener">LinkedIn profile</a>
-          <span id="copied" aria-live="polite"></span>
+  <section class="contact" id="contact">
+    <div class="band"></div>
+    <div class="wrap">
+      <span class="mono">Contact</span>
+      <h2 data-fit><span class="slant">Let's talk</span><br><span class="slant o">aerodynamics</span></h2>
+      <div class="c-grid">
+        <p>Open to graduate aerodynamics and CFD roles in automotive, motorsport and aerospace. Based in Southampton, UK.</p>
+        <div class="chan">
+          <div class="row ix rowlink" id="email-row" title="Click to copy"><span class="val" id="email">shibansanjaip@gmail.com</span><span class="cbtns"><a class="copy" href="mailto:shibansanjaip@gmail.com" id="mailto">Email</a><button class="copy" id="copy" type="button">Copy email</button></span></div>
+          <a class="row ix rowlink" href="https://www.linkedin.com/in/28ss" target="_blank" rel="noopener"><span class="val">linkedin.com/in/28ss</span><span class="mono go">Open LinkedIn ↗</span></a>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="modal" id="modal" hidden>
+  <div class="m-back" data-close></div>
+  <div class="m-panel" role="dialog" aria-modal="true" aria-labelledby="m-title" tabindex="-1">
+    <button class="m-x" type="button" data-close aria-label="Close summary">✕</button>
+    <div class="m-viz" id="m-viz"></div>
+    <div class="m-body" id="m-body"></div>
   </div>
-
-  <footer><span>Shibansanjai Pandian · Aerodynamics</span><span>Updated October 2026</span></footer>
 </div>
+<template id="p-scramjet">
+  <div class="mono">B.Tech dissertation · Jan — May 2026</div>
+  <h3 id="m-title">Strut injectors in a supersonic scramjet combustor</h3>
+  <p class="m-lede">A numerical investigation of how the base geometry of a strut injector changes performance inside the DLR scramjet combustor.</p>
+  <div class="m-grid">
+    <div><h4>The question</h4><p>Which of four strut-base injector geometries best suits which operating condition?</p></div>
+    <div><h4>What I did</h4><p>Modelled all four geometries in ANSYS Fluent with a density-based solver, Roe-FDS flux scheme and the SST k-ω turbulence model.</p></div>
+    <div><h4>How I judged them</h4><p>Compared combustion efficiency against total-pressure loss for each design.</p></div>
+    <div><h4>Outcome</h4><p>Identified the best-suited geometry for different operating conditions.</p></div>
+  </div>
+  <div class="tags"><span class="tag">ANSYS Fluent</span><span class="tag">Compressible flow</span><span class="tag">SST k-ω</span><span class="tag">Roe-FDS</span></div>
+</template>
+<template id="p-rack">
+  <div class="mono">DRDO-CABS research internship · Aug 2025 — Feb 2026</div>
+  <h3 id="m-title">Thermal analysis of an avionics rack</h3>
+  <p class="m-lede">CFD and thermal analysis for the Thermal Analysis of Avionics Rack System project at DRDO's Centre for Airborne Systems.</p>
+  <div class="m-grid">
+    <div><h4>The question</h4><p>What inlet air velocity and temperature keep the rack's electronics adequately cooled?</p></div>
+    <div><h4>What I did</h4><p>Ran CFD and thermal simulations in ANSYS Fluent and produced CATIA models and system layouts for packaging decisions.</p></div>
+    <div><h4>Rigour</h4><p>Built the simulation method on mesh-independence studies, working with senior systems engineers.</p></div>
+    <div><h4>Outcome</h4><p>Identified the optimal inlet air velocity and temperature for rack cooling.</p></div>
+  </div>
+  <div class="tags"><span class="tag">ANSYS Fluent</span><span class="tag">Thermal analysis</span><span class="tag">Mesh independence</span><span class="tag">CATIA</span></div>
+</template>
+<template id="p-tunnel">
+  <div class="mono">Independent project · 2023</div>
+  <h3 id="m-title">Aerofoil in a subsonic wind tunnel</h3>
+  <p class="m-lede">A hands-on check of theory against measurement.</p>
+  <div class="m-grid">
+    <div><h4>What I did</h4><p>Fabricated a scaled aerofoil model and tested it in a subsonic wind tunnel.</p></div>
+    <div><h4>Outcome</h4><p>Validated the measured lift against predicted values.</p></div>
+  </div>
+  <div class="tags"><span class="tag">Wind tunnel</span><span class="tag">Model fabrication</span><span class="tag">Validation</span></div>
+</template>
+<template id="p-rocket">
+  <div class="mono">Independent project · 2025</div>
+  <h3 id="m-title">Sounding rocket trajectory and stability</h3>
+  <p class="m-lede">Flight dynamics practice on a small sounding rocket.</p>
+  <div class="m-grid">
+    <div><h4>What I did</h4><p>Modelled the rocket's trajectory and stability in OpenRocket.</p></div>
+    <div><h4>Skills</h4><p>Flight dynamics and simulation.</p></div>
+  </div>
+  <div class="tags"><span class="tag">OpenRocket</span><span class="tag">Stability</span><span class="tag">Trajectory</span></div>
+</template>
+<template id="p-bracket">
+  <div class="mono">AeSI Industry Academia Conclave · Oct 2024 · Third prize</div>
+  <h3 id="m-title">Sustainable aircraft bracket concept</h3>
+  <p class="m-lede">A conceptual design competition entry, built in a team of three.</p>
+  <div class="m-grid">
+    <div><h4>Brief</h4><p>Develop a sustainable and efficient aircraft bracket design.</p></div>
+    <div><h4>Pitch</h4><p>Presented to industry experts from the Indian Air Force, Boeing and Honeywell.</p></div>
+    <div><h4>Result</h4><p>Third prize in the Conceptual Design Competition.</p></div>
+  </div>
+  <div class="tags"><span class="tag">Conceptual design</span><span class="tag">Teamwork</span><span class="tag">Presentation</span></div>
+</template>
+
+<footer>
+  <div class="wrap mono">
+    <span>© <span id="yr">2026</span> Shibansanjai Pandian</span>
+    <span>Hero: 2D centreline section of a full car over a rolling road, Hess–Smith panel method with ground image, solved live. Inviscid, so drag is not modelled.</span>
+  </div>
+</footer>
 
 <script>
-/* ---------- copy email ---------- */
-(function(){
-  const b=document.getElementById('copy'),out=document.getElementById('copied'),el=document.getElementById('email');
-  b.addEventListener('click',()=>{
-    const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);out.textContent='Selected. Press Ctrl/Cmd+C';};
-    try{navigator.clipboard.writeText(el.textContent.trim()).then(()=>{out.textContent='Copied';},sel);}catch(e){sel();}
+(() => {
+  /* ===== Full-car centreline section: Hess–Smith panels + ground image for the rolling road ===== */
+  function carFactory(){
+    function naca(m,p,t,n){
+      const up=[],lo=[];
+      for(let i=0;i<=n;i++){
+        const b=Math.PI*i/n, x=(1-Math.cos(b))/2;
+        const yt=5*t*(0.2969*Math.sqrt(x)-0.126*x-0.3516*x*x+0.2843*x**3-0.1036*x**4);
+        let yc,dy; if(x<p){yc=m/(p*p)*(2*p*x-x*x);dy=2*m/(p*p)*(p-x);}else{yc=m/((1-p)**2)*((1-2*p)+2*p*x-x*x);dy=2*m/((1-p)**2)*(p-x);}
+        const th=Math.atan(dy);
+        up.push([x-yt*Math.sin(th),yc+yt*Math.cos(th)]); lo.push([x+yt*Math.sin(th),yc-yt*Math.cos(th)]);
+      }
+      const pts=[]; for(let i=n;i>=0;i--) pts.push(lo[i]); for(let i=1;i<=n;i++) pts.push(up[i]);
+      return pts;
+    }
+    function cw(q){ let A=0; for(let i=0;i<q.length-1;i++) A+=q[i][0]*q[i+1][1]-q[i+1][0]*q[i][1]; if(A>0) q.reverse(); return q; }
+    function foil(m,p,t,n,chord,angDeg,lx,ly){
+      const a=angDeg*Math.PI/180, c=Math.cos(a), s=Math.sin(a);
+      return cw(naca(m,p,t,n).map(([x,y])=>{ y=-y*chord; x*=chord; return [lx+x*c-y*s, ly+x*s+y*c]; }));
+    }
+    function foilPivotTE(m,p,t,n,chord,angDeg,px,py){ const a=angDeg*Math.PI/180; return foil(m,p,t,n,chord,angDeg,px-chord*Math.cos(a),py-chord*Math.sin(a)); }
+    function spline(ctrl,per){
+      const out=[], n=ctrl.length;
+      for(let i=0;i<n-1;i++){ const p0=ctrl[Math.max(0,i-1)],p1=ctrl[i],p2=ctrl[i+1],p3=ctrl[Math.min(n-1,i+2)];
+        for(let k=0;k<per;k++){ const t=k/per,t2=t*t,t3=t2*t;
+          out.push([0,1].map(d=>0.5*((2*p1[d])+(-p0[d]+p2[d])*t+(2*p0[d]-5*p1[d]+4*p2[d]-p3[d])*t2+(-p0[d]+3*p1[d]-3*p2[d]+p3[d])*t3))); } }
+      out.push(ctrl[n-1]); return out;
+    }
+    const WB=3.6, XF=1.05, XR=XF+WB;
+    const RWX=5.02, RWY=0.79, RWS=0.36, PIV=[RWX+1.215*RWS, RWY+0.42*RWS];
+    // centreline silhouette (metres): nose tip -> cockpit/helmet -> airbox -> engine cover -> tail, then floor/diffuser back to nose
+    const TOP=[[0.22,0.28],[0.36,0.30],[0.7,0.335],[1.1,0.385],[1.5,0.46],[1.82,0.55],[2.02,0.625],[2.16,0.665],[2.3,0.77],[2.44,0.845],[2.58,0.885],[2.66,0.95],[2.96,0.955],[3.3,0.86],[3.8,0.70],[4.3,0.565],[4.75,0.475],[5.04,0.435]];
+    const BOT=[[5.04,0.435],[5.07,0.40],[5.07,0.31],[4.96,0.275],[4.62,0.15],[4.3,0.075],[3.4,0.065],[2.3,0.065],[1.52,0.07],[1.42,0.14],[1.22,0.215],[0.8,0.245],[0.4,0.25],[0.25,0.255],[0.22,0.28]];
+    function body(){ const a=spline(TOP,6), b=spline(BOT,9); b.shift(); return cw(a.concat(b)); }
+    const flapAng=d=>38-30*d;
+    const RAKE=[0.04,0.09,0.15,0.22,0.3,0.4,0.52,0.66,0.82,1.0,1.2], RAKEX=-0.9;
+    function geometry(drs,fw){
+      return [
+        {pts:body(),lift:false,name:'body'},
+        {pts:foil(0.05,0.4,0.11,26,0.46,2,0.0,0.08),lift:true,name:'fw'},
+        {pts:foil(0.08,0.45,0.10,18,0.24,fw,0.4575,0.115),lift:true,name:'fw'},
+        {pts:foil(0.06,0.4,0.12,26,RWS,2,RWX,RWY),lift:true,name:'rw'},
+        {pts:rwFlap(drs),lift:true,name:'rw'},
+        {pts:foil(0.05,0.4,0.11,18,0.28,2,5.15,0.345),lift:true,name:'beam'}
+      ];
+    }
+    const rwFlap=d=>foilPivotTE(0.08,0.45,0.10,18,0.42*RWS,flapAng(d),PIV[0],PIV[1]);
+    function panels(els){
+      const P=[]; els.forEach((e,k)=>{ const q=e.pts, st=P.length; for(let i=0;i<q.length-1;i++){
+        const [x1,y1]=q[i],[x2,y2]=q[i+1], L=Math.hypot(x2-x1,y2-y1); if(L<1e-6) continue;
+        P.push({x1,y1,L,c:(x2-x1)/L,s:(y2-y1)/L,xm:(x1+x2)/2,ym:(y1+y2)/2,el:k,first:false,last:false}); }
+        P[st].first=true; P[P.length-1].last=true; }); return P;
+    }
+    const tA=[0,0,0,0], tB=[0,0,0,0];
+    function infl1(x,y,p,out){
+      const dx=x-p.x1, dy=y-p.y1, xp=dx*p.c+dy*p.s, yp=-dx*p.s+dy*p.c;
+      const r1=xp*xp+yp*yp, r2=(xp-p.L)*(xp-p.L)+yp*yp;
+      let dth=Math.atan2(yp,xp-p.L)-Math.atan2(yp,xp);
+      if(Math.abs(yp)<1e-12&&xp>0&&xp<p.L) dth=Math.PI;
+      if(dth>Math.PI) dth-=2*Math.PI; else if(dth<-Math.PI) dth+=2*Math.PI;
+      const lg=Math.log(r1/r2)/(4*Math.PI), th=dth/(2*Math.PI);
+      out[0]=lg*p.c-th*p.s; out[1]=lg*p.s+th*p.c; out[2]=th*p.c+lg*p.s; out[3]=th*p.s-lg*p.c;
+    }
+    function infl(x,y,p,out){ infl1(x,y,p,tA); infl1(x,-y,p,tB); out[0]=tA[0]+tB[0]; out[1]=tA[1]-tB[1]; out[2]=tA[2]+tB[2]; out[3]=tA[3]-tB[3]; }
+    function solve(P,els){
+      const lifting=els.map((e,k)=>e.lift?k:-1).filter(k=>k>=0), vi={}; lifting.forEach((k,i)=>vi[k]=i);
+      const N=P.length, M=N+lifting.length, A=[], b=new Float64Array(M), o=[0,0,0,0];
+      for(let i=0;i<M;i++) A.push(new Float64Array(M));
+      for(let i=0;i<N;i++){ const nx=-P[i].s, ny=P[i].c;
+        for(let j=0;j<N;j++){ infl(P[i].xm,P[i].ym,P[j],o); A[i][j]=o[0]*nx+o[1]*ny; if(P[j].el in vi) A[i][N+vi[P[j].el]]+=o[2]*nx+o[3]*ny; }
+        b[i]=-nx; }
+      lifting.forEach((k,r)=>{ const row=N+r;
+        for(const i of [P.findIndex(p=>p.el===k&&p.first),P.findIndex(p=>p.el===k&&p.last)]){
+          for(let j=0;j<N;j++){ infl(P[i].xm,P[i].ym,P[j],o); A[row][j]+=o[0]*P[i].c+o[1]*P[i].s; if(P[j].el in vi) A[row][N+vi[P[j].el]]+=o[2]*P[i].c+o[3]*P[i].s; }
+          b[row]-=P[i].c; } });
+      for(let c=0;c<M;c++){ let pv=c; for(let r=c+1;r<M;r++) if(Math.abs(A[r][c])>Math.abs(A[pv][c])) pv=r;
+        [A[c],A[pv]]=[A[pv],A[c]]; [b[c],b[pv]]=[b[pv],b[c]];
+        for(let r=c+1;r<M;r++){ const f=A[r][c]/A[c][c]; if(!f) continue; for(let k=c;k<M;k++) A[r][k]-=f*A[c][k]; b[r]-=f*b[c]; } }
+      const x=new Float64Array(M); for(let r=M-1;r>=0;r--){ let s=b[r]; for(let k=r+1;k<M;k++) s-=A[r][k]*x[k]; x[r]=s/A[r][r]; }
+      return {sig:Array.from(x.subarray(0,N)), gam:P.map(p=>p.el in vi?x[N+vi[p.el]]:0)};
+    }
+    function makeVel(P,sig,gam){ const o=[0,0,0,0]; return (x,y)=>{ let u=1,v=0; for(let j=0;j<P.length;j++){ infl(x,y,P[j],o); u+=sig[j]*o[0]+gam[j]*o[2]; v+=sig[j]*o[1]+gam[j]*o[3]; } return [u,v]; }; }
+    function inPoly(x,y,q){ let c=false; for(let i=0,j=q.length-1;i<q.length;j=i++){ const [xi,yi]=q[i],[xj,yj]=q[j]; if(((yi>y)!==(yj>y))&&(x<(xj-xi)*(y-yi)/(yj-yi)+xi)) c=!c; } return c; }
+    function boxes(els){ els.forEach(e=>{ let x0=9,x1=-9,y0=9,y1=-9; e.pts.forEach(([x,y])=>{x0=Math.min(x0,x);x1=Math.max(x1,x);y0=Math.min(y0,y);y1=Math.max(y1,y);}); e.box=[x0-0.04,x1+0.04,y0-0.04,y1+0.04]; }); }
+    const inside=(els,x,y)=>y<0.003||els.some(e=>x>e.box[0]&&x<e.box[1]&&y>e.box[2]&&y<e.box[3]&&inPoly(x,y,e.pts));
+    const nearAny=(els,x,y)=>els.some(e=>x>e.box[0]&&x<e.box[1]&&y>e.box[2]&&y<e.box[3]);
+    const GC=0.06;
+    function sampler(st){
+      return (x,y)=>{
+        if(nearAny(st.els,x,y)) return st.vel(x,y);
+        const g=st.grid, fx=(x-g.gx0)/GC, fy=(y-g.gy0)/GC; const i=Math.floor(fx), j=Math.floor(fy);
+        if(i<0||j<0||i>=g.nx-1||j>=g.ny-1) return [1,0];
+        const tx=fx-i, ty=fy-j, k=j*g.nx+i;
+        return [(g.U[k]*(1-tx)+g.U[k+1]*tx)*(1-ty)+(g.U[k+g.nx]*(1-tx)+g.U[k+g.nx+1]*tx)*ty,
+                (g.V[k]*(1-tx)+g.V[k+1]*tx)*(1-ty)+(g.V[k+g.nx]*(1-tx)+g.V[k+g.nx+1]*tx)*ty];
+      };
+    }
+    // full solve + field for a DRS state over view bounds B (world metres)
+    function compute(drs,B,nLines,fw){
+      const els=geometry(drs,fw); boxes(els);
+      const P=panels(els), {sig,gam}=solve(P,els), vel=makeVel(P,sig,gam);
+      const cp=[]; let Fy=0,Ff=0; const F={};
+      P.forEach(p=>{ const [u,v]=vel(p.xm,p.ym), vt=u*p.c+v*p.s, c=1-vt*vt; cp.push(c);
+        const fy=-c*p.c*p.L; Fy+=fy; Ff+=fy*(XR-p.xm)/WB; const nm=els[p.el].name; F[nm]=(F[nm]||0)+fy; });
+      const ytop=Math.min(B.y1,3.2), gx0=B.x0-0.2, gy0=0, nx=Math.ceil((B.x1-gx0+0.2)/GC)+1, ny=Math.ceil((ytop-gy0+0.2)/GC)+1;
+      const U=new Float32Array(nx*ny), V=new Float32Array(nx*ny);
+      for(let j=0;j<ny;j++) for(let i=0;i<nx;i++){ const x=gx0+i*GC, y=gy0+j*GC; const [u,v]=inside(els,x,y)?[0,0]:vel(x,y); U[j*nx+i]=u; V[j*nx+i]=v; }
+      const st={els,vel,grid:{nx,ny,gx0,gy0,U,V}}; const smp=sampler(st);
+      const trace=(x,y,fine)=>{ const pts=[x,y];
+        for(let i=0;i<4000;i++){
+          const [u,v]=smp(x,y), sp=Math.hypot(u,v); if(!(sp>1e-3)) break;
+          const h=nearAny(els,x,y)?0.01:(fine?0.03:0.05); x+=u/sp*h; y+=v/sp*h;
+          if(inside(els,x,y)) break; pts.push(x,y); if(x>B.x1+0.1||y>B.y1+0.5) break;
+        } return pts; };
+      const lines=[];
+      for(let k=0;k<nLines;k++) lines.push(trace(B.x0-0.1, 0.02+(Math.min(B.y1,3)-0.02)*Math.pow((k+0.5)/nLines,1.6)));
+      const rake=[];
+      return {drs,fw,rake,els:els.map(e=>({pts:e.pts,name:e.name,box:e.box})),P:P.map(p=>[p.x1,p.y1,p.L,p.c,p.s,p.el]),sig,gam,cp,CL:Fy/WB,balance:Ff/Fy,F,grid:{nx,ny,gx0,gy0,U,V},lines};
+    }
+    function hydrate(r){  // rebuild callable pieces on the receiving side
+      const P=r.P.map(([x1,y1,L,c,s,el])=>({x1,y1,L,c,s,el}));
+      r.vel=makeVel(P,r.sig,r.gam); r.sample=sampler(r); r.inside=(x,y)=>inside(r.els,x,y); r.Pp=P; return r;
+    }
+    const fwFlap=fw=>foil(0.08,0.45,0.10,18,0.24,fw,0.4575,0.115);
+    return {compute,hydrate,rwFlap,fwFlap,WB,XF,XR,PIV,flapAng,RAKE,RAKEX};
+  }
+
+  const CAR=carFactory();
+  let worker=null;
+  try{
+    const src=`const CAR=(${carFactory.toString()})();onmessage=e=>{const {drs,B,n,id,fw}=e.data;const r=CAR.compute(drs,B,n,fw);r.id=id;postMessage(r,[r.grid.U.buffer,r.grid.V.buffer]);};`;
+    worker=new Worker(URL.createObjectURL(new Blob([src],{type:'text/javascript'})));
+  }catch(e){ worker=null; }
+  // one job at a time, so a user request can jump ahead of background prefetching
+  let jobId=0, busy=null, gen=0; const queue=[];
+  function requestState(drs,fw,cb,urgent){
+    const k=drs+'|'+fw, q=queue.find(j=>j.k===k);
+    if(busy&&busy.k===k&&busy.gen===gen){ busy.cbs.push(cb); return; }
+    if(q){ q.cbs.push(cb); if(urgent){ queue.splice(queue.indexOf(q),1); queue.unshift(q); } return; }
+    const job={k,drs,fw,cbs:[cb],gen}; urgent?queue.unshift(job):queue.push(job); pump();
+  }
+  function finish(job,r){ busy=null; if(job.gen===gen){ const st=CAR.hydrate(r); job.cbs.forEach(f=>f&&f(st)); } pump(); }
+  function pump(){
+    if(busy||!queue.length) return; const job=busy=queue.shift(); job.id=++jobId;
+    const payload={drs:job.drs,fw:job.fw,B:{...B},n:Math.max(26,Math.round(Hd/22)),id:job.id};
+    if(worker) worker.postMessage(payload);
+    else setTimeout(()=>finish(job,CAR.compute(job.drs,payload.B,payload.n,job.fw)),20);
+  }
+  if(worker){
+    worker.onmessage=e=>{ if(busy&&busy.id===e.data.id) finish(busy,e.data); };
+    worker.onerror=()=>{ worker=null; if(busy){ const j=busy; setTimeout(()=>finish(j,CAR.compute(j.drs,{...B},26,j.fw)),0);} };
+  }
+
+  /* ===== colour ===== */
+  const STOPS=[[43,78,201],[54,163,201],[124,192,138],[232,197,71],[217,69,43]];
+  const LUT=[];for(let i=0;i<=64;i++){const t=i/64*(STOPS.length-1);const k=Math.min(STOPS.length-2,Math.floor(t)),f=t-k;LUT.push(STOPS[k].map((v,j)=>Math.round(v+(STOPS[k+1][j]-v)*f)));}
+  const cpRGB=cp=>LUT[Math.round(Math.min(1,Math.max(0,(cp+3.2)/4.2))*64)];
+  const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+  /* ===== canvas + view ===== */
+  const cv=document.getElementById('flow'), hero=cv.parentElement, ctx=cv.getContext('2d');
+  const baseC=document.createElement('canvas'), bctx=baseC.getContext('2d');
+  const trail=document.createElement('canvas'), tctx=trail.getContext('2d');
+  const carC=document.createElement('canvas');
+  let Wd=0,Hd=0,dpr=1,s=100,x0px=0,gy=0, B={x0:0,x1:1,y0:0,y1:1};
+  const toS=(x,y)=>[x0px+x*s, gy-y*s];
+  const toW=(px,py)=>[(px-x0px)/s,(gy-py)/s];
+  const states={}; let cur=null, target=0, anim=1, animFrom=0, roll=0, fwT=22, fwView=22;
+  const FW0=22, key=(d,f)=>d+'|'+f, put=st=>{ states[key(st.drs,st.fw)]=st; };
+
+  function size(){
+    const r=cv.getBoundingClientRect(); if(!r.width) return; dpr=Math.min(2,window.devicePixelRatio||1);
+    const nW=r.width, nH=r.height, same=Math.abs(nW-Wd)<1&&Math.abs(nH-Hd)<1; Wd=nW; Hd=nH;
+    if(Wd>=900){ s=Math.min(Wd*0.72/5.7, Hd*0.34); x0px=Wd*0.965-5.62*s; gy=Hd-132; }
+    else { s=Math.min(Wd*0.97/5.62,120); x0px=(Wd-5.62*s)/2+0.04*s; const hud=document.querySelector('.hud'); gy=Hd-(hud?hud.offsetHeight:150)-24-36; }
+    const a=toW(0,0), b=toW(Wd,gy); B={x0:a[0],x1:b[0],y0:0,y1:a[1]};
+    for(const c of [cv,baseC,trail,carC]){c.width=Math.round(Wd*dpr);c.height=Math.round(Hd*dpr);c.getContext('2d').setTransform(dpr,0,0,dpr,0,0);}
+    if(same&&cur) { drawBase(); compose(); return; }
+    for(const k in states) delete states[k];
+    queue.length=0; gen++;
+    status('Solving');
+    requestState(target,fwT,st=>{ put(st); if(st.drs===target&&st.fw===fwT){ cur=st; seedAll(); drawBase(); readouts(); start(); }
+      requestState(0,FW0,o=>{ put(o); readouts(); }); prefetch(); },true);
+    drawBase(); compose();
+  }
+
+  function label(c,t,x,y,col,al){ c.fillStyle=col; c.textAlign=al||'left'; c.fillText(t,x,y); }
+  function flapNow(){ const e=anim<1?1-Math.pow(1-anim,3):1; return animFrom+(target-animFrom)*e; }
+  // smooth closed/open path through world points (quadratic through midpoints)
+  function sp(c,pts,close){
+    const q=pts.map(([x,y])=>toS(x,y)); c.beginPath();
+    if(!close){ c.moveTo(q[0][0],q[0][1]); }
+    else { const m=[(q[q.length-1][0]+q[0][0])/2,(q[q.length-1][1]+q[0][1])/2]; c.moveTo(m[0],m[1]); }
+    for(let i=0;i<q.length-(close?0:1);i++){ const a=q[i], b=q[(i+1)%q.length]; c.quadraticCurveTo(a[0],a[1],(a[0]+b[0])/2,(a[1]+b[1])/2); }
+    if(!close) c.lineTo(q[q.length-1][0],q[q.length-1][1]); else c.closePath();
+  }
+  function lp(c,pts){ c.beginPath(); pts.forEach(([x,y],i)=>{const p=toS(x,y); i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1]);}); c.closePath(); }
+  const vgrad=(c,y0,y1,stops)=>{ const g=c.createLinearGradient(0,toS(0,y0)[1],0,toS(0,y1)[1]); stops.forEach(([o,col])=>g.addColorStop(o,col)); return g; };
+
+  function drawBase(){
+    bctx.clearRect(0,0,Wd,Hd);
+    const mute=css('--muted'), stream=css('--stream'), line=css('--line');
+    bctx.save(); bctx.beginPath(); bctx.rect(0,gy+42,Wd,Hd-gy-42); bctx.clip();
+    bctx.strokeStyle=line; bctx.lineWidth=1; for(let x=-Hd;x<Wd+Hd;x+=14){ bctx.beginPath(); bctx.moveTo(x,gy+42); bctx.lineTo(x-(Hd-gy),Hd); bctx.stroke(); }
+    bctx.restore();
+    bctx.font='10.5px "JetBrains Mono", monospace';
+    if(anim>=1&&cur){
+      bctx.lineWidth=1; bctx.strokeStyle=stream;
+      for(const L of cur.lines){ bctx.beginPath(); for(let i=0;i<L.length;i+=2){ const p=toS(L[i],L[i+1]); i?bctx.lineTo(p[0],p[1]):bctx.moveTo(p[0],p[1]); } bctx.stroke(); }
+    }
+    drawCar();
+  }
+
+  /* ===== the car: original carbon livery, side elevation ===== */
+  function drawCar(){
+    const c=carC.getContext('2d'); c.clearRect(0,0,Wd,Hd);
+    if(!cur) return;
+    const car=css('--car'), hi=css('--car-hi'), edge=css('--car-edge'), acc=css('--accent'), hot=css('--hot'), mute=css('--muted');
+    const W=v=>v*s, ew=Math.max(0.8,s/260);
+    c.lineJoin='round'; c.lineCap='round';
+    const paint=(y0,y1)=>vgrad(c,y0,y1,[[0,hi],[0.45,car],[1,car]]);
+    const edgeStroke=()=>{ c.strokeStyle=edge; c.lineWidth=ew; c.stroke(); };
+
+    // contact shadow on the road
+    const sh=c.createRadialGradient(toS(2.9,0)[0],gy,0,toS(2.9,0)[0],gy,W(2.9));
+    sh.addColorStop(0,'rgba(0,0,0,0.35)'); sh.addColorStop(1,'rgba(0,0,0,0)');
+    c.save(); c.translate(0,gy-2); c.scale(1,0.05); c.fillStyle=sh; c.beginPath(); c.arc(toS(2.9,0)[0],0,W(2.9),0,Math.PI*2); c.fill(); c.restore();
+
+    // suspension (behind wheels)
+    c.strokeStyle=hi; c.lineWidth=Math.max(1.5,W(0.022));
+    [[[1.48,0.44],[1.05,0.43]],[[1.42,0.21],[1.05,0.30]],[[1.05,0.31],[1.5,0.50]],
+     [[4.18,0.43],[4.65,0.43]],[[4.12,0.19],[4.65,0.30]],[[4.65,0.40],[4.2,0.22]]].forEach(([a,b])=>{ const p=toS(...a), q=toS(...b); c.beginPath(); c.moveTo(p[0],p[1]); c.lineTo(q[0],q[1]); c.stroke(); });
+
+    // floor, floor edge, diffuser side
+    c.fillStyle=car; lp(c,[[1.4,0.075],[4.32,0.078],[4.36,0.03],[1.62,0.028],[1.5,0.05]]); c.fill(); edgeStroke();
+    c.fillStyle=hi; lp(c,[[1.62,0.028],[4.36,0.03],[4.36,0.018],[1.66,0.017]]); c.fill();
+    c.fillStyle=car; lp(c,[[4.3,0.078],[4.62,0.15],[4.96,0.275],[5.0,0.2],[4.5,0.04],[4.36,0.03]]); c.fill(); edgeStroke();
+
+    // main body
+    const body=cur.els[0].pts;
+    lp(c,body); c.fillStyle=paint(0.96,0.06); c.fill(); edgeStroke();
+    c.save(); lp(c,body); c.clip(); c.strokeStyle='rgba(255,255,255,0.22)'; c.lineWidth=Math.max(1.5,W(0.018));
+    sp(c,[[0.4,0.295],[1.1,0.37],[1.6,0.455],[1.95,0.585]],false); c.stroke(); sp(c,[[3.0,0.935],[3.4,0.83],[3.9,0.67],[4.4,0.54],[4.9,0.445]],false); c.stroke(); c.restore();
+
+    c.save(); lp(c,body); c.clip();
+    // sidepod with undercut
+    const pod=[[1.93,0.54],[2.15,0.61],[2.7,0.625],[3.2,0.575],[3.7,0.46],[4.08,0.32],[4.22,0.22],[4.05,0.155],[3.3,0.13],[2.55,0.145],[2.18,0.2],[1.98,0.32],[1.93,0.44]];
+    c.fillStyle='rgba(0,0,0,0.38)'; lp(c,[[2.15,0.21],[2.55,0.15],[3.3,0.135],[4.05,0.16],[4.1,0.07],[2.2,0.07]]); c.fill();
+    sp(c,pod,true); c.fillStyle=vgrad(c,0.63,0.13,[[0,hi],[0.35,car],[1,car]]); c.fill(); edgeStroke();
+    sp(c,[[1.93,0.44],[1.96,0.53],[2.06,0.56],[2.09,0.45],[2.06,0.33],[1.98,0.32]],true); c.fillStyle='rgba(0,0,0,0.75)'; c.fill();
+    // livery: accent band + Cp pinstripe
+    const band=[[0.45,0.29],[1.0,0.335],[1.6,0.43],[2.15,0.52],[2.8,0.555],[3.5,0.52],[4.2,0.44],[4.95,0.40]];
+    const offs=(d)=>band.map(([x,y])=>[x,y+d]);
+    c.beginPath(); offs(0.022).forEach(([x,y],i)=>{const p=toS(x,y); i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1]);}); offs(-0.02).reverse().forEach(([x,y])=>{const p=toS(x,y); c.lineTo(p[0],p[1]);}); c.closePath();
+    c.fillStyle=acc; c.fill();
+    const g=c.createLinearGradient(toS(0.45,0)[0],0,toS(4.95,0)[0],0); [['#2B4EC9',0],['#36A3C9',.25],['#7CC08A',.5],['#E8C547',.75],['#D9452B',1]].forEach(([col,o])=>g.addColorStop(o,col));
+    c.beginPath(); offs(-0.036).forEach(([x,y],i)=>{const p=toS(x,y); i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1]);}); c.strokeStyle=g; c.lineWidth=Math.max(1,W(0.011)); c.stroke();
+    // panel lines
+    c.strokeStyle=edge; c.globalAlpha=0.5; c.lineWidth=ew;
+    [[[1.52,0.07],[1.62,0.47]],[[3.15,0.6],[3.3,0.86]],[[4.25,0.12],[4.32,0.56]]].forEach(([a,b])=>{const p=toS(...a), q=toS(...b); c.beginPath(); c.moveTo(p[0],p[1]); c.lineTo(q[0],q[1]); c.stroke();});
+    c.globalAlpha=1;
+    c.restore();
+
+    // number on engine cover
+
+    // cockpit, helmet, halo
+    sp(c,[[2.04,0.63],[2.2,0.67],[2.62,0.70],[2.62,0.66],[2.12,0.615]],true); c.fillStyle='rgba(0,0,0,0.8)'; c.fill();
+    const hc=toS(2.37,0.775), hr=W(0.105);
+    const hg=c.createRadialGradient(hc[0]-hr*0.3,hc[1]-hr*0.4,hr*0.1,hc[0],hc[1],hr); hg.addColorStop(0,'#ffffff'); hg.addColorStop(0.35,acc); hg.addColorStop(1,acc);
+    c.fillStyle=hg; c.beginPath(); c.arc(hc[0],hc[1],hr,0,Math.PI*2); c.fill();
+    c.fillStyle='rgba(8,10,14,0.9)'; c.beginPath(); c.ellipse(hc[0]-hr*0.52,hc[1]-hr*0.05,hr*0.42,hr*0.22,-0.2,0,Math.PI*2); c.fill();
+    sp(c,[[2.16,0.665],[2.3,0.70],[2.64,0.735],[2.64,0.69],[2.2,0.645]],true); c.fillStyle=paint(0.75,0.6); c.fill(); edgeStroke();
+    c.strokeStyle=hi; c.lineWidth=Math.max(2,W(0.038));
+    sp(c,[[1.99,0.63],[2.08,0.80],[2.22,0.875],[2.5,0.89],[2.66,0.895]],false); c.stroke();
+    c.strokeStyle=edge; c.lineWidth=ew; c.stroke();
+    // mirror
+    c.strokeStyle=car; c.lineWidth=Math.max(1.5,W(0.016)); const m1=toS(1.98,0.56), m2=toS(1.93,0.68); c.beginPath(); c.moveTo(m1[0],m1[1]); c.lineTo(m2[0],m2[1]); c.stroke();
+    const mc=toS(1.9,0.70); c.fillStyle=car; c.beginPath(); c.ellipse(mc[0],mc[1],W(0.075),W(0.028),-0.08,0,Math.PI*2); c.fill(); edgeStroke();
+    // airbox intake + T-cam
+    sp(c,[[2.65,0.86],[2.68,0.935],[2.78,0.935],[2.76,0.85]],true); c.fillStyle='rgba(0,0,0,0.85)'; c.fill();
+    c.fillStyle=acc; lp(c,[[2.82,0.955],[2.82,0.985],[2.96,0.985],[2.96,0.955]]); c.fill();
+
+    // rear crash structure + rain light
+    c.fillStyle=car; lp(c,[[5.02,0.36],[5.16,0.34],[5.16,0.29],[5.02,0.29]]); c.fill(); edgeStroke();
+    const rl=toS(5.17,0.315); c.fillStyle=hot; c.shadowColor=hot; c.shadowBlur=W(0.08); c.fillRect(rl[0]-W(0.012),rl[1]-W(0.022),W(0.024),W(0.044)); c.shadowBlur=0;
+
+    // wing elements (solver geometry) + swan-neck pylon
+    c.strokeStyle=car; c.lineWidth=Math.max(2,W(0.03));
+    const sw=[[4.82,0.49],[4.98,0.64],[5.12,0.90],[5.2,0.93]]; sp(c,sw,false); c.stroke();
+    const dNow=flapNow();
+    const fwStale=fwView!==cur.fw;
+    const elPts=(el,i)=>(i===4&&anim<1)?CAR.rwFlap(dNow):(i===2&&fwStale)?CAR.fwFlap(fwView):el.pts;
+    cur.els.forEach((el,i)=>{ if(i===0) return; lp(c,elPts(el,i)); c.fillStyle=paint(1,0.0); c.fill(); edgeStroke(); });
+    // DRS actuator pod
+    const pv=toS(CAR.PIV[0],CAR.PIV[1]);
+    c.fillStyle=car; c.beginPath(); c.ellipse(pv[0]-W(0.12),pv[1]-W(0.04),W(0.06),W(0.022),0,0,Math.PI*2); c.fill(); edgeStroke();
+
+    // endplates (see-through so the wing sections stay readable)
+    const ep=(pts,band,louv)=>{ lp(c,pts); c.globalAlpha=0.82; c.fillStyle=vgrad(c,1,0,[[0,hi],[0.5,car],[1,car]]); c.fill(); c.globalAlpha=1; edgeStroke();
+      c.save(); lp(c,pts); c.clip();
+      if(band){ c.fillStyle=acc; lp(c,band); c.fill(); }
+      c.strokeStyle='rgba(0,0,0,0.55)'; c.lineWidth=Math.max(1,W(0.012)); louv.forEach(([a,b])=>{const p=toS(...a),q=toS(...b); c.beginPath(); c.moveTo(p[0],p[1]); c.lineTo(q[0],q[1]); c.stroke();});
+      c.restore(); };
+    ep([[-0.03,0.03],[-0.02,0.17],[0.12,0.215],[0.45,0.26],[0.74,0.3],[0.79,0.24],[0.78,0.03]],[[-0.1,0.03],[0.9,0.03],[0.9,0.052],[-0.1,0.052]],
+       [[[0.55,0.07],[0.62,0.2]],[[0.62,0.07],[0.69,0.2]],[[0.69,0.07],[0.76,0.2]]]);
+    ep([[4.98,0.38],[4.99,0.99],[5.56,1.0],[5.6,0.96],[5.6,0.56],[5.46,0.40],[5.24,0.33],[5.06,0.33]],[[4.9,0.945],[5.7,0.945],[5.7,1.02],[4.9,1.02]],
+       [[[5.08,0.86],[5.16,0.92]],[[5.08,0.80],[5.16,0.86]],[[5.08,0.74],[5.16,0.80]],[[5.5,0.5],[5.56,0.62]]]);
+    // wing sections show through the endplate as an outline
+    cur.els.forEach((el,i)=>{ if(i<3) return; lp(c,elPts(el,i)); c.strokeStyle=edge; c.lineWidth=ew; c.stroke(); });
+    // hover / drag highlight on the parts you can operate
+    const glow=(ids)=>{ c.save(); c.shadowColor=acc; c.shadowBlur=W(0.06); c.strokeStyle=acc; c.lineWidth=Math.max(1.5,W(0.01)); ids.forEach(i=>{ lp(c,elPts(cur.els[i],i)); c.stroke(); }); c.restore(); };
+    if(hover==='fw'||drag) glow([1,2]); if(hover==='rw') glow([3,4]);
+
+    // Cp ribbon on every solved surface
+    if(anim>=1){
+      c.lineWidth=Math.max(1.6,W(0.012));
+      cur.Pp.forEach((p,i)=>{ if(fwStale&&p.el===2) return; const a=toS(p.x1,p.y1), b=toS(p.x1+p.c*p.L,p.y1+p.s*p.L); c.strokeStyle=`rgb(${cpRGB(cur.cp[i])})`; c.beginPath(); c.moveTo(a[0],a[1]); c.lineTo(b[0],b[1]); c.stroke(); });
+    }
+
+    // annotations
+    c.font='10.5px "JetBrains Mono", monospace';
+    if(Wd>=640){
+      const U=(t,x)=>label(c,t,toS(x,0)[0],gy+30,mute,'center');
+      U('FRONT WING · FLAP '+fwView+'°',0.38); U('FLOOR · GROUND EFFECT',2.85); U('DIFFUSER',4.75);
+      const r=toS(5.3,1.06); label(c,'REAR WING',r[0],r[1],mute,'center');
+      label(c,target?'DRS ON':'DRS OFF',pv[0]+10,pv[1]-W(0.09),hot,'left');
+      const fl=toS(0.36,0.42); label(c,'↕ DRAG FLAP',fl[0],fl[1],acc,'center');
+      label(c,'CLICK · DRS',r[0],r[1]-14,acc,'center');
+    }
+  }
+
+  function overlay(){   // rolling road + wheels (they rotate, so drawn every frame)
+    const mute=css('--muted'), tyre=css('--tyre'), rim=css('--rim'), acc=css('--accent'), hot=css('--hot'), edge=css('--car-edge');
+    ctx.fillStyle=tyre; ctx.fillRect(0,gy,Wd,12);
+    ctx.strokeStyle=mute; ctx.lineWidth=2; ctx.setLineDash([18,22]); ctx.lineDashOffset=-roll*s; ctx.beginPath(); ctx.moveTo(0,gy+6); ctx.lineTo(Wd,gy+6); ctx.stroke(); ctx.setLineDash([]);
+    ctx.font='10.5px "JetBrains Mono", monospace'; ctx.fillStyle=mute; ctx.textAlign='left';
+    if(Wd>=640) ctx.fillText('ROLLING ROAD · U∞ →',16,gy+30);
+    if(!cur){ ctx.fillText('SOLVING PANEL SYSTEM…',x0px+1.6*s,gy-0.5*s); return; }
+    for(const xw of [CAR.XF,CAR.XR]){
+      const c=toS(xw,0.36), R=0.36*s;
+      const tg=ctx.createRadialGradient(c[0],c[1],R*0.6,c[0],c[1],R); tg.addColorStop(0,'#0a0c0f'); tg.addColorStop(0.75,'#1b2027'); tg.addColorStop(1,'#0c0e11');
+      ctx.fillStyle=tg; ctx.beginPath(); ctx.arc(c[0],c[1],R,0,Math.PI*2); ctx.fill();
+      ctx.strokeStyle=edge; ctx.lineWidth=1; ctx.stroke();
+      ctx.strokeStyle='rgba(255,255,255,0.07)'; ctx.lineWidth=R*0.05; ctx.beginPath(); ctx.arc(c[0],c[1],R*0.9,Math.PI*1.1,Math.PI*1.6); ctx.stroke();
+      ctx.strokeStyle=hot; ctx.lineWidth=Math.max(1.2,R*0.035); ctx.beginPath(); ctx.arc(c[0],c[1],R*0.8,0,Math.PI*2); ctx.stroke();
+      const wg=ctx.createLinearGradient(c[0],c[1]-R*0.64,c[0],c[1]+R*0.64); wg.addColorStop(0,rim); wg.addColorStop(1,'#14181d');
+      ctx.fillStyle=wg; ctx.beginPath(); ctx.arc(c[0],c[1],R*0.64,0,Math.PI*2); ctx.fill();
+      ctx.strokeStyle=acc; ctx.lineWidth=Math.max(1,R*0.03); ctx.beginPath(); ctx.arc(c[0],c[1],R*0.54,0,Math.PI*2); ctx.stroke();
+      ctx.fillStyle='rgba(255,255,255,0.55)';
+      for(let k=0;k<5;k++){ const a=roll/0.36+k*2*Math.PI/5; ctx.beginPath(); ctx.arc(c[0]+Math.cos(a)*R*0.38,c[1]+Math.sin(a)*R*0.38,Math.max(1,R*0.035),0,Math.PI*2); ctx.fill(); }
+      ctx.fillStyle=acc; ctx.beginPath(); ctx.arc(c[0],c[1],R*0.1,0,Math.PI*2); ctx.fill();
+    }
+  }
+
+  /* ===== particles ===== */
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)');
+  const P=[], NP=Math.min(650,Math.round(innerWidth*0.36)), smoke=[];
+  function spawn(p,anywhere){
+    const ymax=Math.min(B.y1,3);
+    for(let t=0;t<6;t++){
+      const x=anywhere?B.x0+Math.random()*(B.x1-B.x0):B.x0-Math.random()*0.4;
+      const y=0.015+Math.pow(Math.random(),1.35)*(ymax-0.015);
+      if(!cur.inside(x,y)){p.x=x;p.y=y;p.life=0;return;}
+    }
+    p.x=B.x0-0.1;p.y=ymax;p.life=0;
+  }
+  function seedAll(){P.length=0;for(let i=0;i<NP;i++){const p={};spawn(p,true);P.push(p);}}
+  const DT=0.024;
+  function stepP(p,isSmoke){
+    const [u,v]=cur.sample(p.x,p.y), sp=Math.hypot(u,v);
+    if(!isFinite(sp)||sp>5) return false;
+    const nx=p.x+u*DT, ny=p.y+v*DT;
+    if(cur.inside(nx,ny)) return false;
+    const a=toS(p.x,p.y), b=toS(nx,ny), c=cpRGB(1-sp*sp);
+    tctx.strokeStyle=`rgba(${c},${isSmoke?0.95:0.7})`; tctx.lineWidth=isSmoke?2.6:1.3;
+    tctx.beginPath(); tctx.moveTo(a[0],a[1]); tctx.lineTo(b[0],b[1]); tctx.stroke();
+    p.x=nx; p.y=ny; p.life++;
+    return !(nx>B.x1+0.05||ny>B.y1+0.3||p.life>4000);
+  }
+
+  /* smoke rake: steady streaklines from fixed nozzles, animated so the smoke always flows */
+  let rakePhase=0;
+  function drawRake(){
+    if(!cur||!cur.rake||anim<1) return;
+    const smokeCol=css('--smoke'), glow=css('--smoke-glow');
+    ctx.save(); ctx.lineCap='round'; ctx.lineJoin='round';
+    cur.rake.forEach((L,k)=>{
+      ctx.beginPath(); for(let i=0;i<L.length;i+=2){ const p=toS(L[i],L[i+1]); i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]); }
+      ctx.setLineDash([]); ctx.strokeStyle=glow; ctx.lineWidth=Math.max(3,s*0.03); ctx.stroke();
+      ctx.setLineDash([s*0.22,s*0.1]); ctx.lineDashOffset=-(rakePhase+k*7)*s*0.02; ctx.strokeStyle=smokeCol; ctx.lineWidth=Math.max(1.4,s*0.009); ctx.stroke();
+    });
+    ctx.setLineDash([]);
+    // the rake itself: a vertical bar of nozzles upstream of the car
+    const mute=css('--muted'), x0=cur.rake[0][0], a=toS(x0,0), b=toS(x0,CAR.RAKE[CAR.RAKE.length-1]+0.08);
+    ctx.strokeStyle=mute; ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(a[0]-3,a[1]); ctx.lineTo(b[0]-3,b[1]); ctx.stroke();
+    ctx.fillStyle=mute; cur.rake.forEach(L=>{ const p=toS(L[0],L[1]); ctx.fillRect(p[0]-3,p[1]-1.5,7,3); });
+    ctx.font='10.5px "JetBrains Mono", monospace'; ctx.textAlign='center'; ctx.fillText('SMOKE RAKE',b[0]-3,b[1]-8);
+    ctx.restore();
+  }
+
+  function compose(){ ctx.clearRect(0,0,Wd,Hd); ctx.drawImage(baseC,0,0,Wd,Hd); ctx.drawImage(trail,0,0,Wd,Hd); ctx.drawImage(carC,0,0,Wd,Hd); overlay(); }
+  let running=false, visible=true, last=0;
+  let wand=null;        // where the cursor smoke wand is held
+  function frame(t){
+    if(!running) return;
+    const dt=last?Math.min(50,t-last):16; last=t;
+    roll+=DT*dt/16; rakePhase+=dt/16;
+    if(anim<1){ anim=Math.min(1,anim+dt/650); drawBase(); }
+    tctx.globalCompositeOperation='destination-out'; tctx.fillStyle='rgba(0,0,0,0.12)'; tctx.fillRect(0,0,Wd,Hd);
+    tctx.globalCompositeOperation='source-over'; tctx.lineCap='round';
+    if(cur){
+      if(wand&&!drag){ for(let k=0;k<2;k++){ const x=wand[0]+(Math.random()-.5)*0.04, y=wand[1]+(Math.random()-.5)*0.04; if(!cur.inside(x,y)) smoke.push({x,y,life:0}); } if(smoke.length>500) smoke.splice(0,smoke.length-500); }
+      for(const p of P){ if(!stepP(p,false)) spawn(p); }
+      for(let i=smoke.length-1;i>=0;i--){ if(!stepP(smoke[i],true)) smoke.splice(i,1); }
+    }
+    compose(); requestAnimationFrame(frame);
+  }
+  function start(){
+    if(reduce.matches||!visible||document.hidden){ running=false; if(anim<1){anim=1;drawBase();} compose(); return; }
+    if(!running){ running=true; last=0; requestAnimationFrame(frame); }
+  }
+
+  /* ===== direct manipulation on the car ===== */
+  let hover=null, drag=null;
+  const FWS=[12,14,16,18,20,22,24,26,28];
+  const snapFW=v=>Math.max(12,Math.min(28,Math.round(v/2)*2));
+  function hitPart(x,y){
+    if(x>-0.08&&x<0.85&&y>-0.02&&y<0.34) return 'fw';
+    if(x>4.95&&x<5.65&&y>0.6&&y<1.06) return 'rw';
+    return null;
+  }
+  const local=e=>{ const r=cv.getBoundingClientRect(); return toW(e.clientX-r.left,e.clientY-r.top); };
+  hero.addEventListener('pointermove',e=>{
+    if(!cur) return;
+    const [x,y]=local(e);
+    if(drag){ const v=snapFW(drag.fw0+(y-drag.y0)/0.24*180/Math.PI); if(v!==fwView){ setFwView(v); } e.preventDefault(); return; }
+    const onUI=e.target.closest('a,button,input,.hud,.hero-inner > *');
+    const h=onUI?null:hitPart(x,y);
+    if(h!==hover){ hover=h; cv.style.cursor=h==='fw'?'ns-resize':h==='rw'?'pointer':''; hero.style.cursor=cv.style.cursor; drawCar(); compose(); }
+    wand=(onUI||h||cur.inside(x,y)||reduce.matches)?null:[x,y];
+  });
+  hero.addEventListener('pointerleave',()=>{ wand=null; if(hover){ hover=null; hero.style.cursor=''; drawCar(); compose(); } });
+  hero.addEventListener('pointerdown',e=>{
+    if(!cur||e.target.closest('a,button,input,.hud')) return;
+    const [x,y]=local(e), h=hitPart(x,y);
+    if(h==='fw'){ drag={y0:y,fw0:fwView}; hero.setPointerCapture?.(e.pointerId); e.preventDefault(); }
+    else if(h==='rw'){ setDRS(target?0:1); }
+    else if(e.pointerType!=='mouse'&&!cur.inside(x,y)) wand=[x,y];
+  });
+  const endDrag=()=>{ if(!drag) return; drag=null; commitFW(); };
+  hero.addEventListener('pointerup',endDrag); hero.addEventListener('pointercancel',endDrag);
+
+  /* ===== DRS + front flap state ===== */
+  const bClosed=document.getElementById('drs-closed'), bOpen=document.getElementById('drs-open');
+  const fwIn=document.getElementById('fw'), fwOut=document.getElementById('r-fw');
+  function status(){ readouts(); }
+  function readouts(){
+    bClosed.setAttribute('aria-pressed',target===0); bOpen.setAttribute('aria-pressed',target===1);
+    fwOut.textContent=fwView+'°';
+    const pend=cur&&(cur.fw!==fwT||cur.drs!==target);
+    if(!cur){ ['r-cl','r-bal','r-df'].forEach(id=>document.getElementById(id).textContent='…'); return; }
+    document.getElementById('r-cl').textContent=pend?'…':cur.CL.toFixed(2);
+    document.getElementById('r-bal').textContent=pend?'…':(cur.balance*100).toFixed(1)+'% F';
+    const ref=states[key(0,FW0)], base=target===0&&cur.fw===FW0;
+    let df='…'; if(ref&&!pend){ const v=Math.round((cur.CL/ref.CL-1)*100); df=base?'baseline':(v>0?'+':'')+v+'%'; }
+    document.getElementById('r-df').textContent=df;
+  }
+  function show(st,animate){ if(st.drs!==target||st.fw!==fwT) return; cur=st; for(const p of P) if(cur.inside(p.x,p.y)) spawn(p);
+    anim=(animate&&!reduce.matches)?0:1; drawBase(); compose(); readouts(); start(); }
+  function fetchShow(animate){ const k=key(target,fwT); if(states[k]) show(states[k],animate); else { readouts(); requestState(target,fwT,st=>{ put(st); show(st,animate); },true); } }
+  function setDRS(d){ if(d===target) return; animFrom=target; target=d; smoke.length=0; fetchShow(true); }
+  function setFwView(v){ fwView=v; fwIn.value=v; readouts(); drawCar(); compose(); }
+  function commitFW(){ if(fwView===fwT) return; fwT=fwView; animFrom=target; fetchShow(false); }
+  let fwTimer;
+  fwIn.addEventListener('input',()=>{ setFwView(+fwIn.value); clearTimeout(fwTimer); fwTimer=setTimeout(commitFW,160); });
+  bClosed.addEventListener('click',()=>setDRS(0));
+  bOpen.addEventListener('click',()=>setDRS(1));
+  hero.addEventListener('keydown',e=>{ if(e.target.matches('input')) return; if(e.key==='d'||e.key==='D') setDRS(target?0:1); });
+  function prefetch(){ for(const d of [target,target?0:1]) for(const f of FWS) if(!states[key(d,f)]) requestState(d,f,put); }
+
+  size(); readouts(); start();
+  let rt; new ResizeObserver(()=>{clearTimeout(rt);rt=setTimeout(()=>{size();},150)}).observe(cv);
+  reduce.addEventListener?.('change',()=>{tctx.clearRect(0,0,Wd,Hd);compose();start();});
+  const redraw=()=>{drawBase();compose()};
+  matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change',redraw);
+  new MutationObserver(redraw).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+  new IntersectionObserver(es=>{visible=es[0].isIntersecting; if(!visible) running=false; start();}).observe(hero);
+  document.addEventListener('visibilitychange',()=>{ if(document.hidden) running=false; else start(); });
+  document.fonts?.ready.then(redraw);
+
+  /* telemetry */
+  const T0=2022.5, T1=2027.75, pct=t=>((t-T0)/(T1-T0)*100)+'%';
+  document.querySelectorAll('#tele .bar').forEach(b=>{const a=+b.dataset.s,e=+b.dataset.e;b.style.left=pct(a);b.style.width=((e-a)/(T1-T0)*100)+'%';});
+  document.querySelectorAll('#tele .dot').forEach(d=>d.style.left=pct(+d.dataset.p));
+  const ticks=document.getElementById('ticks'), tele=document.getElementById('tele');
+  for(let y=2023;y<=2027;y++){ const sp=document.createElement('span'); sp.textContent=y; sp.style.left=pct(y); ticks.appendChild(sp); }
+  function lines(){
+    tele.querySelectorAll('.vline').forEach(n=>n.remove());
+    const tr=ticks.getBoundingClientRect(), te=tele.getBoundingClientRect();
+    const mk=(t,cls)=>{const v=document.createElement('div');v.className='vline'+(cls?' '+cls:'');v.style.left=(tr.left-te.left+(t-T0)/(T1-T0)*tr.width)+'px';tele.appendChild(v);};
+    for(let y=2023;y<=2027;y++) mk(y);
+    const d=new Date(), now=Math.min(T1,Math.max(T0,d.getFullYear()+d.getMonth()/12+d.getDate()/365)); mk(now,'now');
+  }
+  lines(); new ResizeObserver(lines).observe(tele);
+
+
+  /* ===== page interaction: spotlight, scroll-spy, telemetry readout, project summaries ===== */
+  document.addEventListener('pointermove',e=>{ const el=e.target.closest&&e.target.closest('.ix'); if(!el) return; const r=el.getBoundingClientRect(); el.style.setProperty('--mx',(e.clientX-r.left)+'px'); el.style.setProperty('--my',(e.clientY-r.top)+'px'); },{passive:true});
+  const navLinks=[...document.querySelectorAll('.nav ul a')];
+  const SECS=['career','projects','toolchain','certificates','contact'];
+  const mark=id=>navLinks.forEach(a=>a.setAttribute('aria-current',a.getAttribute('href')==='#'+id?'true':'false'));
+  let lockUntil=0, spyT;
+  function spyNow(){
+    if(Date.now()<lockUntil) return;
+    const de=document.documentElement; let cur=null;
+    if(innerHeight+de.scrollTop>=de.scrollHeight-4) cur='contact';
+    else for(const id of SECS){ const el=document.getElementById(id); if(el&&el.getBoundingClientRect().top<=innerHeight*0.35) cur=id; }
+    mark(cur);
+  }
+  addEventListener('scroll',()=>{ clearTimeout(spyT); spyT=setTimeout(()=>{ lockUntil=0; spyNow(); },140); spyNow(); },{passive:true});
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+    const id=a.getAttribute('href').slice(1), el=document.getElementById(id); if(!el) return;
+    e.preventDefault();
+    const y=el.getBoundingClientRect().top+document.documentElement.scrollTop-(id==='top'?0:72);
+    lockUntil=Date.now()+1500; mark(SECS.includes(id)?id:null);
+    window.scrollTo({top:Math.max(0,y),behavior:reduce.matches?'auto':'smooth'});
+  }));
+  spyNow();
+  const tRead=document.getElementById('t-read'), tWhat=document.getElementById('t-what'), tLab=tRead.querySelector('.mono');
+  document.querySelectorAll('.t-row').forEach(r=>{
+    r.addEventListener('pointerenter',()=>{ tRead.classList.add('on'); tLab.textContent=r.querySelector('.lab').childNodes[0].textContent.trim(); tWhat.textContent=r.dataset.when; });
+  });
+  document.getElementById('tele').addEventListener('pointerleave',()=>{ tRead.classList.remove('on'); tLab.textContent='Hover a row'; tWhat.textContent='to read its dates and headline'; });
+
+  const modal=document.getElementById('modal'), mViz=document.getElementById('m-viz'), mBody=document.getElementById('m-body'), mPanel=modal.querySelector('.m-panel');
+  let opener=null;
+  function openProj(card){
+    const t=document.getElementById('p-'+card.dataset.p); if(!t) return;
+    opener=card; mBody.innerHTML=''; mBody.appendChild(t.content.cloneNode(true));
+    mViz.innerHTML=''; const svg=card.querySelector('svg'); if(svg){ const c=svg.cloneNode(true); c.removeAttribute('aria-label'); c.setAttribute('aria-hidden','true'); mViz.appendChild(c); }
+    modal.hidden=false; document.body.style.overflow='hidden'; mPanel.focus();
+  }
+  function closeProj(){ if(modal.hidden) return; modal.hidden=true; document.body.style.overflow=''; opener&&opener.focus(); }
+  document.querySelectorAll('.proj').forEach(c=>{
+    c.addEventListener('click',()=>openProj(c));
+    c.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openProj(c); } });
+  });
+  modal.addEventListener('click',e=>{ if(e.target.closest('[data-close]')) closeProj(); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeProj();
+    if(e.key==='Tab'&&!modal.hidden){ const f=[...mPanel.querySelectorAll('button')]; if(f.length){ e.preventDefault(); f[0].focus(); } } });
+
+  document.getElementById('yr').textContent=Math.max(2026,new Date().getFullYear());
+
+  /* touch wording */
+  if(matchMedia('(hover: none)').matches){
+    const sw=(sel,a,b)=>{ const el=document.querySelector(sel); if(el) el.innerHTML=el.innerHTML.replace(a,b); };
+    sw('#t-read .mono','Hover a row','Tap a row'); sw('#projects .sh p','Click any project','Tap any project');
+    sw('.hint','Hover the flow for smoke','Touch the flow for smoke'); sw('.hint','click the rear wing','tap the rear wing');
+    document.getElementById('tele').addEventListener('pointerleave',()=>{ tLab.textContent='Tap a row'; });
+  }
+  /* phone menu */
+  const menuBtn=document.getElementById('menu-btn'), navList=document.getElementById('navlist');
+  const setMenu=o=>{ navList.classList.toggle('open',o); menuBtn.setAttribute('aria-expanded',o); };
+  menuBtn.addEventListener('click',e=>{ e.stopPropagation(); setMenu(!navList.classList.contains('open')); });
+  navList.addEventListener('click',()=>setMenu(false));
+  document.addEventListener('click',e=>{ if(!e.target.closest('.nav')) setMenu(false); });
+  /* keep big headings inside the screen whatever font loads */
+  function fitHeads(){ document.querySelectorAll('[data-fit]').forEach(h=>{ h.style.fontSize=''; const avail=h.clientWidth; let w=0;
+    h.querySelectorAll('.slant').forEach(s=>{ w=Math.max(w,s.getBoundingClientRect().width); });
+    if(w>avail&&avail>0){ const fs=parseFloat(getComputedStyle(h).fontSize); h.style.fontSize=Math.floor(fs*avail/w*0.97)+'px'; } }); }
+  fitHeads(); document.fonts?.ready.then(fitHeads); let fitT; addEventListener('resize',()=>{ clearTimeout(fitT); fitT=setTimeout(fitHeads,120); });
+
+  /* Cp progress bar */
+  const prog=document.getElementById('prog');
+  const onScroll=()=>{const h=document.documentElement; prog.style.width=(h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight)*100)+'%';};
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  /* copy */
+  const btn=document.getElementById('copy'), emailEl=document.getElementById('email');
+  document.getElementById('email-row').addEventListener('click',e=>{ if(e.target!==btn&&!e.target.closest('#mailto')) btn.click(); });
+  btn.addEventListener('click',()=>{
+    const reset=()=>setTimeout(()=>btn.textContent='Copy email',1600);
+    const fallback=()=>{const r=document.createRange();r.selectNodeContents(emailEl);const sel=getSelection();sel.removeAllRanges();sel.addRange(r);btn.textContent='Selected, press Ctrl+C';reset();};
+    try{navigator.clipboard.writeText(emailEl.textContent).then(()=>{btn.textContent='Copied';reset();},fallback);}catch(e){fallback();}
   });
 })();
-
-/* ---------- timing tower highlight ---------- */
-(function(){
-  const links=[...document.querySelectorAll('nav.tower a')];
-  const map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
-  if(!('IntersectionObserver' in window))return;
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('on'));map.get(e.target.id)?.classList.add('on');}}),{rootMargin:'-30% 0px -60% 0px'});
-  document.querySelectorAll('main section').forEach(s=>io.observe(s));
-})();
-
-/* ---------- live flow: inverted Joukowski wing section ----------
-   Circle (centre μ, radius R through ζ=c) mapped by z = ζ + c²/ζ.
-   dW/dζ = U[e^{-iα} − R²e^{iα}/(ζ−μ)²] + iΓ/(2π(ζ−μ)),  Γ = 4πUR sin(α+β)  (Kutta)
-   Drawn in screen axes (y down), so the cambered section appears inverted and its lift points down. */
-(function(){
-  const cv=document.getElementById('flow'),ctx=cv.getContext('2d');
-  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  // complex helpers
-  const C=(r,i)=>({r,i}), add=(a,b)=>C(a.r+b.r,a.i+b.i), sub=(a,b)=>C(a.r-b.r,a.i-b.i),
-        mul=(a,b)=>C(a.r*b.r-a.i*b.i,a.r*b.i+a.i*b.r),
-        div=(a,b)=>{const d=b.r*b.r+b.i*b.i;return C((a.r*b.r+a.i*b.i)/d,(a.i*b.r-a.r*b.i)/d);},
-        csqrt=a=>{const m=Math.hypot(a.r,a.i);const r=Math.sqrt((m+a.r)/2);const i=Math.sign(a.i||1)*Math.sqrt(Math.max(0,(m-a.r)/2));return C(r,i);};
-  const c=1, mu=C(-0.09,0.11), R=Math.hypot(c-mu.r,mu.i), beta=Math.asin(mu.i/R);
-  const alphaDeg=7, alpha=alphaDeg*Math.PI/180, U=1, Gam=4*Math.PI*U*R*Math.sin(alpha+beta);
-  const eA=C(Math.cos(alpha),-Math.sin(alpha)), eAp=C(Math.cos(alpha),Math.sin(alpha));
-  const mapZ=z=>add(z,div(C(c*c,0),z));
-  // airfoil outline + chord
-  const N=220, surf=[];
-  for(let k=0;k<N;k++){const th=2*Math.PI*k/N;const zeta=C(mu.r+R*Math.cos(th),mu.i+R*Math.sin(th));surf.push({zeta,z:mapZ(zeta)});}
-  let xmin=Infinity,xmax=-Infinity; surf.forEach(s=>{xmin=Math.min(xmin,s.z.r);xmax=Math.max(xmax,s.z.r);});
-  const chord=xmax-xmin, CL=2*Gam/(U*chord);
-  document.getElementById('t-alpha').textContent=alphaDeg+'°';
-  document.getElementById('t-cl').textContent='−'+CL.toFixed(2);
-  function dWdzeta(zeta){const d=sub(zeta,mu);const t1=div(C(R*R*eAp.r,R*R*eAp.i),mul(d,d));return add(sub(C(U*eA.r,U*eA.i),t1),div(C(0,Gam/(2*Math.PI)),d));}
-  function zetaOf(z){const s=csqrt(sub(mul(z,z),C(4*c*c,0)));const a=C((z.r+s.r)/2,(z.i+s.i)/2),b=C((z.r-s.r)/2,(z.i-s.i)/2);
-    const da=Math.hypot(a.r-mu.r,a.i-mu.i),db=Math.hypot(b.r-mu.r,b.i-mu.i);return da>=db?{zeta:a,d:da}:{zeta:b,d:db};}
-  function vel(z){const {zeta,d}=zetaOf(z);if(d<R*1.002)return null;const dz=sub(C(1,0),div(C(c*c,0),mul(zeta,zeta)));
-    const m=Math.hypot(dz.r,dz.i);if(m<0.02)return C(U,0);const W=div(dWdzeta(zeta),dz);return C(W.r,-W.i);}
-  // Cp on surface
-  surf.forEach(s=>{const v=vel(C(s.z.r*1.0001,s.z.i*1.0001));const zeta=s.zeta;const dz=sub(C(1,0),div(C(c*c,0),mul(zeta,zeta)));
-    let q;const W0=dWdzeta(zeta);const m=Math.hypot(dz.r,dz.i);q=m<0.05?1:Math.hypot(W0.r,W0.i)/m;s.cp=Math.max(-3,Math.min(1,1-q*q));});
-
-  let W=0,H=0,S=1,ox=0,oy=0,parts=[],col={},raf=0;
-  // rotate by α so the freestream runs horizontally across the screen
-  const rotM=C(Math.cos(alpha),-Math.sin(alpha)), rotP=C(Math.cos(alpha),Math.sin(alpha));
-  const toScreen=z=>{const q=mul(z,rotM);return[ox+q.r*S, oy+q.i*S];}, toZ=(x,y)=>mul(C((x-ox)/S,(y-oy)/S),rotP);
-  const velS=z=>{const v=vel(z);return v?mul(v,rotM):null;};
-  function readCol(){const s=getComputedStyle(document.documentElement);['--panel','--flow','--ink','--suction','--pressure','--rule','--signal'].forEach(k=>col[k]=s.getPropertyValue(k).trim());}
-  function size(){const r=cv.getBoundingClientRect();const dpr=Math.min(2,devicePixelRatio||1);W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
-    const wide=W>760; S=wide?Math.min(W*0.085,H*0.2):Math.min(W*0.12,40);
-    if(wide){const g=Math.min(56,Math.max(16,W*0.04));const cw=Math.min(1400,W-2*g);const left=(W-cw)/2;ox=left+cw*0.74;oy=H*0.36;S=Math.min(cw*0.085,H*0.2);}else{const act=document.querySelector('.hero .actions').getBoundingClientRect();ox=W*0.5;oy=act.bottom-r.top+42;}
-    readCol(); seed(); base(); if(reduce)staticLines();}
-  function seed(){parts=[];const n=Math.round(W*H/2300);for(let i=0;i<n;i++)parts.push(spawn(true));}
-  function spawn(any){return{x:any?Math.random()*W:-5-Math.random()*60,y:Math.random()*H,age:0};}
-  function base(){ctx.fillStyle=col['--panel'];ctx.fillRect(0,0,W,H);drawWing();}
-  function drawWing(){
-    ctx.beginPath();surf.forEach((s,k)=>{const [x,y]=toScreen(s.z);k?ctx.lineTo(x,y):ctx.moveTo(x,y);});ctx.closePath();
-    ctx.fillStyle=col['--panel'];ctx.fill();ctx.lineWidth=1;ctx.strokeStyle=col['--ink'];ctx.stroke();
-    for(let k=0;k<N;k+=2){const s=surf[k];const [x,y]=toScreen(s.z);const neg=s.cp<0;const mag=neg?Math.min(1,-s.cp/2.2):Math.min(1,s.cp);
-      ctx.globalAlpha=0.25+0.75*mag;ctx.fillStyle=neg?col['--suction']:col['--pressure'];ctx.beginPath();ctx.arc(x,y,1.3+1.8*mag,0,Math.PI*2);ctx.fill();}
-    ctx.globalAlpha=1;
-    // downforce arrow
-    const [ax,ay]=toScreen(C(xmin+chord*0.25,0.02));ctx.strokeStyle=col['--signal'];ctx.fillStyle=col['--signal'];ctx.lineWidth=2;
-    const L=S*0.9;ctx.beginPath();ctx.moveTo(ax,ay+S*0.25);ctx.lineTo(ax,ay+S*0.25+L);ctx.stroke();
-    ctx.beginPath();ctx.moveTo(ax-5,ay+S*0.25+L-8);ctx.lineTo(ax,ay+S*0.25+L);ctx.lineTo(ax+5,ay+S*0.25+L-8);ctx.fill();
-  }
-  function staticLines(){base();ctx.strokeStyle=col['--flow'];ctx.lineWidth=1;const step=H/24;
-    for(let y0=step/2;y0<H;y0+=step){let x=0,y=y0;ctx.beginPath();ctx.moveTo(x,y);for(let i=0;i<1600&&x<W+5;i++){const v=velS(toZ(x,y));if(!v)break;const m=Math.hypot(v.r,v.i)||1;x+=v.r/m*2;y+=v.i/m*2;ctx.lineTo(x,y);}ctx.stroke();}
-    drawWing();}
-  function frame(){
-    ctx.globalAlpha=0.08;ctx.fillStyle=col['--panel'];ctx.fillRect(0,0,W,H);ctx.globalAlpha=1;
-    ctx.strokeStyle=col['--flow'];ctx.lineWidth=1.1;ctx.beginPath();const sp=Math.max(1.4,W/520);
-    for(const p of parts){const v=velS(toZ(p.x,p.y));if(!v){Object.assign(p,spawn(false));continue;}
-      let vx=v.r,vy=v.i;const m=Math.hypot(vx,vy);if(m>3){vx*=3/m;vy*=3/m;}
-      const nx=p.x+vx*sp,ny=p.y+vy*sp;ctx.moveTo(p.x,p.y);ctx.lineTo(nx,ny);p.x=nx;p.y=ny;p.age++;
-      if(p.x>W+10||p.y<-10||p.y>H+10||p.age>1200)Object.assign(p,spawn(false));}
-    ctx.stroke();drawWing();raf=requestAnimationFrame(frame);}
-  new ResizeObserver(()=>{cancelAnimationFrame(raf);size();if(!reduce)raf=requestAnimationFrame(frame);}).observe(cv);
-  const retheme=()=>{readCol();reduce?staticLines():base();};
-  matchMedia('(prefers-color-scheme: dark)').addEventListener('change',retheme);
-  new MutationObserver(retheme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
-  document.addEventListener('visibilitychange',()=>{cancelAnimationFrame(raf);if(!document.hidden&&!reduce)raf=requestAnimationFrame(frame);});
-})();
 </script>
-
 </body>
 </html>
