@@ -72,6 +72,13 @@ img { max-width: 100%; }
   --accent: #5CC8FF; --accent-ink: #060A10; --hot: #FF7457; --stream: rgba(233, 238, 245, 0.11);
   --foil-fill: #E9EEF5; --tyre: #1C2530; --rim: #66748A; --car: #222A35; --car-hi: #4D5A6C; --car-edge: rgba(233, 238, 245, 0.32); --smoke: rgba(236, 243, 250, 0.62); --smoke-glow: rgba(236, 243, 250, 0.09); --scrim: rgba(6, 10, 16, 0.9); color-scheme: dark;
 }
+/* always dark, whatever the browser or OS theme */
+:root, :root[data-theme="light"] {
+  --bg: #060A10; --bg-2: #0B111A; --panel: #0E1520; --fg: #E9EEF5; --muted: #8592A3; --line: #1B2634;
+  --accent: #5CC8FF; --accent-ink: #060A10; --hot: #FF7457; --stream: rgba(233, 238, 245, 0.11);
+  --foil-fill: #E9EEF5; --tyre: #1C2530; --rim: #66748A; --car: #222A35; --car-hi: #4D5A6C; --car-edge: rgba(233, 238, 245, 0.32); --smoke: rgba(236, 243, 250, 0.62); --smoke-glow: rgba(236, 243, 250, 0.09); --scrim: rgba(6, 10, 16, 0.9); color-scheme: dark;
+}
+
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
