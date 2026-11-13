@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Shibansanjai Pandian | Aerodynamics &amp; CFD">
 <meta name="twitter:image" content="https://shibansanjai.github.io/og-image.jpg">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Shibansanjai Pandian", "url": "https://shibansanjai.github.io/", "image": "https://shibansanjai.github.io/og-image.jpg", "email": "mailto:shibansanjaip@gmail.com", "jobTitle": "MSc Aerodynamics and Computation student", "description": "Aerodynamics and CFD engineer in training; wind tunnel testing with Southampton University Formula Student Team.", "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Southampton"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Karunya Institute of Technology and Sciences"}], "address": {"@type": "PostalAddress", "addressLocality": "Southampton", "addressCountry": "GB"}, "knowsAbout": ["Aerodynamics", "Computational Fluid Dynamics", "ANSYS Fluent", "OpenFOAM", "Thermal analysis", "Wind tunnel testing", "Race car aerodynamics", "Turbulence modelling", "Supersonic combustion", "CATIA", "SolidWorks", "Python", "MATLAB"], "sameAs": ["https://www.linkedin.com/in/28ss"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Shibansanjai Pandian", "url": "https://shibansanjai.github.io/", "image": "https://shibansanjai.github.io/photo.jpg", "email": "mailto:shibansanjaip@gmail.com", "jobTitle": "MSc Aerodynamics and Computation student", "description": "Aerodynamics and CFD engineer in training; wind tunnel testing with Southampton University Formula Student Team.", "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Southampton"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Karunya Institute of Technology and Sciences"}], "address": {"@type": "PostalAddress", "addressLocality": "Southampton", "addressCountry": "GB"}, "knowsAbout": ["Aerodynamics", "Computational Fluid Dynamics", "ANSYS Fluent", "OpenFOAM", "Thermal analysis", "Wind tunnel testing", "Race car aerodynamics", "Turbulence modelling", "Supersonic combustion", "CATIA", "SolidWorks", "Python", "MATLAB"], "sameAs": ["https://www.linkedin.com/in/28ss"]}</script>
 <style>
 :root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
 body { margin: 0; font: 14px/1.5 system-ui, sans-serif; }
@@ -136,9 +136,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .seg button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
 .seg button:hover:not([aria-pressed="true"]) { color: var(--fg); }
 .ro b#r-df { min-width: 5.5em; }
+.ro .note { font-size: 10.5px; letter-spacing: .02em; color: var(--muted); }
 .legend { display: flex; align-items: center; gap: 8px; }
 .legend .bar { width: 70px; height: 5px; background: var(--cp); }
-.hint { position: absolute; left: max(var(--gut), env(safe-area-inset-left, 0px)); bottom: 32px; }
+.hint { margin-top: 20px; }
 .hud label.mono { text-transform: none; letter-spacing: 0.04em; }
 @media (max-width: 900px) {
   .hero { min-height: 0; }
@@ -356,6 +357,16 @@ section { padding-block: 120px 0; }
 .c-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; margin-top: 44px; align-items: end; }
 @media (max-width: 820px) { .c-grid { grid-template-columns: 1fr; } }
 .c-grid p { margin: 0; max-width: 32em; font-size: 18px; }
+.me { display: flex; gap: 24px; align-items: flex-start; min-width: 0; }
+.me-text { min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.me-text p { margin-top: 10px !important; }
+.me-name { font-family: var(--f-display); font-weight: 800; font-size: 26px; text-transform: uppercase; line-height: 1; }
+.avatar { flex: 0 0 auto; margin: 0; width: 132px; height: 132px; max-width: 100%; border-radius: 50%; padding: 4px; background: var(--cp); position: relative; transition: transform .3s ease; }
+.avatar::after { content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 1px dashed color-mix(in srgb, var(--muted) 60%, transparent); }
+.avatar img { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid var(--bg); }
+.me:hover .avatar { transform: rotate(-4deg) scale(1.03); }
+@media (max-width: 520px) { .me { flex-direction: column; gap: 18px; } .avatar { width: 112px; height: 112px; } }
+@media (prefers-reduced-motion: reduce) { .avatar { transition: none; } }
 .chan .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 16px; border-top: 1px solid var(--line); flex-wrap: wrap; }
 .chan .row:last-child { border-bottom: 1px solid var(--line); }
 .chan .val { font-family: var(--f-display); font-weight: 700; font-size: clamp(22px, 2.6vw, 30px); color: var(--fg); text-decoration: none; word-break: break-all; user-select: all; }
@@ -467,17 +478,18 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
     <p class="lede">Aerodynamics &amp; CFD engineer in training. <b>MSc Aerodynamics and Computation</b> at Southampton, wind tunnel testing with <b>Formula Student</b>, and a <b>DRDO</b> CFD study that cut an avionics rack's peak temperature by <b>24 K</b>.</p>
     <div class="cta">
       <a class="btn primary" href="#projects">See the work →</a>
+      <a class="btn" href="Shibansanjai_Pandian_CV.pdf" target="_blank" rel="noopener" download data-cv>Download CV <span aria-hidden="true">↓</span></a>
       <a class="btn" href="#contact">Get in touch</a>
     </div>
+    <div class="hint mono">Hover the flow for smoke · drag the front flap · click the rear wing</div>
   </div>
-  <div class="hint mono">Hover the flow for smoke · drag the front flap · click the rear wing</div>
   <div class="hud">
     <div class="seg" role="group" aria-label="DRS position">
       <button type="button" id="drs-closed" aria-pressed="true">DRS off</button>
       <button type="button" id="drs-open" aria-pressed="false">DRS on</button>
     </div>
     <div class="ctrl"><label class="mono" for="fw">Front flap</label><input id="fw" type="range" min="12" max="28" step="2" value="22"><span class="ro"><b id="r-fw">22°</b></span></div>
-    <div class="ro">C<sub>L</sub> <b id="r-cl">…</b></div>
+    <div class="ro" title="A negative lift coefficient means downforce">C<sub>L</sub> <b id="r-cl">…</b> <small class="note">(−ve = downforce)</small></div>
     <div class="ro">Balance <b id="r-bal">…</b></div>
     <div class="ro">Downforce <b id="r-df">…</b></div>
   </div>
@@ -567,7 +579,6 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
             <ul>
               <li>Picking customers' online orders accurately, item by item, in the Dotcom department and loading them onto delivery trucks for dispatch.</li>
             </ul>
-            <div class="tags"><span class="tag">Accuracy</span><span class="tag">Early-morning shifts</span><span class="tag">Teamwork</span></div>
           </div>
         </article>
       </div>
@@ -783,9 +794,17 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
       <span class="mono">Contact</span>
       <h2 data-fit><span class="slant">Let's talk</span><br><span class="slant o">aerodynamics</span></h2>
       <div class="c-grid">
-        <p>Applying now for graduate roles in aerodynamics, CFD or thermal analysis starting September 2027, and open to internships and part-time opportunities alongside my MSc. Based in Southampton, UK.</p>
+        <div class="me">
+          <figure class="avatar"><img src="photo.jpg" alt="Shibansanjai Pandian" loading="lazy" width="400" height="400" decoding="async"></figure>
+          <div class="me-text">
+            <div class="me-name">Shibansanjai Pandian</div>
+            <div class="mono">MSc Aerodynamics &amp; Computation · Southampton</div>
+            <p>Applying now for graduate roles in aerodynamics, CFD or thermal analysis starting September 2027, and open to internships and part-time opportunities alongside my MSc. Based in Southampton, UK.</p>
+          </div>
+        </div>
         <div class="chan">
           <div class="row ix rowlink" id="email-row" title="Click to copy"><span class="val" id="email">shibansanjaip@gmail.com</span><span class="cbtns"><a class="copy" href="mailto:shibansanjaip@gmail.com" id="mailto">Email</a><button class="copy" id="copy" type="button">Copy email</button></span></div>
+          <a class="row ix rowlink" href="Shibansanjai_Pandian_CV.pdf" target="_blank" rel="noopener" download data-cv><span class="val">CV (PDF)</span><span class="mono go">Download CV ↓</span></a>
           <a class="row ix rowlink" href="https://www.linkedin.com/in/28ss" target="_blank" rel="noopener"><span class="val">linkedin.com/in/28ss</span><span class="mono go">Open LinkedIn ↗</span></a>
         </div>
       </div>
