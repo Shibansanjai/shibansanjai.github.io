@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Shibansanjai Pandian | Aerodynamics &amp; CFD | MSc Southampton</title>
-<meta name="description" content="Shibansanjai Pandian: MSc Aerodynamics and Computation student at the University of Southampton, aerodynamics team member at Southampton University Formula Student Team, with CFD experience in ANSYS Fluent and OpenFOAM. Seeking graduate aerodynamics roles in motorsport, automotive and aerospace.">
+<meta name="description" content="MSc Aerodynamics and Computation student at the University of Southampton. Formula Student aerodynamics, CFD in ANSYS Fluent and OpenFOAM, and thermal analysis.">
 <meta name="author" content="Shibansanjai Pandian">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://shibansanjai.github.io/">
@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Shibansanjai Pandian | Aerodynamics &amp; CFD">
 <meta name="twitter:image" content="https://shibansanjai.github.io/og-image.jpg">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Shibansanjai Pandian", "url": "https://shibansanjai.github.io/", "image": "https://shibansanjai.github.io/og-image.jpg", "email": "mailto:shibansanjaip@gmail.com", "jobTitle": "MSc Aerodynamics and Computation student", "description": "Aerodynamics and CFD engineer in training; wind tunnel testing with Southampton University Formula Student Team.", "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Southampton"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Karunya Institute of Technology and Sciences"}], "address": {"@type": "PostalAddress", "addressLocality": "Southampton", "addressCountry": "GB"}, "knowsAbout": ["Aerodynamics", "Computational Fluid Dynamics", "ANSYS Fluent", "OpenFOAM", "Wind tunnel testing", "Race car aerodynamics", "Turbulence modelling", "CATIA", "Python", "MATLAB"], "sameAs": ["https://www.linkedin.com/in/28ss"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Shibansanjai Pandian", "url": "https://shibansanjai.github.io/", "image": "https://shibansanjai.github.io/og-image.jpg", "email": "mailto:shibansanjaip@gmail.com", "jobTitle": "MSc Aerodynamics and Computation student", "description": "Aerodynamics and CFD engineer in training; wind tunnel testing with Southampton University Formula Student Team.", "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Southampton"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Karunya Institute of Technology and Sciences"}], "address": {"@type": "PostalAddress", "addressLocality": "Southampton", "addressCountry": "GB"}, "knowsAbout": ["Aerodynamics", "Computational Fluid Dynamics", "ANSYS Fluent", "OpenFOAM", "Thermal analysis", "Wind tunnel testing", "Race car aerodynamics", "Turbulence modelling", "Supersonic combustion", "CATIA", "SolidWorks", "Python", "MATLAB"], "sameAs": ["https://www.linkedin.com/in/28ss"]}</script>
 <style>
 :root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
 body { margin: 0; font: 14px/1.5 system-ui, sans-serif; }
@@ -169,6 +169,7 @@ section { padding-block: 120px 0; }
 .bar { position: absolute; top: 50%; height: 12px; transform: translateY(-50%) skewX(-18deg); }
 .bar.b-edu { background: var(--accent); }
 .bar.b-eng { background: var(--cp); }
+.bar.b-work { background: var(--muted); }
 .bar.b-lead { background: transparent; border: 1.5px solid var(--muted); }
 .bar.open { -webkit-mask: linear-gradient(90deg, #000 35%, transparent); mask: linear-gradient(90deg, #000 35%, transparent); }
 .dot { position: absolute; top: 50%; width: 11px; height: 11px; transform: translate(-50%, -50%) rotate(45deg); background: var(--hot); }
@@ -212,6 +213,8 @@ section { padding-block: 120px 0; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
 .tag { font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.04em; padding: 4px 9px; border: 1px solid var(--line); color: var(--muted); }
 
+.sub-head { margin-top: 48px; padding-bottom: 12px; color: var(--muted); }
+#career .log.log-other { margin-top: 0; }
 /* ---------- projects ---------- */
 .feature { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); border: 1px solid var(--line); background: var(--panel); }
 @media (max-width: 900px) { .feature { grid-template-columns: 1fr; } }
@@ -236,7 +239,7 @@ section { padding-block: 120px 0; }
 .card h3 { font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 25px; line-height: 1; }
 .card p { margin: 0; font-size: 15px; }
 .card .tags { margin-top: auto; padding-top: 8px; }
-.badge { position: absolute; top: 12px; left: 12px; font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 8px; background: var(--hot); color: #fff; }
+.badge { position: absolute; top: 12px; left: 12px; font-family: var(--f-mono); font-size: 10.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 8px; background: var(--hot); color: var(--bg); }
 .flowdash { stroke-dasharray: 6 8; animation: dash 1.6s linear infinite; }
 @keyframes dash { to { stroke-dashoffset: -28; } }
 .cap { font-family: var(--f-mono); font-size: 10.5px; fill: var(--muted); letter-spacing: .06em; }
@@ -395,7 +398,8 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
 
   #career .tele { min-width: 0; }
   #career .t-row, #career .axis { grid-template-columns: 116px minmax(0, 1fr); }
-  #career .t-row { height: 26px; }
+  #career .t-row { height: auto; min-height: 30px; padding-block: 3px; }
+  #career .t-row .lab { white-space: normal; overflow: visible; text-overflow: clip; line-height: 1.2; }
   #career .t-row .lab { font-size: 11px; padding-right: 8px; }
   #career .t-row .lab small { display: none; }
   .axis .ticks span { font-size: 10px; }
@@ -460,7 +464,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
       <span>Run <b>001</b></span><span>Model <b>full car</b></span><span>Ground <b>rolling road</b></span><span>Solver <b>panel method</b></span><span>Base <b>Southampton</b></span>
     </div>
     <h1 data-fit><span class="l1 slant">Shibansanjai</span><span class="l2 slant">Pandian</span></h1>
-    <p class="lede">Aerodynamics &amp; CFD engineer in training. <b>MSc Aerodynamics and Computation</b> at Southampton, wind tunnel testing with <b>Formula Student</b>, and six months of Fluent research at <b>DRDO</b>.</p>
+    <p class="lede">Aerodynamics &amp; CFD engineer in training. <b>MSc Aerodynamics and Computation</b> at Southampton, wind tunnel testing with <b>Formula Student</b>, and a <b>DRDO</b> CFD study that cut an avionics rack's peak temperature by <b>24 K</b>.</p>
     <div class="cta">
       <a class="btn primary" href="#projects">See the work →</a>
       <a class="btn" href="#contact">Get in touch</a>
@@ -484,14 +488,15 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
     <div class="wrap">
       <div class="sh">
         <h2 data-fit><span class="slant">Telemetry</span></h2>
-        <p>Study, research and leadership on one trace, from July 2022 to the end of the MSc.</p>
+        <p>Study, research, leadership and work on one trace, from July 2022 to the end of the MSc.</p>
       </div>
       <div class="tele-scroll">
         <div class="tele" id="tele">
-          <div class="t-row" data-when="Sep 2026 – Sep 2027 · University of Southampton"><div class="lab">MSc Aerodynamics &amp; Computation</div><div class="track"><span class="bar b-edu" data-s="2026.67" data-e="2027.71"></span></div></div>
-          <div class="t-row" data-when="Sep 2026 – present · wind tunnel testing"><div class="lab">SUFST aerodynamics</div><div class="track"><span class="bar b-eng open" data-s="2026.67" data-e="2027.4"></span></div></div>
-          <div class="t-row" data-when="Jan – May 2026 · four strut injector geometries"><div class="lab">B.Tech dissertation <small>scramjet</small></div><div class="track"><span class="bar b-eng" data-s="2026.0" data-e="2026.42"></span></div></div>
-          <div class="t-row" data-when="Aug 2025 – Feb 2026 · avionics rack cooling CFD"><div class="lab">DRDO-CABS research intern</div><div class="track"><span class="bar b-eng" data-s="2025.58" data-e="2026.17"></span></div></div>
+          <div class="t-row" data-when="Sep 2026 – Sep 2027 · University of Southampton"><div class="lab">MSc Aero &amp; Computation</div><div class="track"><span class="bar b-edu" data-s="2026.67" data-e="2027.71"></span></div></div>
+          <div class="t-row" data-when="Nov 2026 – present · online order picking, Dotcom"><div class="lab">Tesco festive colleague</div><div class="track"><span class="bar b-work open" data-s="2026.83" data-e="2027.2"></span></div></div>
+          <div class="t-row" data-when="Sep 2026 – present · 50% scale wind tunnel model"><div class="lab">SUFST aerodynamics</div><div class="track"><span class="bar b-eng open" data-s="2026.67" data-e="2027.4"></span></div></div>
+          <div class="t-row" data-when="Jan – May 2026 · 98.8% combustion efficiency at Mach 2.5"><div class="lab">B.Tech dissertation <small>scramjet</small></div><div class="track"><span class="bar b-eng" data-s="2026.0" data-e="2026.42"></span></div></div>
+          <div class="t-row" data-when="Aug 2025 – Feb 2026 · peak rack temperature cut by 24 K"><div class="lab">DRDO-CABS research intern</div><div class="track"><span class="bar b-eng" data-s="2025.58" data-e="2026.17"></span></div></div>
           <div class="t-row" data-when="2025 · OpenRocket trajectory and stability"><div class="lab">Sounding rocket <small>2025</small></div><div class="track"><span class="dot" data-p="2025.5"></span></div></div>
           <div class="t-row" data-when="Oct 2024 · third prize, conceptual design"><div class="lab">AeSI design competition <small>3rd</small></div><div class="track"><span class="dot" data-p="2024.79"></span></div></div>
           <div class="t-row" data-when="Dec 2023 – Jan 2024 · 60 villages in 30 days"><div class="lab">Garuda Aerospace intern</div><div class="track"><span class="bar b-eng" data-s="2023.92" data-e="2024.08"></span></div></div>
@@ -509,6 +514,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
         <span><i style="background:var(--cp)"></i>Engineering</span>
         <span><i style="border:1.5px solid var(--muted)"></i>Leadership</span>
         <span><i style="background:var(--hot);width:10px;height:10px;transform:rotate(45deg)"></i>Project or award</span>
+        <span><i style="background:var(--muted)"></i>Other work</span>
       </div>
 
       <div class="log">
@@ -518,23 +524,23 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
             <h3>Aerodynamics Team Member</h3>
             <div class="org">Southampton University Formula Student Team</div>
             <ul>
-              <li>Conducting wind tunnel testing in the aerodynamics department, building hands-on experimental skills.</li>
-              <li>Supporting the car's aerodynamic development through testing, inside a multidisciplinary student team.</li>
+              <li>Scaling the car's CAD model down to 50% in SolidWorks and preparing it for 3D printing to produce the wind tunnel test model.</li>
+              <li>Testing the 3D-printed model in the wind tunnel to measure the car's aerodynamic performance, working closely with the team on its aerodynamic development.</li>
             </ul>
-            <div class="tags"><span class="tag">Wind tunnel</span><span class="tag">Race car aero</span><span class="tag">Experimental methods</span></div>
+            <div class="tags"><span class="tag">Wind tunnel</span><span class="tag">SolidWorks</span><span class="tag">3D-printed 50% model</span><span class="tag">Race car aero</span></div>
           </div>
         </article>
         <article class="run ix">
-          <div class="when"><b>6 months</b>Aug 2025 — Feb 2026<br>India</div>
+          <div class="when"><b>24 K</b>peak temperature cut<br>Aug 2025 — Feb 2026 · India</div>
           <div>
             <h3>Research Intern</h3>
             <div class="org">DRDO Centre for Airborne Systems</div>
             <ul>
-              <li>Ran CFD and thermal analysis in ANSYS Fluent on the Thermal Analysis of Avionics Rack System project, finding the optimal inlet air velocity and temperature for rack cooling.</li>
-              <li>Built a reliable simulation method through mesh-independence studies, working with senior systems engineers.</li>
-              <li>Produced CATIA models and system layouts to support airborne system packaging decisions.</li>
+              <li>Ran a nine-case CFD parametric study in ANSYS Fluent on the Thermal Analysis of Avionics Rack System project, identifying 7.4 m/s inlet velocity and 40 Pa fan pressure as optimal and cutting the maximum component temperature by 24 K (369 K to 345 K).</li>
+              <li>Validated the results with a mesh-independence study (under 1% change between medium and fine meshes) and an energy balance check, working alongside senior systems engineers.</li>
+              <li>Produced CATIA CAD models and system layouts supporting airborne system packaging decisions.</li>
             </ul>
-            <div class="tags"><span class="tag">ANSYS Fluent</span><span class="tag">Thermal analysis</span><span class="tag">Mesh independence</span><span class="tag">CATIA</span></div>
+            <div class="tags"><span class="tag">ANSYS Fluent</span><span class="tag">Parametric study</span><span class="tag">Thermal analysis</span><span class="tag">Mesh independence</span><span class="tag">CATIA</span></div>
           </div>
         </article>
         <article class="run ix">
@@ -544,9 +550,24 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
             <div class="org">Garuda Aerospace</div>
             <ul>
               <li>Delivered agricultural drone demonstrations across about 60 villages in 30 days.</li>
-              <li>Trained farmers in the safe use of drones for fertiliser and pesticide application, explaining technical points to non-specialists.</li>
+              <li>Trained farmers in the safe use of drones for fertiliser and pesticide application, explaining technical guidance clearly to non-specialists.</li>
             </ul>
             <div class="tags"><span class="tag">UAV operations</span><span class="tag">Field outreach</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="sub-head mono">Other work experience</div>
+      <div class="log log-other">
+        <article class="run ix">
+          <div class="when"><b>Part-time</b>Nov 2026 — present<br>Southampton, UK</div>
+          <div>
+            <h3>Festive Colleague</h3>
+            <div class="org">Tesco</div>
+            <ul>
+              <li>Picking customers' online orders accurately, item by item, in the Dotcom department and loading them onto delivery trucks for dispatch.</li>
+            </ul>
+            <div class="tags"><span class="tag">Accuracy</span><span class="tag">Early-morning shifts</span><span class="tag">Teamwork</span></div>
           </div>
         </article>
       </div>
@@ -584,23 +605,25 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
               <path d="M232 60 L320 190" stroke-dasharray="4 4"/><path d="M232 190 L320 60" stroke-dasharray="4 4"/>
             </g>
             <g fill="var(--accent)"><circle cx="250" cy="119" r="2.5"/><circle cx="250" cy="125" r="2.5"/><circle cx="250" cy="131" r="2.5"/></g>
-            <text class="cap" x="12" y="30">M∞ &gt; 1  →</text>
+            <text class="cap" x="12" y="30">M = 2.5  →</text>
             <text class="cap h" x="236" y="30">OBLIQUE SHOCKS</text>
             <text class="cap" x="120" y="230">STRUT + FUEL INJECTION</text>
             <text class="cap" x="370" y="230">MIXING · COMBUSTION</text>
           </svg>
-          <div class="tags" style="margin-top:0"><span class="tag">4 strut-base geometries</span><span class="tag">Compared head to head</span></div>
+          <div class="tags" style="margin-top:0"><span class="tag">4 strut-base geometries</span><span class="tag">Mach 2.5</span><span class="tag">98.8% combustion efficiency</span></div>
         </div>
         <div class="body">
           <div class="mono">B.Tech dissertation · Jan — May 2026</div>
           <h3>Strut injectors in a supersonic scramjet combustor</h3>
-          <p>A numerical study of four strut-base injector geometries in the DLR scramjet combustor, run in ANSYS Fluent.</p>
-          <p>I compared combustion efficiency and total-pressure loss across all four designs to find which geometry suits which operating condition.</p>
+          <p>A numerical study of four strut-base injector geometries in a Mach 2.5 DLR scramjet combustor, run in ANSYS Fluent.</p>
+          <p>A 45° outward-angled base gave the highest exit combustion efficiency (98.8%) but also the highest total-pressure loss coefficient (0.55). A semi-circular base gave the lowest loss (0.50).</p>
           <dl class="spec">
-            <dt>Case</dt><dd>DLR scramjet combustor</dd>
+            <dt>Case</dt><dd>DLR scramjet combustor, Mach 2.5</dd>
             <dt>Solver</dt><dd>Density-based, Roe-FDS flux</dd>
             <dt>Turbulence</dt><dd>SST k-ω</dd>
-            <dt>Outputs</dt><dd>Combustion efficiency, total-pressure loss</dd>
+            <dt>Combustion</dt><dd>Finite-rate / eddy-dissipation</dd>
+            <dt>Best efficiency</dt><dd>98.8% · 45° outward base</dd>
+            <dt>Lowest loss</dt><dd>0.50 · semi-circular base</dd>
           </dl>
           <span class="more">Open summary <i>→</i></span>
         </div>
@@ -609,6 +632,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
       <div class="cards">
         <article class="card ix proj" data-p="rack" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open summary: Avionics rack cooling">
           <div class="sk">
+            <span class="badge">24 K cooler</span>
             <svg viewBox="0 0 320 180" aria-hidden="true">
               <defs><linearGradient id="g-heat" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#2B4EC9"/><stop offset=".5" stop-color="#7CC08A"/><stop offset="1" stop-color="#D9452B"/></linearGradient></defs>
               <rect x="110" y="24" width="100" height="132" fill="none" stroke="var(--fg)" stroke-width="2"/>
@@ -621,7 +645,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
           <div class="in">
             <div class="mono">DRDO-CABS · 2025–26</div>
             <h3>Avionics rack cooling</h3>
-            <p>Thermal CFD to find the inlet air velocity and temperature that keep an airborne rack cool, backed by a mesh-independence study.</p>
+            <p>A nine-case Fluent parametric study that found the best inlet velocity and fan pressure, cutting peak component temperature by 24 K.</p>
             <div class="tags"><span class="tag">Fluent</span><span class="tag">Thermal</span></div>
             <span class="more">Open summary <i>→</i></span>
           </div>
@@ -664,7 +688,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
           <div class="in">
             <div class="mono">Independent · 2025</div>
             <h3>Sounding rocket</h3>
-            <p>Modelled the trajectory and stability of a sounding rocket in OpenRocket, applying flight dynamics.</p>
+            <p>Designed a sounding rocket in OpenRocket, modelling its trajectory and stability.</p>
             <div class="tags"><span class="tag">OpenRocket</span><span class="tag">Stability</span></div>
             <span class="more">Open summary <i>→</i></span>
           </div>
@@ -704,10 +728,10 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
       </div>
       <div class="tools">
         <div class="tool wide ix"><span class="mono">Solve</span><h3>CFD &amp; simulation</h3><div class="chips"><span class="chip k">ANSYS Fluent</span><span class="chip">Fluent Meshing</span><span class="chip k">OpenFOAM</span><span class="chip">ANSYS Workbench</span><span class="chip">OpenRocket</span></div></div>
-        <div class="tool ix"><span class="mono">Test</span><h3>Experimental</h3><div class="chips"><span class="chip k">Subsonic wind tunnel</span></div></div>
-        <div class="tool ix"><span class="mono">Design</span><h3>CAD</h3><div class="chips"><span class="chip k">CATIA</span><span class="chip">SolidWorks</span><span class="chip">AutoCAD</span></div></div>
+        <div class="tool ix"><span class="mono">Test</span><h3>Experimental</h3><div class="chips"><span class="chip k">Subsonic wind tunnel</span><span class="chip">Scale models for 3D printing</span></div></div>
+        <div class="tool ix"><span class="mono">Design</span><h3>CAD</h3><div class="chips"><span class="chip k">CATIA</span><span class="chip k">SolidWorks</span><span class="chip">AutoCAD</span></div></div>
         <div class="tool ix"><span class="mono">Post-process</span><h3>Code</h3><div class="chips"><span class="chip">Python</span><span class="chip">MATLAB</span></div></div>
-        <div class="tool ix"><span class="mono">Communicate</span><h3>Languages</h3><div class="chips"><span class="chip">English · IELTS 7.5</span><span class="chip">Tamil · native</span></div></div>
+        <div class="tool ix"><span class="mono">Communicate</span><h3>Languages &amp; office</h3><div class="chips"><span class="chip">English · IELTS 7.5</span><span class="chip">Tamil · native</span><span class="chip">Microsoft Office</span></div></div>
       </div>
     </div>
   </section>
@@ -719,13 +743,14 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
         <div class="edu first ix">
           <div class="mono">Sep 2026 — Sep 2027 · University of Southampton</div>
           <h3>MSc Aerodynamics and Computation</h3>
-          <div class="mods"><span class="tag">Applications of CFD</span><span class="tag">Computational Aerodynamics</span><span class="tag">Turbulence</span><span class="tag">Race Car Aerodynamics</span><span class="tag">Experimental Methods</span><span class="tag">Data-Driven Fluid Mechanics</span></div>
+          <div class="mods"><span class="tag">Applications of CFD</span><span class="tag">Computational Aerodynamics</span><span class="tag">Turbulence</span><span class="tag">Race Car Aerodynamics</span><span class="tag">Experimental Methods for Aerodynamics</span><span class="tag">Data-Driven Fluid Mechanics</span></div>
         </div>
         <div class="edu ix">
           <div class="mono">Jul 2022 — May 2026 · Karunya Institute, India</div>
           <h3>B.Tech Aerospace Engineering</h3>
           <div class="grade"><b>76.1%</b><span class="mono">First Class</span></div>
-          <p>Completed alongside a six-month DRDO internship. Outstanding grade in FEA lab; final-year Aircraft Design Project.</p>
+          <div class="mods"><span class="tag">Aerodynamics</span><span class="tag">Computational Fluid Dynamics</span><span class="tag">Gas Dynamics</span><span class="tag">Heat and Mass Transfer</span><span class="tag">Propulsion</span><span class="tag">Aircraft Stability and Control</span></div>
+          <p>Achieved a First Class degree alongside a six-month DRDO internship in the final year. Outstanding grade in the FEA lab; aircraft design and performance analysis in the final-year Aircraft Design Project.</p>
         </div>
       </div>
       <div>
@@ -758,7 +783,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
       <span class="mono">Contact</span>
       <h2 data-fit><span class="slant">Let's talk</span><br><span class="slant o">aerodynamics</span></h2>
       <div class="c-grid">
-        <p>Open to graduate aerodynamics and CFD roles in automotive, motorsport and aerospace. Based in Southampton, UK.</p>
+        <p>Applying now for graduate roles in aerodynamics, CFD or thermal analysis starting September 2027, and open to internships and part-time opportunities alongside my MSc. Based in Southampton, UK.</p>
         <div class="chan">
           <div class="row ix rowlink" id="email-row" title="Click to copy"><span class="val" id="email">shibansanjaip@gmail.com</span><span class="cbtns"><a class="copy" href="mailto:shibansanjaip@gmail.com" id="mailto">Email</a><button class="copy" id="copy" type="button">Copy email</button></span></div>
           <a class="row ix rowlink" href="https://www.linkedin.com/in/28ss" target="_blank" rel="noopener"><span class="val">linkedin.com/in/28ss</span><span class="mono go">Open LinkedIn ↗</span></a>
@@ -781,24 +806,24 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
   <h3 id="m-title">Strut injectors in a supersonic scramjet combustor</h3>
   <p class="m-lede">A numerical investigation of how the base geometry of a strut injector changes performance inside the DLR scramjet combustor.</p>
   <div class="m-grid">
-    <div><h4>The question</h4><p>Which of four strut-base injector geometries best suits which operating condition?</p></div>
-    <div><h4>What I did</h4><p>Modelled all four geometries in ANSYS Fluent with a density-based solver, Roe-FDS flux scheme and the SST k-ω turbulence model.</p></div>
-    <div><h4>How I judged them</h4><p>Compared combustion efficiency against total-pressure loss for each design.</p></div>
-    <div><h4>Outcome</h4><p>Identified the best-suited geometry for different operating conditions.</p></div>
+    <div><h4>The question</h4><p>How does the shape of the strut's base trade combustion efficiency against total-pressure loss?</p></div>
+    <div><h4>What I did</h4><p>Modelled four strut-base geometries in a Mach 2.5 DLR scramjet combustor in ANSYS Fluent: SST k-ω turbulence, density-based Roe-FDS solver and finite-rate/eddy-dissipation combustion.</p></div>
+    <div><h4>Best combustion</h4><p>A 45° outward-angled base gave the highest exit combustion efficiency, 98.8%, but the highest total-pressure loss coefficient, 0.55.</p></div>
+    <div><h4>Lowest loss</h4><p>A semi-circular base gave the lowest total-pressure loss coefficient, 0.50.</p></div>
   </div>
-  <div class="tags"><span class="tag">ANSYS Fluent</span><span class="tag">Compressible flow</span><span class="tag">SST k-ω</span><span class="tag">Roe-FDS</span></div>
+  <div class="tags"><span class="tag">ANSYS Fluent</span><span class="tag">Supersonic combustion</span><span class="tag">SST k-ω</span><span class="tag">Roe-FDS</span><span class="tag">Eddy-dissipation</span></div>
 </template>
 <template id="p-rack">
   <div class="mono">DRDO-CABS research internship · Aug 2025 — Feb 2026</div>
   <h3 id="m-title">Thermal analysis of an avionics rack</h3>
-  <p class="m-lede">CFD and thermal analysis for the Thermal Analysis of Avionics Rack System project at DRDO's Centre for Airborne Systems.</p>
+  <p class="m-lede">A CFD parametric study for the Thermal Analysis of Avionics Rack System project at DRDO's Centre for Airborne Systems.</p>
   <div class="m-grid">
-    <div><h4>The question</h4><p>What inlet air velocity and temperature keep the rack's electronics adequately cooled?</p></div>
-    <div><h4>What I did</h4><p>Ran CFD and thermal simulations in ANSYS Fluent and produced CATIA models and system layouts for packaging decisions.</p></div>
-    <div><h4>Rigour</h4><p>Built the simulation method on mesh-independence studies, working with senior systems engineers.</p></div>
-    <div><h4>Outcome</h4><p>Identified the optimal inlet air velocity and temperature for rack cooling.</p></div>
+    <div><h4>The question</h4><p>Which inlet velocity and fan pressure keep the rack's components coolest?</p></div>
+    <div><h4>What I did</h4><p>Ran nine CFD cases in ANSYS Fluent and produced CATIA CAD models and system layouts for packaging decisions.</p></div>
+    <div><h4>Validation</h4><p>A mesh-independence study (under 1% change between medium and fine meshes) and an energy balance check, alongside senior systems engineers.</p></div>
+    <div><h4>Outcome</h4><p>7.4 m/s inlet velocity and 40 Pa fan pressure were optimal, cutting the maximum component temperature by 24 K, from 369 K to 345 K.</p></div>
   </div>
-  <div class="tags"><span class="tag">ANSYS Fluent</span><span class="tag">Thermal analysis</span><span class="tag">Mesh independence</span><span class="tag">CATIA</span></div>
+  <div class="tags"><span class="tag">ANSYS Fluent</span><span class="tag">Parametric study</span><span class="tag">Thermal analysis</span><span class="tag">Mesh independence</span><span class="tag">CATIA</span></div>
 </template>
 <template id="p-tunnel">
   <div class="mono">Independent project · 2023</div>
@@ -815,7 +840,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
   <h3 id="m-title">Sounding rocket trajectory and stability</h3>
   <p class="m-lede">Flight dynamics practice on a small sounding rocket.</p>
   <div class="m-grid">
-    <div><h4>What I did</h4><p>Modelled the rocket's trajectory and stability in OpenRocket.</p></div>
+    <div><h4>What I did</h4><p>Designed a sounding rocket in OpenRocket and modelled its trajectory and stability.</p></div>
     <div><h4>Skills</h4><p>Flight dynamics and simulation.</p></div>
   </div>
   <div class="tags"><span class="tag">OpenRocket</span><span class="tag">Stability</span><span class="tag">Trajectory</span></div>
