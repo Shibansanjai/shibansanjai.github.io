@@ -425,6 +425,19 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
 .sh h2 .slant { color: var(--fg); }
 .contact h2 .o { -webkit-text-stroke-color: var(--accent); }
 .contact h2 .slant:first-child { color: var(--fg); }
+/* ===== design pass: one accent (coral) on quiet neutrals; teal only where it encodes data ===== */
+#career, #projects, .modal, #toolchain, #education, #certificates, .contact { --accent: var(--s1); }
+.sector { border-color: var(--line); color: var(--muted); padding: 7px 14px 7px 12px; letter-spacing: .1em; }
+.sector i { width: 16px; height: 2px; border-radius: 0; background: var(--accent); }
+.sector b { color: var(--fg); font-weight: 600; }
+.nav ul a::before { background: color-mix(in srgb, var(--fg) 28%, transparent) !important; }
+.nav ul a[aria-current="true"]::before { background: var(--accent) !important; }
+.badge.pb, .badge.best { background: var(--accent); color: var(--accent-ink); }
+.dot { background: var(--accent) !important; }
+/* hierarchy: Study, Leadership and Certificates are parts of section 03, so their titles step down a level */
+#education .sh h2, #certificates .sh h2 { font-size: clamp(34px, 4.4vw, 60px); }
+#education .sh, #certificates .sh { margin-bottom: 28px; }
+@media (max-width: 680px) { #education .sh h2, #certificates .sh h2 { font-size: clamp(30px, 9vw, 44px); } }
 /* 3D wind tunnel */
 .hero .hint { max-width: 36em; }
 @media (min-width: 1100px) { .hud { gap: 10px 16px; padding: 10px 14px; } .hud .ctrl input[type="range"] { width: 110px; } }
@@ -553,7 +566,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
 <main>
   <section id="career">
     <div class="wrap">
-      <div class="sector mono" style="--sc:var(--s1)"><i aria-hidden="true"></i><b>Sector 1</b> · Career</div>
+      <div class="sector mono"><i aria-hidden="true"></i><b>01</b> · Career</div>
       <div class="sh">
         <h2 data-fit><span class="slant">Telemetry</span></h2>
         <p>Study, research, leadership and work on one trace, from July 2022 to the end of the MSc.</p>
@@ -643,7 +656,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
 
   <section id="projects">
     <div class="wrap">
-      <div class="sector mono" style="--sc:var(--s2)"><i aria-hidden="true"></i><b>Sector 2</b> · Projects</div>
+      <div class="sector mono"><i aria-hidden="true"></i><b>02</b> · Projects</div>
       <div class="sh">
         <h2 data-fit><span class="slant">Projects</span></h2>
         <p>Supersonic combustion to subsonic tunnels. Click any project for its summary. Drawings are schematics, not results.</p>
@@ -790,7 +803,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
 
   <section id="toolchain">
     <div class="wrap">
-      <div class="sector mono" style="--sc:var(--s3)"><i aria-hidden="true"></i><b>Sector 3</b> · Skills, study &amp; certificates</div>
+      <div class="sector mono"><i aria-hidden="true"></i><b>03</b> · Skills, study &amp; certificates</div>
       <div class="sh">
         <h2 data-fit><span class="slant">Toolchain</span></h2>
         <p>Mesh it, solve it, test it, plot it. Highlighted tools are my core toolset.</p>
@@ -849,7 +862,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
   <section class="contact" id="contact">
     <div class="band"></div>
     <div class="wrap">
-      <div class="sector mono finish"><i aria-hidden="true"></i><b>Finish</b> · Contact</div>
+      <div class="sector mono"><i aria-hidden="true"></i><b>04</b> · Contact</div>
       <h2 data-fit><span class="slant">Let's talk</span><br><span class="slant o">aerodynamics</span></h2>
       <div class="c-grid">
         <div class="me">
@@ -1925,7 +1938,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
       const off=((roll%1)+1)%1;
       for(let z=-1.2;z<=1.21;z+=0.6) for(let x=-3+off;x<9;x+=1){ const a=P3(x,0,z), b=P3(x+0.45,0,z); g.beginPath(); g.moveTo(a[0],a[1]); g.lineTo(b[0],b[1]); g.stroke(); }
       g.globalAlpha=1;
-      [[-0.2,1.45,'--s1'],[1.45,4.14,'--s2'],[4.14,5.2,'--s3']].forEach(([a,b,v])=>{ const p=P3(a,0,sd*1.45), q=P3(b,0,sd*1.45); g.beginPath(); g.moveTo(p[0],p[1]); g.lineTo(q[0],q[1]); g.strokeStyle=css(v); g.lineWidth=3; g.stroke(); });
+      { const p=P3(-3,0,sd*1.45), q=P3(9,0,sd*1.45); g.beginPath(); g.moveTo(p[0],p[1]); g.lineTo(q[0],q[1]); g.strokeStyle='rgba(244,233,216,0.22)'; g.lineWidth=1.5; g.stroke(); }
       g.beginPath(); for(let k=0;k<=32;k++){ const a=k/32*Math.PI*2, p=P3(2.5+2.7*Math.cos(a),0,0.85*Math.sin(a)); k?g.lineTo(p[0],p[1]):g.moveTo(p[0],p[1]); } g.fillStyle='rgba(0,0,0,0.38)'; g.fill();
       // flow, split into what the car hides and what passes in front of it
       const B=[0,1].map(()=>[...Array(24)].map(()=>[])), Dd=[0,1].map(()=>[...Array(12)].map(()=>[]));
@@ -1950,8 +1963,8 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
       if(W3>=640){ const g=gl3?gF:g3;
         g.font='10.5px "JetBrains Mono", monospace'; g.textAlign='left';
         const lab=(t,x,y,z,col,dx,dy)=>{ const p=P3(x,y,z); g.strokeStyle=INK(0.35); g.lineWidth=1; g.beginPath(); g.moveTo(p[0],p[1]); g.lineTo(p[0]+dx,p[1]+dy); g.stroke(); g.fillStyle=col; g.fillText(t,p[0]+dx+4,p[1]+dy+3); };
-        lab('FRONT-WING TIP VORTEX · Γ '+field.Gf.toFixed(2),2.4,0.21,sd*1.02,css('--s1'),-30,30);
-        lab('REAR-WING TIP VORTEX · Γ '+field.Gr.toFixed(2),5.9,0.85,sd*0.56,css('--s3'),10,-46);
+        lab('FRONT-WING TIP VORTEX · Γ '+field.Gf.toFixed(2),2.4,0.21,sd*1.02,css('--muted'),-30,30);
+        lab('REAR-WING TIP VORTEX · Γ '+field.Gr.toFixed(2),5.9,0.85,sd*0.56,css('--muted'),10,-46);
         g.fillStyle=css('--muted'); g.fillText('3D POTENTIAL FLOW · MODEL: QVIST_DESIGNS, CC BY 4.0',16,H3h-14);
       }
     }
