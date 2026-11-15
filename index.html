@@ -8,8 +8,8 @@
 <meta name="author" content="Shibansanjai Pandian">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://shibansanjai.github.io/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23060A10'/%3E%3Cpath d='M8 36 C 18 20, 40 18, 58 32 C 40 34, 22 40, 8 36 Z' fill='%235CC8FF'/%3E%3C/svg%3E">
-<meta name="theme-color" content="#060A10">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23071A2B'/%3E%3Cpath d='M8 36 C 18 20, 40 18, 58 32 C 40 34, 22 40, 8 36 Z' fill='%23FF6F59'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#071A2B">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Shibansanjai Pandian">
 <meta property="og:title" content="Shibansanjai Pandian | Aerodynamics &amp; CFD">
@@ -44,7 +44,7 @@ img { max-width: 100%; }
   --line: #CDD4DE;
   --accent: #1452D9;
   --accent-ink: #FFFFFF;
-  --hot: #D9452B;
+  --hot: #5AA9FF;
   --stream: rgba(10, 15, 22, 0.16);
   --foil-fill: #0A0F16;
   --tyre: #1E2631;
@@ -55,28 +55,36 @@ img { max-width: 100%; }
   --smoke: rgba(20, 30, 45, 0.55);
   --smoke-glow: rgba(20, 30, 45, 0.08);
   --scrim: rgba(241, 243, 246, 0.92);
-  --cp: linear-gradient(90deg, #2B4EC9, #36A3C9, #7CC08A, #E8C547, #D9452B);
+  /* F1 timing colour system on a schlieren base:
+     sectors split the page (S1 career, S2 projects, S3 skills), timing colours carry meaning */
+  --s1: #FF6F59; --s2: #4FC3B8; --s3: #E8C48A;  /* Riviera night: coral, harbour teal, sandstone gold */
+  --t-best: #FF6F59;  /* purple: session best, the top results */
+  --t-pb: #4FC3B8;    /* green: personal best, improvements and engineering milestones */
+  --cp: linear-gradient(90deg, var(--s1), var(--s2) 50%, var(--s3));
+  --blue: #EDEFF2;  /* the second colour is the white ink */
+  --red-fill: #EDEFF2;  /* filled blocks are white ink, dark text */
+  --plume: radial-gradient(ellipse 55% 75% at 50% 115%, rgba(205,211,219,0.20), rgba(255,111,89,0.07) 45%, transparent 75%);
   --f-display: "Saira Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
   --f-body: "Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
   --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #060A10; --bg-2: #0B111A; --panel: #0E1520; --fg: #E9EEF5; --muted: #8592A3; --line: #1B2634;
-    --accent: #5CC8FF; --accent-ink: #060A10; --hot: #FF7457; --stream: rgba(233, 238, 245, 0.11);
-    --foil-fill: #E9EEF5; --tyre: #1C2530; --rim: #66748A; --car: #222A35; --car-hi: #4D5A6C; --car-edge: rgba(233, 238, 245, 0.32); --smoke: rgba(236, 243, 250, 0.62); --smoke-glow: rgba(236, 243, 250, 0.09); --scrim: rgba(6, 10, 16, 0.9); color-scheme: dark;
+    --bg: #071A2B; --bg-2: #0A2133; --panel: #0D2538; --fg: #F4E9D8; --muted: #9FB2BF; --line: #1C3A50;
+    --accent: #FF6F59; --accent-ink: #071A2B; --hot: #FF6F59; --stream: rgba(244, 233, 216, 0.08);
+    --foil-fill: #E9EEF5; --tyre: #0B2030; --rim: #8FA3B0; --car: #222A35; --car-hi: #4D5A6C; --car-edge: rgba(233, 238, 245, 0.32); --smoke: rgba(244, 233, 216, 0.62); --smoke-glow: rgba(244, 233, 216, 0.09); --scrim: rgba(7, 26, 43, 0.86); color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #060A10; --bg-2: #0B111A; --panel: #0E1520; --fg: #E9EEF5; --muted: #8592A3; --line: #1B2634;
-  --accent: #5CC8FF; --accent-ink: #060A10; --hot: #FF7457; --stream: rgba(233, 238, 245, 0.11);
-  --foil-fill: #E9EEF5; --tyre: #1C2530; --rim: #66748A; --car: #222A35; --car-hi: #4D5A6C; --car-edge: rgba(233, 238, 245, 0.32); --smoke: rgba(236, 243, 250, 0.62); --smoke-glow: rgba(236, 243, 250, 0.09); --scrim: rgba(6, 10, 16, 0.9); color-scheme: dark;
+  --bg: #071A2B; --bg-2: #0A2133; --panel: #0D2538; --fg: #F4E9D8; --muted: #9FB2BF; --line: #1C3A50;
+  --accent: #FF6F59; --accent-ink: #071A2B; --hot: #FF6F59; --stream: rgba(244, 233, 216, 0.08);
+  --foil-fill: #E9EEF5; --tyre: #0B2030; --rim: #8FA3B0; --car: #222A35; --car-hi: #4D5A6C; --car-edge: rgba(233, 238, 245, 0.32); --smoke: rgba(244, 233, 216, 0.62); --smoke-glow: rgba(244, 233, 216, 0.09); --scrim: rgba(7, 26, 43, 0.86); color-scheme: dark;
 }
 /* always dark, whatever the browser or OS theme */
 :root, :root[data-theme="light"] {
-  --bg: #060A10; --bg-2: #0B111A; --panel: #0E1520; --fg: #E9EEF5; --muted: #8592A3; --line: #1B2634;
-  --accent: #5CC8FF; --accent-ink: #060A10; --hot: #FF7457; --stream: rgba(233, 238, 245, 0.11);
-  --foil-fill: #E9EEF5; --tyre: #1C2530; --rim: #66748A; --car: #222A35; --car-hi: #4D5A6C; --car-edge: rgba(233, 238, 245, 0.32); --smoke: rgba(236, 243, 250, 0.62); --smoke-glow: rgba(236, 243, 250, 0.09); --scrim: rgba(6, 10, 16, 0.9); color-scheme: dark;
+  --bg: #071A2B; --bg-2: #0A2133; --panel: #0D2538; --fg: #F4E9D8; --muted: #9FB2BF; --line: #1C3A50;
+  --accent: #FF6F59; --accent-ink: #071A2B; --hot: #FF6F59; --stream: rgba(244, 233, 216, 0.08);
+  --foil-fill: #E9EEF5; --tyre: #0B2030; --rim: #8FA3B0; --car: #222A35; --car-hi: #4D5A6C; --car-edge: rgba(233, 238, 245, 0.32); --smoke: rgba(244, 233, 216, 0.62); --smoke-glow: rgba(244, 233, 216, 0.09); --scrim: rgba(7, 26, 43, 0.86); color-scheme: dark;
 }
 
 
@@ -104,20 +112,23 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .nav ul a:hover { color: var(--fg); background: var(--bg-2); }
 @media (max-width: 680px) { .nav ul { display: none; } }
 .progress { position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; height: 3px; z-index: 16; pointer-events: none; }
-.progress i { display: block; height: 100%; background: var(--cp); background-size: 100vw 100%; width: 0; }
+.progress i { display: block; height: 100%; background: var(--accent); width: 0; }
 
 /* ---------- hero ---------- */
+/* schlieren light field: a soft lit disc behind the car, falling off to graphite */
+.hero { background: radial-gradient(ellipse 60% 70% at 72% 62%, #123852 0%, #0B2639 45%, var(--bg) 75%); }
+@media (max-width: 900px) { .hero { background: radial-gradient(ellipse 90% 45% at 50% 78%, #123852 0%, #0B2639 50%, var(--bg) 80%); } }
 .hero { position: relative; min-height: 900px; display: flex; flex-direction: column; isolation: isolate; border-bottom: 1px solid var(--line); }
 .hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; z-index: -2; }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background: linear-gradient(90deg, var(--scrim) 0%, color-mix(in srgb, var(--scrim) 55%, transparent) 26%, transparent 44%); }
 .hero-inner { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; padding-block: 120px 260px; pointer-events: none; }
 .hero-inner > * { pointer-events: auto; }
-.run-id { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.run-id { display: flex; flex-wrap: wrap; gap: 6px 16px; width: fit-content; max-width: 100%; padding: 9px 14px; border: 1px solid color-mix(in srgb, var(--fg) 10%, transparent); border-radius: 8px; background: color-mix(in srgb, var(--fg) 4%, transparent); backdrop-filter: blur(8px); letter-spacing: .14em; }
 .run-id span b { color: var(--fg); font-weight: 500; }
 .hero h1 { font-family: var(--f-display); font-weight: 900; text-transform: uppercase; line-height: 0.82; letter-spacing: -0.005em; margin: 22px 0 26px; font-size: clamp(60px, 8vw, 190px); }
 .hero h1 .l1 { display: block; width: fit-content; color: transparent; -webkit-text-stroke: 1.5px var(--fg); }
-.hero h1 .l2 { display: block; width: fit-content; background: var(--cp); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: 0.08em; }
+.hero h1 .l2 { display: block; width: fit-content; color: var(--fg); padding-right: 0.08em; }
 .lede { font-size: clamp(17px, 1.6vw, 20px); max-width: 30em; margin: 0 0 30px; }
 .lede b { font-weight: 600; }
 .cta { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -168,8 +179,8 @@ section { padding-block: 120px 0; }
 .track { position: relative; height: 100%; }
 .track::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 1px dashed var(--line); }
 .bar { position: absolute; top: 50%; height: 12px; transform: translateY(-50%) skewX(-18deg); }
-.bar.b-edu { background: var(--accent); }
-.bar.b-eng { background: var(--cp); }
+.bar.b-edu { background: var(--blue); }
+.bar.b-eng { background: var(--t-pb); }
 .bar.b-work { background: var(--muted); }
 .bar.b-lead { background: transparent; border: 1.5px solid var(--muted); }
 .bar.open { -webkit-mask: linear-gradient(90deg, #000 35%, transparent); mask: linear-gradient(90deg, #000 35%, transparent); }
@@ -201,7 +212,7 @@ section { padding-block: 120px 0; }
 /* ---------- run log ---------- */
 .log { margin-top: 72px; display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
 .run { background: var(--bg); display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 32px; padding: 34px 32px; position: relative; overflow: hidden; }
-.run::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--cp); transform: scaleY(0); transform-origin: top; transition: transform .45s ease; }
+.run::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--accent); transform: scaleY(0); transform-origin: top; transition: transform .45s ease; }
 .run:hover::after { transform: scaleY(1); }
 @media (max-width: 760px) { .run { grid-template-columns: 1fr; gap: 10px; padding: 26px 20px; } }
 .run .when { font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
@@ -221,7 +232,7 @@ section { padding-block: 120px 0; }
 @media (max-width: 900px) { .feature { grid-template-columns: 1fr; } }
 .feature .viz { border-right: 1px solid var(--line); padding: 24px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px; background: var(--bg-2); min-width: 0; }
 @media (max-width: 900px) { .feature .viz { border-right: 0; border-bottom: 1px solid var(--line); } }
-.feature .viz svg { width: 100%; height: auto; display: block; }
+.feature .viz svg { width: 100%; height: auto; display: block; margin-block: auto; }
 .feature .body { padding: 34px; min-width: 0; }
 .feature h3 { font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: clamp(32px, 3.4vw, 46px); line-height: 0.95; margin: 12px 0 16px; }
 .feature p { margin: 0 0 14px; }
@@ -265,7 +276,7 @@ section { padding-block: 120px 0; }
 .edu h3 { font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 30px; line-height: 1; margin: 8px 0 6px; }
 .edu p { margin: 6px 0 0; }
 .grade { display: flex; align-items: baseline; gap: 12px; margin-top: 14px; }
-.grade b { font-family: var(--f-display); font-size: 56px; font-weight: 900; line-height: 1; background: var(--cp); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.grade b { font-family: var(--f-display); font-size: 56px; font-weight: 900; line-height: 1; color: var(--accent); }
 .mods { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
 .stat { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 20px; padding-block: 20px; border-top: 1px solid var(--line); align-items: start; }
 .stat.first { border-top: 2px solid var(--fg); }
@@ -286,7 +297,7 @@ section { padding-block: 120px 0; }
 .nav ul a:hover:not([aria-current="true"]) { color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); }
 
 .ix { position: relative; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, background-color .25s; }
-.ix:hover { background-image: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--accent) 13%, transparent), transparent 70%); }
+.ix:hover { background-image: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--blue) 16%, transparent), transparent 70%); }
 .run.ix:hover, .tool.ix:hover, .stat.ix:hover, .edu.ix:hover { background-color: var(--bg-2); }
 .tool.ix:hover h3, .stat.ix:hover h4, .edu.ix:hover h3, .run.ix:hover h3 { color: var(--accent); }
 .stat.ix, .edu.ix { padding-inline: 14px; margin-inline: -14px; }
@@ -320,8 +331,8 @@ section { padding-block: 120px 0; }
 @media (max-width: 560px) { .certs { grid-template-columns: 1fr; } }
 .cert { border: 1px solid var(--line); background-color: var(--panel); padding: 22px; display: flex; flex-direction: column; gap: 16px; }
 .cert:hover { border-color: var(--accent); transform: translateY(-4px); }
-.cert .ci { align-self: flex-start; padding: 8px 16px; display: inline-block; font-family: var(--f-mono); font-size: 12px; font-weight: 500; letter-spacing: .04em; color: var(--accent-ink); background: var(--accent); clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%); transition: background .25s; }
-.cert:hover .ci { background: var(--hot); }
+.cert .ci { align-self: flex-start; padding: 6px 12px; display: inline-block; font-family: var(--f-mono); font-size: 11.5px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); background: transparent; border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 4px; transition: background .25s, color .25s; }
+.cert:hover .ci { background: var(--accent); color: var(--accent-ink); }
 .cert h3 { font-family: var(--f-display); font-weight: 800; text-transform: uppercase; font-size: 23px; line-height: 1; margin: 6px 0 8px; }
 .cert p { margin: 0; color: var(--muted); font-size: 14.5px; }
 
@@ -330,7 +341,7 @@ section { padding-block: 120px 0; }
 .modal { position: fixed; inset: 0; z-index: 40; display: grid; place-items: center; padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
 .m-back { position: absolute; inset: 0; background: color-mix(in srgb, var(--bg) 70%, transparent); backdrop-filter: blur(6px); animation: fade .2s ease; }
 .m-panel { position: relative; width: min(980px, 100%); max-height: calc(100% - 8px); overflow: auto; background: var(--panel); border: 1px solid var(--line); display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); animation: rise .28s cubic-bezier(.2,.8,.2,1); box-shadow: 0 30px 80px -30px rgba(0,0,0,.6); }
-.m-panel::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--cp); }
+.m-panel::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--accent); }
 @media (max-width: 760px) { .m-panel { grid-template-columns: 1fr; } }
 .m-viz { background: var(--bg-2); border-right: 1px solid var(--line); padding: 28px; display: grid; place-items: center; min-width: 0; }
 .m-viz svg { width: 100%; height: auto; }
@@ -349,8 +360,8 @@ section { padding-block: 120px 0; }
 @keyframes rise { from { opacity: 0; transform: translateY(18px) scale(.98); } }
 @media (prefers-reduced-motion: reduce) { .m-back, .m-panel, .mark .pulse { animation: none; } .ix, .chip, .cert { transition: none; } }
 /* ---------- contact ---------- */
-.contact { margin-top: 140px; padding-block: 0; border-top: 1px solid var(--line); }
-.contact .band { height: 6px; background: var(--cp); }
+.contact { margin-top: 140px; padding-block: 0; border-top: 1px solid var(--line); background: var(--plume), var(--bg); }
+.contact .band { height: 0; }
 .contact .wrap { padding-block: 80px 70px; }
 .contact h2 { font-family: var(--f-display); font-weight: 900; text-transform: uppercase; font-size: clamp(46px, 9.5vw, 156px); line-height: 0.84; margin-top: 10px; }
 .contact h2 .o { color: transparent; -webkit-text-stroke: 1.5px var(--fg); }
@@ -380,6 +391,40 @@ a.copy { text-decoration: none; display: inline-block; }
 footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); }
 
 
+
+/* ---------- F1 timing colour system ---------- */
+#career { --accent: var(--s1); }
+#projects, .modal { --accent: var(--s2); }
+#toolchain, #education, #certificates { --accent: var(--s3); }
+.contact { --accent: var(--t-best); }
+.sector + .sh { margin-top: 16px; }
+.sector { display: inline-flex; align-items: center; gap: 10px; width: fit-content; max-width: 100%; padding: 6px 14px 6px 8px; border: 1px solid color-mix(in srgb, var(--sc, var(--fg)) 45%, transparent); border-radius: 999px; color: var(--muted); }
+.sector b { color: var(--fg); font-weight: 500; }
+.sector i { width: 22px; height: 4px; border-radius: 2px; background: var(--sc); }
+.sector.finish { --sc: var(--fg); margin-bottom: 4px; }
+.sector.finish i { width: 14px; height: 14px; border-radius: 2px; background: conic-gradient(var(--fg) 0 25%, transparent 0 50%, var(--fg) 0 75%, transparent 0) 0 0 / 7px 7px; outline: 1px solid color-mix(in srgb, var(--fg) 40%, transparent); }
+.nav ul a::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 8px; vertical-align: 1px; background: var(--dot, transparent); }
+.nav ul a[href="#career"] { --dot: var(--s1); }
+.nav ul a[href="#projects"] { --dot: var(--s2); }
+.nav ul a[href="#toolchain"], .nav ul a[href="#certificates"] { --dot: var(--s3); }
+.nav ul a[href="#contact"]::before { border-radius: 1px; background: conic-gradient(var(--fg) 0 25%, transparent 0 50%, var(--fg) 0 75%, transparent 0) 0 0 / 3px 3px; outline: 1px solid color-mix(in srgb, var(--fg) 40%, transparent); }
+.progress i { background: var(--accent) !important; }
+.badge.pb { background: var(--t-pb); }
+.badge.best { background: var(--t-best); }
+.dot { background: var(--t-best) !important; }
+.grade b { color: var(--t-best); }
+.avatar { background: var(--accent) !important; }
+#r-df.t-best { color: var(--t-best); } #r-df.t-pb { color: var(--t-pb); } #r-df.t-slow { color: var(--s3); }
+.tt { margin-left: 8px; padding: 2px 7px; border-radius: 3px; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--bg); vertical-align: 1px; }
+.tt.best { background: var(--t-best); } .tt.pb { background: var(--t-pb); } .tt.slow { background: var(--s3); }
+.ro b#r-df { min-width: 4.2em; }
+
+/* name and headings wear the timing colours */
+.hero h1 .l2 { color: var(--accent) !important; }
+.hero h1 .l1 { -webkit-text-stroke-color: var(--fg); }
+.sh h2 .slant { color: var(--fg); }
+.contact h2 .o { -webkit-text-stroke-color: var(--accent); }
+.contact h2 .slant:first-child { color: var(--fg); }
 /* ---------- phones ---------- */
 .menu-btn { display: none; }
 .swipe { display: none; }
@@ -491,13 +536,14 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
     <div class="ctrl"><label class="mono" for="fw">Front flap</label><input id="fw" type="range" min="12" max="28" step="2" value="22"><span class="ro"><b id="r-fw">22°</b></span></div>
     <div class="ro" title="A negative lift coefficient means downforce">C<sub>L</sub> <b id="r-cl">…</b> <small class="note">(−ve = downforce)</small></div>
     <div class="ro">Balance <b id="r-bal">…</b></div>
-    <div class="ro">Downforce <b id="r-df">…</b></div>
+    <div class="ro">Downforce <b id="r-df">…</b><span class="tt" id="r-tt" hidden></span></div>
   </div>
 </header>
 
 <main>
   <section id="career">
     <div class="wrap">
+      <div class="sector mono" style="--sc:var(--s1)"><i aria-hidden="true"></i><b>Sector 1</b> · Career</div>
       <div class="sh">
         <h2 data-fit><span class="slant">Telemetry</span></h2>
         <p>Study, research, leadership and work on one trace, from July 2022 to the end of the MSc.</p>
@@ -522,10 +568,10 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
       </div>
       <div class="t-read" id="t-read"><span class="mono">Hover a row</span><b id="t-what">to read its dates and headline</b></div>
       <div class="t-key mono">
-        <span><i style="background:var(--accent)"></i>Education</span>
-        <span><i style="background:var(--cp)"></i>Engineering</span>
+        <span><i style="background:var(--blue)"></i>Education</span>
+        <span><i style="background:var(--t-pb)"></i>Engineering</span>
         <span><i style="border:1.5px solid var(--muted)"></i>Leadership</span>
-        <span><i style="background:var(--hot);width:10px;height:10px;transform:rotate(45deg)"></i>Project or award</span>
+        <span><i style="background:var(--t-best);width:10px;height:10px;transform:rotate(45deg)"></i>Project or award</span>
         <span><i style="background:var(--muted)"></i>Other work</span>
       </div>
 
@@ -587,6 +633,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
 
   <section id="projects">
     <div class="wrap">
+      <div class="sector mono" style="--sc:var(--s2)"><i aria-hidden="true"></i><b>Sector 2</b> · Projects</div>
       <div class="sh">
         <h2 data-fit><span class="slant">Projects</span></h2>
         <p>Supersonic combustion to subsonic tunnels. Click any project for its summary. Drawings are schematics, not results.</p>
@@ -598,8 +645,8 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
           <span class="mono">Schematic · strut injector in a scramjet combustor</span>
           <svg viewBox="0 0 520 250" role="img" aria-label="Schematic of a supersonic combustor duct with a central wedge strut, oblique shocks and fuel injection">
             <defs>
-              <linearGradient id="g-cp" x1="0" x2="1"><stop offset="0" stop-color="#2B4EC9"/><stop offset=".3" stop-color="#36A3C9"/><stop offset=".55" stop-color="#7CC08A"/><stop offset=".8" stop-color="#E8C547"/><stop offset="1" stop-color="#D9452B"/></linearGradient>
-              <linearGradient id="g-fuel" x1="0" x2="1"><stop offset="0" stop-color="#D9452B" stop-opacity=".85"/><stop offset="1" stop-color="#E8C547" stop-opacity="0"/></linearGradient>
+              <linearGradient id="g-cp" x1="0" x2="1"><stop offset="0" stop-color="#8F959D"/><stop offset=".3" stop-color="#C7CCD3"/><stop offset=".55" stop-color="#FFFFFF"/><stop offset=".8" stop-color="#BFE8E3"/><stop offset="1" stop-color="#4FC3B8"/></linearGradient>
+              <linearGradient id="g-fuel" x1="0" x2="1"><stop offset="0" stop-color="#4FC3B8" stop-opacity=".85"/><stop offset="1" stop-color="#BFE8E3" stop-opacity="0"/></linearGradient>
             </defs>
             <path d="M10 60 H230 L510 48" fill="none" stroke="var(--fg)" stroke-width="2.5"/>
             <path d="M10 190 H510" fill="none" stroke="var(--fg)" stroke-width="2.5"/>
@@ -610,7 +657,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
               <path class="flowdash" d="M10 170 H150 L170 164 L330 160 H510"/>
             </g>
             <path d="M250 114 Q 360 108 510 96 L510 154 Q 360 142 250 136 Z" fill="url(#g-fuel)"/>
-            <path d="M150 125 L250 114 L250 136 Z" fill="var(--fg)"/>
+            <path d="M150 125 L250 114 L250 136 Z" fill="var(--bg)" stroke="var(--fg)" stroke-width="1.5" stroke-linejoin="round"/>
             <g stroke="var(--hot)" stroke-width="1.4" fill="none">
               <path d="M150 125 L232 60"/><path d="M150 125 L232 190"/>
               <path d="M232 60 L320 190" stroke-dasharray="4 4"/><path d="M232 190 L320 60" stroke-dasharray="4 4"/>
@@ -643,13 +690,13 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
       <div class="cards">
         <article class="card ix proj" data-p="rack" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open summary: Avionics rack cooling">
           <div class="sk">
-            <span class="badge">24 K cooler</span>
+            <span class="badge pb">24 K cooler</span>
             <svg viewBox="0 0 320 180" aria-hidden="true">
-              <defs><linearGradient id="g-heat" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#2B4EC9"/><stop offset=".5" stop-color="#7CC08A"/><stop offset="1" stop-color="#D9452B"/></linearGradient></defs>
+              <defs><linearGradient id="g-heat" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#8F959D"/><stop offset=".5" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FF5A5A"/></linearGradient></defs>
               <rect x="110" y="24" width="100" height="132" fill="none" stroke="var(--fg)" stroke-width="2"/>
               <g fill="url(#g-heat)" opacity=".85"><rect x="122" y="36" width="14" height="108"/><rect x="146" y="36" width="14" height="108"/><rect x="170" y="36" width="14" height="108"/><rect x="194" y="36" width="6" height="108"/></g>
-              <g stroke="#2B4EC9" stroke-width="1.6" fill="none"><path class="flowdash" d="M30 140 H105"/><path class="flowdash" d="M30 120 H105"/></g>
-              <g stroke="#D9452B" stroke-width="1.6" fill="none"><path class="flowdash" d="M215 50 H290"/><path class="flowdash" d="M215 70 H290"/></g>
+              <g stroke="#8F959D" stroke-width="1.6" fill="none"><path class="flowdash" d="M30 140 H105"/><path class="flowdash" d="M30 120 H105"/></g>
+              <g stroke="#FF5A5A" stroke-width="1.6" fill="none"><path class="flowdash" d="M215 50 H290"/><path class="flowdash" d="M215 70 H290"/></g>
               <text class="cap" x="30" y="108">COLD INLET</text><text class="cap" x="226" y="40">HOT OUTLET</text>
             </svg>
           </div>
@@ -669,7 +716,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
                 <path class="flowdash" d="M10 60 C 100 60, 120 52, 170 54 S 260 62, 310 62"/>
                 <path class="flowdash" d="M10 120 C 100 120, 120 112, 170 114 S 260 122, 310 122"/>
               </g>
-              <path d="M110 92 C 120 74, 170 72, 225 92 C 180 96, 130 100, 110 92 Z" fill="var(--fg)"/>
+              <path d="M110 92 C 120 74, 170 72, 225 92 C 180 96, 130 100, 110 92 Z" fill="var(--bg)" stroke="var(--fg)" stroke-width="1.5" stroke-linejoin="round"/>
               <path d="M165 96 V 150" stroke="var(--accent)" stroke-width="2"/>
               <rect x="152" y="150" width="26" height="10" fill="var(--accent)"/>
               <path d="M168 70 V 40" stroke="var(--hot)" stroke-width="2"/><path d="M162 48 L168 38 L174 48" fill="none" stroke="var(--hot)" stroke-width="2"/>
@@ -692,7 +739,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
               <path d="M40 160 C 70 60, 120 26, 170 26 C 220 26, 260 90, 290 160" fill="none" stroke="url(#g-cp)" stroke-width="2.5"/>
               <circle cx="170" cy="26" r="5" fill="var(--hot)"/>
               <text class="cap h" x="180" y="22">APOGEE</text>
-              <g transform="translate(36 140) rotate(18)"><path d="M0 0 L5 -16 L10 0 Z" fill="var(--fg)"/><rect x="2" y="0" width="6" height="12" fill="var(--fg)"/></g>
+              <g transform="translate(36 140) rotate(18)"><path d="M0 0 L5 -16 L10 0 Z" fill="var(--bg)" stroke="var(--fg)" stroke-width="1.5" stroke-linejoin="round"/><rect x="2" y="0" width="6" height="12" fill="var(--bg)" stroke="var(--fg)" stroke-width="1.5" stroke-linejoin="round"/></g>
               <text class="cap" x="20" y="176">LAUNCH</text>
             </svg>
           </div>
@@ -706,7 +753,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
         </article>
         <article class="card ix proj" data-p="bracket" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open summary: Aircraft bracket">
           <div class="sk">
-            <span class="badge">Third prize</span>
+            <span class="badge best">Third prize</span>
             <svg viewBox="0 0 320 180" aria-hidden="true">
               <path d="M70 150 H250 V128 H170 L120 48 H90 V150 Z" fill="none" stroke="var(--fg)" stroke-width="2"/>
               <g fill="none" stroke="var(--accent)" stroke-width="1.2">
@@ -733,6 +780,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
 
   <section id="toolchain">
     <div class="wrap">
+      <div class="sector mono" style="--sc:var(--s3)"><i aria-hidden="true"></i><b>Sector 3</b> · Skills, study &amp; certificates</div>
       <div class="sh">
         <h2 data-fit><span class="slant">Toolchain</span></h2>
         <p>Mesh it, solve it, test it, plot it. Highlighted tools are my core toolset.</p>
@@ -791,7 +839,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
   <section class="contact" id="contact">
     <div class="band"></div>
     <div class="wrap">
-      <span class="mono">Contact</span>
+      <div class="sector mono finish"><i aria-hidden="true"></i><b>Finish</b> · Contact</div>
       <h2 data-fit><span class="slant">Let's talk</span><br><span class="slant o">aerodynamics</span></h2>
       <div class="c-grid">
         <div class="me">
@@ -1038,7 +1086,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
   }
 
   /* ===== colour ===== */
-  const STOPS=[[43,78,201],[54,163,201],[124,192,138],[232,197,71],[217,69,43]];
+  const STOPS=[[255,111,89],[255,180,165],[244,233,216],[130,155,170],[60,85,105]];
   const LUT=[];for(let i=0;i<=64;i++){const t=i/64*(STOPS.length-1);const k=Math.min(STOPS.length-2,Math.floor(t)),f=t-k;LUT.push(STOPS[k].map((v,j)=>Math.round(v+(STOPS[k+1][j]-v)*f)));}
   const cpRGB=cp=>LUT[Math.round(Math.min(1,Math.max(0,(cp+3.2)/4.2))*64)];
   const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -1083,6 +1131,22 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
   function lp(c,pts){ c.beginPath(); pts.forEach(([x,y],i)=>{const p=toS(x,y); i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1]);}); c.closePath(); }
   const vgrad=(c,y0,y1,stops)=>{ const g=c.createLinearGradient(0,toS(0,y0)[1],0,toS(0,y1)[1]); stops.forEach(([o,col])=>g.addColorStop(o,col)); return g; };
 
+  // faint lattice towers framing the test section
+  function gantry(){
+    const ink='rgba(244,233,216,0.16)', ink2='rgba(244,233,216,0.09)', top=96, bot=gy-4, w=22;
+    const tower=(x)=>{
+      bctx.strokeStyle=ink; bctx.lineWidth=1;
+      bctx.beginPath(); bctx.moveTo(x,top); bctx.lineTo(x,bot); bctx.moveTo(x+w,top); bctx.lineTo(x+w,bot); bctx.stroke();
+      bctx.strokeStyle=ink2;
+      for(let y=top;y<bot-w;y+=w){ bctx.beginPath(); bctx.moveTo(x,y); bctx.lineTo(x+w,y+w); bctx.moveTo(x+w,y); bctx.lineTo(x,y+w); bctx.moveTo(x,y); bctx.lineTo(x+w,y); bctx.stroke(); }
+      for(let y=top+60;y<bot-40;y+=150){
+        bctx.fillStyle='#0b2030'; bctx.strokeStyle=ink;
+        bctx.beginPath(); bctx.roundRect?bctx.roundRect(x-6,y,w+12,26,4):bctx.rect(x-6,y,w+12,26); bctx.fill(); bctx.stroke();
+        bctx.fillStyle=ink; [[x,y+8],[x+w,y+8],[x,y+18],[x+w,y+18]].forEach(([a,b])=>{ bctx.beginPath(); bctx.arc(a,b,1,0,Math.PI*2); bctx.fill(); });
+      }
+    };
+    tower(10); tower(Wd-10-w);
+  }
   function drawBase(){
     bctx.clearRect(0,0,Wd,Hd);
     const mute=css('--muted'), stream=css('--stream'), line=css('--line');
@@ -1090,6 +1154,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
     bctx.strokeStyle=line; bctx.lineWidth=1; for(let x=-Hd;x<Wd+Hd;x+=14){ bctx.beginPath(); bctx.moveTo(x,gy+42); bctx.lineTo(x-(Hd-gy),Hd); bctx.stroke(); }
     bctx.restore();
     bctx.font='10.5px "JetBrains Mono", monospace';
+    if(Wd>=1100) gantry();
     if(anim>=1&&cur){
       bctx.lineWidth=1; bctx.strokeStyle=stream;
       for(const L of cur.lines){ bctx.beginPath(); for(let i=0;i<L.length;i+=2){ const p=toS(L[i],L[i+1]); i?bctx.lineTo(p[0],p[1]):bctx.moveTo(p[0],p[1]); } bctx.stroke(); }
@@ -1101,113 +1166,113 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
   function drawCar(){
     const c=carC.getContext('2d'); c.clearRect(0,0,Wd,Hd);
     if(!cur) return;
-    const car=css('--car'), hi=css('--car-hi'), edge=css('--car-edge'), acc=css('--accent'), hot=css('--hot'), mute=css('--muted');
-    const W=v=>v*s, ew=Math.max(0.8,s/260);
+    // technical line-drawing palette: near-black fills, fine light ink, one warm glow
+    const INK='rgba(244,233,216,0.92)', INK2='rgba(244,233,216,0.42)', INK3='rgba(244,233,216,0.2)';
+    const F0='#05131f', F1='#0b2030', F2='#10283b';
+    const acc=css('--accent'), hot=css('--hot'), mute=css('--muted');
+    const W=v=>v*s, lw=Math.max(1,s/190), dw=Math.max(0.6,s/330);
     c.lineJoin='round'; c.lineCap='round';
-    const paint=(y0,y1)=>vgrad(c,y0,y1,[[0,hi],[0.45,car],[1,car]]);
-    const edgeStroke=()=>{ c.strokeStyle=edge; c.lineWidth=ew; c.stroke(); };
+    const fillG=(y0,y1)=>vgrad(c,y0,y1,[[0,F2],[0.5,F1],[1,F0]]);
+    const ink=(w,col)=>{ c.strokeStyle=col||INK; c.lineWidth=w||lw; c.stroke(); };
+    const seg=(a,b,w,col)=>{ const p=toS(...a), q=toS(...b); c.beginPath(); c.moveTo(p[0],p[1]); c.lineTo(q[0],q[1]); ink(w,col); };
+    const tube=(a,b,d)=>{ const p=toS(...a), q=toS(...b); c.beginPath(); c.moveTo(p[0],p[1]); c.lineTo(q[0],q[1]);
+      c.strokeStyle=INK; c.lineWidth=W(d)+2*dw; c.stroke(); c.strokeStyle=F1; c.lineWidth=Math.max(0.5,W(d)); c.stroke(); };
+    const bolts=(a,b,n)=>{ for(let k=0;k<n;k++){ const t=(k+0.5)/n, p=toS(a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t); c.beginPath(); c.arc(p[0],p[1],Math.max(1,W(0.0075)),0,Math.PI*2); c.fillStyle=F0; c.fill(); ink(dw,INK2); } };
+    const hatch=(poly,step,ang)=>{ c.save(); lp(c,poly); c.clip(); c.strokeStyle=INK3; c.lineWidth=dw;
+      const x0=toS(Math.min(...poly.map(p=>p[0])),0)[0]-Hd, x1=toS(Math.max(...poly.map(p=>p[0])),0)[0]+Hd;
+      for(let x=x0;x<x1;x+=W(step)){ c.beginPath(); c.moveTo(x,0); c.lineTo(x+Hd*ang,Hd); c.stroke(); } c.restore(); };
 
-    // contact shadow on the road
-    const sh=c.createRadialGradient(toS(2.9,0)[0],gy,0,toS(2.9,0)[0],gy,W(2.9));
-    sh.addColorStop(0,'rgba(0,0,0,0.35)'); sh.addColorStop(1,'rgba(0,0,0,0)');
-    c.save(); c.translate(0,gy-2); c.scale(1,0.05); c.fillStyle=sh; c.beginPath(); c.arc(toS(2.9,0)[0],0,W(2.9),0,Math.PI*2); c.fill(); c.restore();
+    // ground glow under the floor: the low-pressure region, drawn like a soft plume
 
-    // suspension (behind wheels)
-    c.strokeStyle=hi; c.lineWidth=Math.max(1.5,W(0.022));
+    // suspension: hollow tubes behind the wheels
     [[[1.48,0.44],[1.05,0.43]],[[1.42,0.21],[1.05,0.30]],[[1.05,0.31],[1.5,0.50]],
-     [[4.18,0.43],[4.65,0.43]],[[4.12,0.19],[4.65,0.30]],[[4.65,0.40],[4.2,0.22]]].forEach(([a,b])=>{ const p=toS(...a), q=toS(...b); c.beginPath(); c.moveTo(p[0],p[1]); c.lineTo(q[0],q[1]); c.stroke(); });
+     [[4.18,0.43],[4.65,0.43]],[[4.12,0.19],[4.65,0.30]],[[4.65,0.40],[4.2,0.22]]].forEach(([a,b])=>tube(a,b,0.016));
 
-    // floor, floor edge, diffuser side
-    c.fillStyle=car; lp(c,[[1.4,0.075],[4.32,0.078],[4.36,0.03],[1.62,0.028],[1.5,0.05]]); c.fill(); edgeStroke();
-    c.fillStyle=hi; lp(c,[[1.62,0.028],[4.36,0.03],[4.36,0.018],[1.66,0.017]]); c.fill();
-    c.fillStyle=car; lp(c,[[4.3,0.078],[4.62,0.15],[4.96,0.275],[5.0,0.2],[4.5,0.04],[4.36,0.03]]); c.fill(); edgeStroke();
+    // floor, plank and diffuser side
+    lp(c,[[1.4,0.075],[4.32,0.078],[4.36,0.03],[1.62,0.028],[1.5,0.05]]); c.fillStyle=F0; c.fill(); ink();
+    lp(c,[[1.62,0.028],[4.36,0.03],[4.36,0.018],[1.66,0.017]]); c.fillStyle=F1; c.fill(); ink(dw);
+    bolts([1.75,0.023],[4.25,0.024],22);
+    lp(c,[[4.3,0.078],[4.62,0.15],[4.96,0.275],[5.0,0.2],[4.5,0.04],[4.36,0.03]]); c.fillStyle=F0; c.fill(); ink();
+    hatch([[4.36,0.035],[4.5,0.045],[4.98,0.21],[4.95,0.26],[4.62,0.145],[4.32,0.075]],0.035,0.55);
+    [[1.9,2.1],[2.5,2.7],[3.1,3.3]].forEach(([a,b])=>seg([a,0.05],[b,0.07],dw,INK2));
 
     // main body
     const body=cur.els[0].pts;
-    lp(c,body); c.fillStyle=paint(0.96,0.06); c.fill(); edgeStroke();
-    c.save(); lp(c,body); c.clip(); c.strokeStyle='rgba(255,255,255,0.22)'; c.lineWidth=Math.max(1.5,W(0.018));
-    sp(c,[[0.4,0.295],[1.1,0.37],[1.6,0.455],[1.95,0.585]],false); c.stroke(); sp(c,[[3.0,0.935],[3.4,0.83],[3.9,0.67],[4.4,0.54],[4.9,0.445]],false); c.stroke(); c.restore();
-
+    lp(c,body); c.fillStyle=fillG(0.96,0.06); c.fill();
     c.save(); lp(c,body); c.clip();
-    // sidepod with undercut
+    // undercut in shadow, hatched like a section drawing
+    const under=[[2.15,0.21],[2.55,0.15],[3.3,0.135],[4.05,0.16],[4.1,0.07],[2.2,0.07]];
+    lp(c,under); c.fillStyle=F0; c.fill(); hatch(under,0.04,0.6);
+    // sidepod
     const pod=[[1.93,0.54],[2.15,0.61],[2.7,0.625],[3.2,0.575],[3.7,0.46],[4.08,0.32],[4.22,0.22],[4.05,0.155],[3.3,0.13],[2.55,0.145],[2.18,0.2],[1.98,0.32],[1.93,0.44]];
-    c.fillStyle='rgba(0,0,0,0.38)'; lp(c,[[2.15,0.21],[2.55,0.15],[3.3,0.135],[4.05,0.16],[4.1,0.07],[2.2,0.07]]); c.fill();
-    sp(c,pod,true); c.fillStyle=vgrad(c,0.63,0.13,[[0,hi],[0.35,car],[1,car]]); c.fill(); edgeStroke();
-    sp(c,[[1.93,0.44],[1.96,0.53],[2.06,0.56],[2.09,0.45],[2.06,0.33],[1.98,0.32]],true); c.fillStyle='rgba(0,0,0,0.75)'; c.fill();
-    // livery: accent band + Cp pinstripe
-    const band=[[0.45,0.29],[1.0,0.335],[1.6,0.43],[2.15,0.52],[2.8,0.555],[3.5,0.52],[4.2,0.44],[4.95,0.40]];
-    const offs=(d)=>band.map(([x,y])=>[x,y+d]);
-    c.beginPath(); offs(0.022).forEach(([x,y],i)=>{const p=toS(x,y); i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1]);}); offs(-0.02).reverse().forEach(([x,y])=>{const p=toS(x,y); c.lineTo(p[0],p[1]);}); c.closePath();
-    c.fillStyle=acc; c.fill();
-    const g=c.createLinearGradient(toS(0.45,0)[0],0,toS(4.95,0)[0],0); [['#2B4EC9',0],['#36A3C9',.25],['#7CC08A',.5],['#E8C547',.75],['#D9452B',1]].forEach(([col,o])=>g.addColorStop(o,col));
-    c.beginPath(); offs(-0.036).forEach(([x,y],i)=>{const p=toS(x,y); i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1]);}); c.strokeStyle=g; c.lineWidth=Math.max(1,W(0.011)); c.stroke();
-    // panel lines
-    c.strokeStyle=edge; c.globalAlpha=0.5; c.lineWidth=ew;
-    [[[1.52,0.07],[1.62,0.47]],[[3.15,0.6],[3.3,0.86]],[[4.25,0.12],[4.32,0.56]]].forEach(([a,b])=>{const p=toS(...a), q=toS(...b); c.beginPath(); c.moveTo(p[0],p[1]); c.lineTo(q[0],q[1]); c.stroke();});
-    c.globalAlpha=1;
+    sp(c,pod,true); c.fillStyle=fillG(0.63,0.13); c.fill(); ink();
+    sp(c,[[2.0,0.5],[2.2,0.565],[2.7,0.58],[3.2,0.535],[3.65,0.43]],false); ink(dw,INK2);
+    sp(c,[[1.93,0.44],[1.96,0.53],[2.06,0.56],[2.09,0.45],[2.06,0.33],[1.98,0.32]],true); c.fillStyle='#000'; c.fill(); ink(dw);
+    for(let k=1;k<5;k++){ const y=0.33+k*0.045; seg([1.97,y],[2.07,y+0.01],dw,INK3); }
+    // engine cover louvres
+    for(let k=0;k<8;k++){ const x=3.42+k*0.055, yt=0.86-0.32*(x-3.3); seg([x,yt-0.035],[x+0.035,yt-0.11],dw,INK2); }
+    // panel seams with fasteners
+    const seams=[[[0.98,0.255],[1.03,0.36]],[[1.52,0.07],[1.62,0.47]],[[3.15,0.6],[3.3,0.86]],[[4.25,0.12],[4.32,0.56]]];
+    seams.forEach(([a,b])=>{ seg(a,b,dw,INK2); bolts([a[0]+0.025,a[1]],[b[0]+0.025,b[1]],5); });
+    sp(c,[[0.45,0.285],[1.0,0.33],[1.6,0.425],[2.15,0.515]],false); ink(dw,INK2);
+    // livery: one fine Cp-coloured pinstripe, the site's signature
     c.restore();
+    lp(c,body); ink();
 
-    // number on engine cover
-
-    // cockpit, helmet, halo
-    sp(c,[[2.04,0.63],[2.2,0.67],[2.62,0.70],[2.62,0.66],[2.12,0.615]],true); c.fillStyle='rgba(0,0,0,0.8)'; c.fill();
+    // cockpit, helmet and halo
+    sp(c,[[2.04,0.63],[2.2,0.67],[2.62,0.70],[2.62,0.66],[2.12,0.615]],true); c.fillStyle='#000'; c.fill(); ink(dw);
     const hc=toS(2.37,0.775), hr=W(0.105);
-    const hg=c.createRadialGradient(hc[0]-hr*0.3,hc[1]-hr*0.4,hr*0.1,hc[0],hc[1],hr); hg.addColorStop(0,'#ffffff'); hg.addColorStop(0.35,acc); hg.addColorStop(1,acc);
-    c.fillStyle=hg; c.beginPath(); c.arc(hc[0],hc[1],hr,0,Math.PI*2); c.fill();
-    c.fillStyle='rgba(8,10,14,0.9)'; c.beginPath(); c.ellipse(hc[0]-hr*0.52,hc[1]-hr*0.05,hr*0.42,hr*0.22,-0.2,0,Math.PI*2); c.fill();
-    sp(c,[[2.16,0.665],[2.3,0.70],[2.64,0.735],[2.64,0.69],[2.2,0.645]],true); c.fillStyle=paint(0.75,0.6); c.fill(); edgeStroke();
-    c.strokeStyle=hi; c.lineWidth=Math.max(2,W(0.038));
-    sp(c,[[1.99,0.63],[2.08,0.80],[2.22,0.875],[2.5,0.89],[2.66,0.895]],false); c.stroke();
-    c.strokeStyle=edge; c.lineWidth=ew; c.stroke();
-    // mirror
-    c.strokeStyle=car; c.lineWidth=Math.max(1.5,W(0.016)); const m1=toS(1.98,0.56), m2=toS(1.93,0.68); c.beginPath(); c.moveTo(m1[0],m1[1]); c.lineTo(m2[0],m2[1]); c.stroke();
-    const mc=toS(1.9,0.70); c.fillStyle=car; c.beginPath(); c.ellipse(mc[0],mc[1],W(0.075),W(0.028),-0.08,0,Math.PI*2); c.fill(); edgeStroke();
-    // airbox intake + T-cam
-    sp(c,[[2.65,0.86],[2.68,0.935],[2.78,0.935],[2.76,0.85]],true); c.fillStyle='rgba(0,0,0,0.85)'; c.fill();
-    c.fillStyle=acc; lp(c,[[2.82,0.955],[2.82,0.985],[2.96,0.985],[2.96,0.955]]); c.fill();
+    c.beginPath(); c.arc(hc[0],hc[1],hr,0,Math.PI*2); c.fillStyle=F1; c.fill(); ink();
+    c.beginPath(); c.ellipse(hc[0]-hr*0.5,hc[1]-hr*0.05,hr*0.44,hr*0.24,-0.2,0,Math.PI*2); c.fillStyle='#000'; c.fill(); ink(dw);
+    c.beginPath(); c.arc(hc[0],hc[1],hr*0.72,Math.PI*1.15,Math.PI*1.75); ink(dw,INK2);
+    c.beginPath(); c.arc(hc[0]-hr*0.62,hc[1]-hr*0.12,hr*0.12,Math.PI*1.1,Math.PI*1.6); ink(dw,'rgba(255,255,255,0.8)');
+    sp(c,[[2.16,0.665],[2.3,0.70],[2.64,0.735],[2.64,0.69],[2.2,0.645]],true); c.fillStyle=F1; c.fill(); ink(dw);
+    const halo=[[1.99,0.63],[2.08,0.80],[2.22,0.875],[2.5,0.89],[2.66,0.895]];
+    sp(c,halo,false); c.strokeStyle=INK; c.lineWidth=W(0.036)+2*dw; c.stroke(); c.strokeStyle=F1; c.lineWidth=W(0.036); c.stroke();
+    // mirror on its stalk
+    tube([1.98,0.56],[1.93,0.68],0.01);
+    const mc=toS(1.9,0.70); c.beginPath(); c.ellipse(mc[0],mc[1],W(0.075),W(0.028),-0.08,0,Math.PI*2); c.fillStyle=F1; c.fill(); ink(dw);
+    // airbox intake and camera pod
+    sp(c,[[2.65,0.86],[2.68,0.935],[2.78,0.935],[2.76,0.85]],true); c.fillStyle='#000'; c.fill(); ink(dw);
+    lp(c,[[2.82,0.955],[2.82,0.985],[2.96,0.985],[2.96,0.955]]); c.fillStyle=F1; c.fill(); ink(dw);
+    const cam=toS(2.86,0.97); c.beginPath(); c.arc(cam[0],cam[1],Math.max(1,W(0.008)),0,Math.PI*2); c.fillStyle=acc; c.fill();
 
-    // rear crash structure + rain light
-    c.fillStyle=car; lp(c,[[5.02,0.36],[5.16,0.34],[5.16,0.29],[5.02,0.29]]); c.fill(); edgeStroke();
-    const rl=toS(5.17,0.315); c.fillStyle=hot; c.shadowColor=hot; c.shadowBlur=W(0.08); c.fillRect(rl[0]-W(0.012),rl[1]-W(0.022),W(0.024),W(0.044)); c.shadowBlur=0;
+    // rear crash structure and the rain light (the drawing's one warm glow)
+    lp(c,[[5.02,0.36],[5.16,0.34],[5.16,0.29],[5.02,0.29]]); c.fillStyle=F1; c.fill(); ink(dw);
+    const rl=toS(5.17,0.315);
+    c.fillStyle=hot; c.fillRect(rl[0]-W(0.01),rl[1]-W(0.022),W(0.02),W(0.044));
 
-    // wing elements (solver geometry) + swan-neck pylon
-    c.strokeStyle=car; c.lineWidth=Math.max(2,W(0.03));
-    const sw=[[4.82,0.49],[4.98,0.64],[5.12,0.90],[5.2,0.93]]; sp(c,sw,false); c.stroke();
+    // wing elements (the solver's own geometry) and swan-neck pylon
+    const sw=[[4.82,0.49],[4.98,0.64],[5.12,0.90],[5.2,0.93]];
+    sp(c,sw,false); c.strokeStyle=INK; c.lineWidth=W(0.028)+2*dw; c.stroke(); c.strokeStyle=F1; c.lineWidth=W(0.028); c.stroke();
     const dNow=flapNow();
     const fwStale=fwView!==cur.fw;
     const elPts=(el,i)=>(i===4&&anim<1)?CAR.rwFlap(dNow):(i===2&&fwStale)?CAR.fwFlap(fwView):el.pts;
-    cur.els.forEach((el,i)=>{ if(i===0) return; lp(c,elPts(el,i)); c.fillStyle=paint(1,0.0); c.fill(); edgeStroke(); });
-    // DRS actuator pod
+    cur.els.forEach((el,i)=>{ if(i===0) return; lp(c,elPts(el,i)); c.fillStyle=F1; c.fill(); ink(); });
     const pv=toS(CAR.PIV[0],CAR.PIV[1]);
-    c.fillStyle=car; c.beginPath(); c.ellipse(pv[0]-W(0.12),pv[1]-W(0.04),W(0.06),W(0.022),0,0,Math.PI*2); c.fill(); edgeStroke();
+    c.beginPath(); c.ellipse(pv[0]-W(0.12),pv[1]-W(0.04),W(0.06),W(0.022),0,0,Math.PI*2); c.fillStyle=F1; c.fill(); ink(dw);
 
-    // endplates (see-through so the wing sections stay readable)
-    const ep=(pts,band,louv)=>{ lp(c,pts); c.globalAlpha=0.82; c.fillStyle=vgrad(c,1,0,[[0,hi],[0.5,car],[1,car]]); c.fill(); c.globalAlpha=1; edgeStroke();
-      c.save(); lp(c,pts); c.clip();
-      if(band){ c.fillStyle=acc; lp(c,band); c.fill(); }
-      c.strokeStyle='rgba(0,0,0,0.55)'; c.lineWidth=Math.max(1,W(0.012)); louv.forEach(([a,b])=>{const p=toS(...a),q=toS(...b); c.beginPath(); c.moveTo(p[0],p[1]); c.lineTo(q[0],q[1]); c.stroke();});
-      c.restore(); };
-    ep([[-0.03,0.03],[-0.02,0.17],[0.12,0.215],[0.45,0.26],[0.74,0.3],[0.79,0.24],[0.78,0.03]],[[-0.1,0.03],[0.9,0.03],[0.9,0.052],[-0.1,0.052]],
-       [[[0.55,0.07],[0.62,0.2]],[[0.62,0.07],[0.69,0.2]],[[0.69,0.07],[0.76,0.2]]]);
-    ep([[4.98,0.38],[4.99,0.99],[5.56,1.0],[5.6,0.96],[5.6,0.56],[5.46,0.40],[5.24,0.33],[5.06,0.33]],[[4.9,0.945],[5.7,0.945],[5.7,1.02],[4.9,1.02]],
-       [[[5.08,0.86],[5.16,0.92]],[[5.08,0.80],[5.16,0.86]],[[5.08,0.74],[5.16,0.80]],[[5.5,0.5],[5.56,0.62]]]);
-    // wing sections show through the endplate as an outline
-    cur.els.forEach((el,i)=>{ if(i<3) return; lp(c,elPts(el,i)); c.strokeStyle=edge; c.lineWidth=ew; c.stroke(); });
+    // endplates: drawn as glass, so the wing sections stay readable behind them
+    const ep=(pts,louv,bl)=>{ lp(c,pts); c.globalAlpha=0.55; c.fillStyle=F0; c.fill(); c.globalAlpha=1; ink();
+      c.save(); lp(c,pts); c.clip(); louv.forEach(([a,b])=>seg(a,b,dw,INK2)); c.restore();
+      bl.forEach(([a,b,n])=>bolts(a,b,n)); };
+    ep([[-0.03,0.03],[-0.02,0.17],[0.12,0.215],[0.45,0.26],[0.74,0.3],[0.79,0.24],[0.78,0.03]],
+       [[[0.55,0.07],[0.62,0.2]],[[0.62,0.07],[0.69,0.2]],[[0.69,0.07],[0.76,0.2]]],[[[0.0,0.05],[0.5,0.05],6]]);
+    ep([[4.98,0.38],[4.99,0.99],[5.56,1.0],[5.6,0.96],[5.6,0.56],[5.46,0.40],[5.24,0.33],[5.06,0.33]],
+       [[[5.08,0.86],[5.16,0.92]],[[5.08,0.80],[5.16,0.86]],[[5.08,0.74],[5.16,0.80]],[[5.5,0.5],[5.56,0.62]]],[[[5.03,0.97],[5.55,0.975],7],[[5.57,0.62],[5.57,0.93],4]]);
+    cur.els.forEach((el,i)=>{ if(i<3) return; lp(c,elPts(el,i)); ink(dw,INK2); });
+
     // hover / drag highlight on the parts you can operate
-    const glow=(ids)=>{ c.save(); c.shadowColor=acc; c.shadowBlur=W(0.06); c.strokeStyle=acc; c.lineWidth=Math.max(1.5,W(0.01)); ids.forEach(i=>{ lp(c,elPts(cur.els[i],i)); c.stroke(); }); c.restore(); };
+    const glow=(ids)=>{ c.save(); c.strokeStyle=acc; c.lineWidth=Math.max(1.5,W(0.01)); ids.forEach(i=>{ lp(c,elPts(cur.els[i],i)); c.stroke(); }); c.restore(); };
     if(hover==='fw'||drag) glow([1,2]); if(hover==='rw') glow([3,4]);
 
-    // Cp ribbon on every solved surface
-    if(anim>=1){
-      c.lineWidth=Math.max(1.6,W(0.012));
-      cur.Pp.forEach((p,i)=>{ if(fwStale&&p.el===2) return; const a=toS(p.x1,p.y1), b=toS(p.x1+p.c*p.L,p.y1+p.s*p.L); c.strokeStyle=`rgb(${cpRGB(cur.cp[i])})`; c.beginPath(); c.moveTo(a[0],a[1]); c.lineTo(b[0],b[1]); c.stroke(); });
-    }
+    // Cp ribbon on every solved surface: the data, glowing along the ink line
 
     // annotations
     c.font='10.5px "JetBrains Mono", monospace';
     if(Wd>=640){
-      const U=(t,x)=>label(c,t,toS(x,0)[0],gy+30,mute,'center');
-      U('FRONT WING · FLAP '+fwView+'°',0.38); U('FLOOR · GROUND EFFECT',2.85); U('DIFFUSER',4.75);
+      const U=(t,x,col)=>label(c,t,toS(x,0)[0],gy+30,col,'center');
+      U('S1 · FRONT WING · FLAP '+fwView+'°',0.55,css('--s1')); U('S2 · FLOOR · GROUND EFFECT',2.85,css('--s2')); U('S3 · DIFFUSER & REAR WING',4.98,css('--s3'));
       const r=toS(5.3,1.06); label(c,'REAR WING',r[0],r[1],mute,'center');
       label(c,target?'DRS ON':'DRS OFF',pv[0]+10,pv[1]-W(0.09),hot,'left');
       const fl=toS(0.36,0.42); label(c,'↕ DRAG FLAP',fl[0],fl[1],acc,'center');
@@ -1216,25 +1281,32 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
   }
 
   function overlay(){   // rolling road + wheels (they rotate, so drawn every frame)
-    const mute=css('--muted'), tyre=css('--tyre'), rim=css('--rim'), acc=css('--accent'), hot=css('--hot'), edge=css('--car-edge');
+    const mute=css('--muted'), tyre=css('--tyre'), acc=css('--accent'), hot=css('--hot');
+    const INK='rgba(244,233,216,0.92)', INK2='rgba(244,233,216,0.42)', INK3='rgba(244,233,216,0.2)';
     ctx.fillStyle=tyre; ctx.fillRect(0,gy,Wd,12);
+    // the car is split into three timing sectors along its length
+    [[-0.12,1.45,'--s1'],[1.45,4.3,'--s2'],[4.3,5.66,'--s3']].forEach(([a,b,v])=>{ const x0=toS(a,0)[0], x1=toS(b,0)[0]; ctx.fillStyle=css(v); ctx.fillRect(x0,gy,x1-x0-2,3); });
     ctx.strokeStyle=mute; ctx.lineWidth=2; ctx.setLineDash([18,22]); ctx.lineDashOffset=-roll*s; ctx.beginPath(); ctx.moveTo(0,gy+6); ctx.lineTo(Wd,gy+6); ctx.stroke(); ctx.setLineDash([]);
     ctx.font='10.5px "JetBrains Mono", monospace'; ctx.fillStyle=mute; ctx.textAlign='left';
     if(Wd>=640) ctx.fillText('ROLLING ROAD · U∞ →',16,gy+30);
     if(!cur){ ctx.fillText('SOLVING PANEL SYSTEM…',x0px+1.6*s,gy-0.5*s); return; }
+    const lw=Math.max(1,s/190), dw=Math.max(0.6,s/330);
+    const ring=(c0,r,w,col)=>{ ctx.beginPath(); ctx.arc(c0[0],c0[1],r,0,Math.PI*2); ctx.strokeStyle=col; ctx.lineWidth=w; ctx.stroke(); };
     for(const xw of [CAR.XF,CAR.XR]){
-      const c=toS(xw,0.36), R=0.36*s;
-      const tg=ctx.createRadialGradient(c[0],c[1],R*0.6,c[0],c[1],R); tg.addColorStop(0,'#0a0c0f'); tg.addColorStop(0.75,'#1b2027'); tg.addColorStop(1,'#0c0e11');
-      ctx.fillStyle=tg; ctx.beginPath(); ctx.arc(c[0],c[1],R,0,Math.PI*2); ctx.fill();
-      ctx.strokeStyle=edge; ctx.lineWidth=1; ctx.stroke();
-      ctx.strokeStyle='rgba(255,255,255,0.07)'; ctx.lineWidth=R*0.05; ctx.beginPath(); ctx.arc(c[0],c[1],R*0.9,Math.PI*1.1,Math.PI*1.6); ctx.stroke();
-      ctx.strokeStyle=hot; ctx.lineWidth=Math.max(1.2,R*0.035); ctx.beginPath(); ctx.arc(c[0],c[1],R*0.8,0,Math.PI*2); ctx.stroke();
-      const wg=ctx.createLinearGradient(c[0],c[1]-R*0.64,c[0],c[1]+R*0.64); wg.addColorStop(0,rim); wg.addColorStop(1,'#14181d');
-      ctx.fillStyle=wg; ctx.beginPath(); ctx.arc(c[0],c[1],R*0.64,0,Math.PI*2); ctx.fill();
-      ctx.strokeStyle=acc; ctx.lineWidth=Math.max(1,R*0.03); ctx.beginPath(); ctx.arc(c[0],c[1],R*0.54,0,Math.PI*2); ctx.stroke();
-      ctx.fillStyle='rgba(255,255,255,0.55)';
-      for(let k=0;k<5;k++){ const a=roll/0.36+k*2*Math.PI/5; ctx.beginPath(); ctx.arc(c[0]+Math.cos(a)*R*0.38,c[1]+Math.sin(a)*R*0.38,Math.max(1,R*0.035),0,Math.PI*2); ctx.fill(); }
-      ctx.fillStyle=acc; ctx.beginPath(); ctx.arc(c[0],c[1],R*0.1,0,Math.PI*2); ctx.fill();
+      const c=toS(xw,0.36), R=0.36*s, a0=roll/0.36;
+      ctx.beginPath(); ctx.arc(c[0],c[1],R,0,Math.PI*2); ctx.fillStyle='#05131f'; ctx.fill();
+      ring(c,R,lw,INK); ring(c,R*0.93,dw,INK3); ring(c,R*0.8,Math.max(1,R*0.03),css('--s1')); ring(c,R*0.7,dw,INK2);
+      // sidewall lettering ticks rotate with the tyre
+      ctx.strokeStyle=INK3; ctx.lineWidth=dw;
+      for(let k=0;k<24;k++){ const a=a0+k*Math.PI/12; ctx.beginPath(); ctx.moveTo(c[0]+Math.cos(a)*R*0.84,c[1]+Math.sin(a)*R*0.84); ctx.lineTo(c[0]+Math.cos(a)*R*0.89,c[1]+Math.sin(a)*R*0.89); ctx.stroke(); }
+      // wheel cover with spoke lines
+      ctx.beginPath(); ctx.arc(c[0],c[1],R*0.64,0,Math.PI*2); ctx.fillStyle='#0b2030'; ctx.fill();
+      ring(c,R*0.64,lw,INK); ring(c,R*0.54,dw,INK2);
+      ctx.strokeStyle=INK2; ctx.lineWidth=dw;
+      for(let k=0;k<10;k++){ const a=a0+k*Math.PI/5; ctx.beginPath(); ctx.moveTo(c[0]+Math.cos(a)*R*0.17,c[1]+Math.sin(a)*R*0.17); ctx.lineTo(c[0]+Math.cos(a+0.12)*R*0.52,c[1]+Math.sin(a+0.12)*R*0.52); ctx.stroke(); }
+      for(let k=0;k<5;k++){ const a=a0+k*2*Math.PI/5+0.3; ctx.beginPath(); ctx.arc(c[0]+Math.cos(a)*R*0.3,c[1]+Math.sin(a)*R*0.3,Math.max(1,R*0.03),0,Math.PI*2); ctx.fillStyle='#05131f'; ctx.fill(); ctx.strokeStyle=INK; ctx.lineWidth=dw; ctx.stroke(); }
+      ring(c,R*0.15,dw,INK);
+      ctx.beginPath(); ctx.arc(c[0],c[1],R*0.08,0,Math.PI*2); ctx.fillStyle=acc; ctx.fill();
     }
   }
 
@@ -1340,6 +1412,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
   const bClosed=document.getElementById('drs-closed'), bOpen=document.getElementById('drs-open');
   const fwIn=document.getElementById('fw'), fwOut=document.getElementById('r-fw');
   function status(){ readouts(); }
+  let sessionBest=null;
   function readouts(){
     bClosed.setAttribute('aria-pressed',target===0); bOpen.setAttribute('aria-pressed',target===1);
     fwOut.textContent=fwView+'°';
@@ -1349,7 +1422,16 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
     document.getElementById('r-bal').textContent=pend?'…':(cur.balance*100).toFixed(1)+'% F';
     const ref=states[key(0,FW0)], base=target===0&&cur.fw===FW0;
     let df='…'; if(ref&&!pend){ const v=Math.round((cur.CL/ref.CL-1)*100); df=base?'baseline':(v>0?'+':'')+v+'%'; }
-    document.getElementById('r-df').textContent=df;
+    const dfEl=document.getElementById('r-df'), tt=document.getElementById('r-tt');
+    dfEl.textContent=df; dfEl.className=''; tt.hidden=true;
+    // F1 timing colours: purple = session best, green = better than baseline, yellow = below baseline
+    if(ref&&!pend&&!base){
+      const d=-cur.CL, d0=-ref.CL;
+      if(sessionBest===null) sessionBest=d0;
+      if(d>sessionBest+1e-9) sessionBest=d;
+      const cls=d>d0+1e-9?(d>=sessionBest-1e-9?'best':'pb'):'slow';
+      dfEl.className='t-'+cls; tt.className='tt '+cls; tt.textContent={best:'Session best',pb:'Improved',slow:'Below baseline'}[cls]; tt.hidden=false;
+    }
   }
   function show(st,animate){ if(st.drs!==target||st.fw!==fwT) return; cur=st; for(const p of P) if(cur.inside(p.x,p.y)) spawn(p);
     anim=(animate&&!reduce.matches)?0:1; drawBase(); compose(); readouts(); start(); }
