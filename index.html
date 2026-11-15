@@ -426,6 +426,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
 .contact h2 .o { -webkit-text-stroke-color: var(--accent); }
 .contact h2 .slant:first-child { color: var(--fg); }
 /* 3D wind tunnel */
+.hero .hint { max-width: 36em; }
 @media (min-width: 1100px) { .hud { gap: 10px 16px; padding: 10px 14px; } .hud .ctrl input[type="range"] { width: 110px; } }
 .hero canvas[hidden] { display: none; }
 .hero.is3d { cursor: grab; touch-action: pan-y; -webkit-user-select: none; user-select: none; }
@@ -1488,7 +1489,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
     var MODE3D=false, T3API=null;
     const cv3=document.getElementById('flow3d'), g3=cv3.getContext('2d'), cvF=document.getElementById('flow3dF'), gF=cvF.getContext('2d');
     const carL=document.createElement('canvas'), gc=carL.getContext('2d');
-    const HOME={yaw:-0.28,pitch:0.14,zoom:1};
+    const HOME={yaw:-0.75,pitch:0.3,zoom:1};
     const view={yaw:HOME.yaw,pitch:HOME.pitch,zoom:HOME.zoom,intro:0};
     const TGT=[2.5,0.42,0], DIST=9.5;
     let W3=0,H3h=0,dpr3=1, field=null, lines=[], parts=[], loopOn=false, t0=0, needField=true, carKey='', ZB=null, ZW=0, ZH=0;
@@ -1688,9 +1689,42 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
 
     /* ---------- camera ---------- */
     let cY=1,sY=0,cP=1,sP=0,FOC=1,CX=0,CY=0,CAM=[0,0,0];
+    /* ---------- framing: the car is always fitted inside the free part of the hero (never under the text or the
+       control bar). The free area is measured from the page itself, so it adapts to fonts, screen size and phones. ---------- */
+    let STAGE=null, FITPTS=null;
+    function measureStage(){
+      if(!W3) return;
+      const hr=hero.getBoundingClientRect(), rel=r=>({l:r.left-hr.left,t:r.top-hr.top,r:r.right-hr.left,b:r.bottom-hr.top});
+      const tight=el=>{ const g=document.createRange(); g.selectNodeContents(el); return rel(g.getBoundingClientRect()); };
+      const kids=[...hero.querySelectorAll('.hero-inner > *')].filter(e=>e.offsetParent!==null&&e.textContent.trim()).map(tight);
+      const hudEl=document.querySelector('.hud'), hud=hudEl?rel(hudEl.getBoundingClientRect()):{t:H3h};
+      const navEl=document.querySelector('.nav'), navB=navEl?Math.max(0,rel(navEl.getBoundingClientRect()).b):0;
+      const h1El=hero.querySelector('.hero-inner h1'), h1=h1El?tight(h1El):{b:0,r:0};
+      const m=W3<700?10:18, bottom=hud.t-m;
+      const under=kids.filter(k=>k.t>=h1.b-4);
+      const colR=under.length?Math.max(...under.map(k=>k.r)):0, allR=Math.max(...kids.map(k=>k.r)), textB=Math.max(...kids.map(k=>k.b));
+      const cand=[{x0:colR+28,y0:h1.b+m,x1:W3-m,y1:bottom},{x0:allR+28,y0:navB+m,x1:W3-m,y1:bottom},{x0:m,y0:textB+m,x1:W3-m,y1:bottom}]
+        .filter(r=>r.x1-r.x0>140&&r.y1-r.y0>90);
+      if(!cand.length){ STAGE={x0:m,y0:navB+m,x1:W3-m,y1:bottom}; return; }
+      // keep the one where the car comes out biggest in the home view
+      const save=[view.yaw,view.pitch]; view.yaw=HOME.yaw; view.pitch=HOME.pitch; orient();
+      let best=null; for(const r of cand){ const f=fit(r); if(!best||f.k>best.k) best={...f,r}; }
+      view.yaw=save[0]; view.pitch=save[1]; STAGE=best.r;
+    }
+    function orient(){ cY=Math.cos(view.yaw); sY=Math.sin(view.yaw); cP=Math.cos(view.pitch); sP=Math.sin(view.pitch); }
+    function fit(r){   // project the car's points with unit focal length, then scale/centre them into rectangle r
+      if(!FITPTS){ FITPTS=[]; for(const m of [bodyLo,flap]) for(let i=0;i<m.V.length;i+=5) FITPTS.push(m.V[i]); }
+      let a=1e9,b=-1e9,c=1e9,d=-1e9;
+      for(const [x0,y0,z0] of FITPTS){ const x=x0-TGT[0], y=y0-TGT[1], z=z0-TGT[2], x1=x*cY-z*sY, z1=x*sY+z*cY, y2=y*cP-z1*sP, z2=y*sP+z1*cP, dd=DIST-z2, px=x1/dd, py=-y2/dd;
+        if(px<a) a=px; if(px>b) b=px; if(py<c) c=py; if(py>d) d=py; }
+      const k=Math.min((r.x1-r.x0)/(b-a),(r.y1-r.y0)/(d-c));
+      return {k,cx:(r.x0+r.x1)/2-k*(a+b)/2,cy:(r.y0+r.y1)/2-k*(c+d)/2};
+    }
     function camera(){
-      cY=Math.cos(view.yaw); sY=Math.sin(view.yaw); cP=Math.cos(view.pitch); sP=Math.sin(view.pitch);
-      FOC=s*DIST*view.zoom*(W3<700?0.86:1); const c=toS(TGT[0],TGT[1]); CX=c[0]; CY=c[1]-(W3<900?0.08:0.2)*s;
+      orient();
+      if(!STAGE&&bodyLo) measureStage();
+      if(STAGE){ const f=fit(STAGE); FOC=f.k; CX=f.cx; CY=f.cy; }
+      else { FOC=s*DIST; const c=toS(TGT[0],TGT[1]); CX=c[0]; CY=c[1]; }
       CAM=[TGT[0]+DIST*cP*sY, TGT[1]+DIST*sP, TGT[2]+DIST*cP*cY];
     }
     function P3(x,y,z){ x-=TGT[0]; y-=TGT[1]; z-=TGT[2]; const x1=x*cY-z*sY, z1=x*sY+z*cY, y2=y*cP-z1*sP, z2=y*sP+z1*cP, d=DIST-z2, k=FOC/d; return [CX+x1*k, CY-y2*k, d]; }
@@ -1877,12 +1911,12 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
     function render(){
       const g=g3; g.setTransform(dpr3,0,0,dpr3,0,0); g.clearRect(0,0,W3,H3h); gF.setTransform(dpr3,0,0,dpr3,0,0); gF.clearRect(0,0,W3,H3h);
       camera(); const gl3=GLR&&GLR.ready;
-      const key=[view.yaw,view.pitch,view.zoom,W3,H3h,flapNow(),s,fwView].map(v=>v.toFixed(4)).join();
+      const key=[view.yaw,view.pitch,FOC,CX,CY,W3,H3h,flapNow(),fwView].map(v=>v.toFixed(3)).join();
       const wA=roll/0.3573;   // wheel angle (world y up, anticlockwise +): contact patch moves +x with the belt, tread speed = belt speed
       if(GLR&&GLR.ready){
         if(key!==carKey||wA!==lastWA){ ZW=Math.ceil(W3/4); ZH=Math.ceil(H3h/4); if(!ZB||ZB.length!==ZW*ZH) ZB=new Float32Array(ZW*ZH);
           GLR.render(camGL(),-30*Math.PI/180*flapNow(),RW_TE,ZB,glSS,(fwView-22)*Math.PI/180,wA,key!==carKey); lastWA=wA; carKey=key; } }
-      else if(key!==carKey){ if(anim<1||carKey.split(',')[5]!==flapNow().toFixed(4)) poseFlap(); renderCar(); carKey=key; }
+      else if(key!==carKey){ if(anim<1||carKey.split(',')[7]!==flapNow().toFixed(3)) poseFlap(); renderCar(); carKey=key; }
       const sd=CAM[2]>=0?1:-1;
       // rolling road, timing stripes and the car's contact shadow
       const road=[[-3,0,-1.45],[9,0,-1.45],[9,0,1.45],[-3,0,1.45]].map(p=>P3(...p));
@@ -1938,7 +1972,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
     }
     function go(){ if(!MODE3D||!visible||document.hidden){ loopOn=false; return; } if(!loopOn){ loopOn=true; t0=0; requestAnimationFrame(frame); } }
     function size3(){ const r=hero.getBoundingClientRect(); if(!r.width) return; dpr3=Math.min(1.5,window.devicePixelRatio||1); W3=r.width; H3h=r.height;
-      for(const c of [cv3,carL,cvF]){ c.width=Math.round(W3*dpr3); c.height=Math.round(H3h*dpr3); } if(GLR) glSS=GLR.size(W3,H3h,dpr3); carKey=''; }
+      for(const c of [cv3,carL,cvF]){ c.width=Math.round(W3*dpr3); c.height=Math.round(H3h*dpr3); } STAGE=null; if(GLR) glSS=GLR.size(W3,H3h,dpr3); carKey=''; }
     function rebuild(){ if(!cur) return; needField=false; buildField(); traceAll(); traceInternal();
       const n=small()?320:900; if(parts.length!==n){ parts=[]; for(let i=0;i<n;i++){ const p={cp:0}; spawn(p,true); parts.push(p); } } }
 
@@ -2019,6 +2053,8 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
     if(smk) smk.addEventListener('click',()=>{ RAKE.enabled=!RAKE.enabled; smk.setAttribute('aria-pressed',String(RAKE.enabled));
       if(!RAKE.enabled){ RAKE.on=false; RAKE.parked=false; smoke.length=0; } });
     const ifl=document.getElementById('ifl'); if(ifl) ifl.addEventListener('click',()=>{ showInternal=!showInternal; ifl.setAttribute('aria-pressed',String(showInternal)); });
+    { let rt3; new ResizeObserver(()=>{ clearTimeout(rt3); rt3=setTimeout(()=>{ if(MODE3D){ size3(); } },120); }).observe(hero); }
+    document.fonts&&document.fonts.ready.then(()=>{ STAGE=null; carKey=''; });
     T3API={ size(){ if(MODE3D) size3(); }, state(){ if(MODE3D) needField=true; }, flap(){}, go };
     setMode(true);   // the 3D tunnel is the hero; the 2D panel solver keeps running underneath for the wing loads
   }
