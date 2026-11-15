@@ -1293,7 +1293,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
     const lw=Math.max(1,s/190), dw=Math.max(0.6,s/330);
     const ring=(c0,r,w,col)=>{ ctx.beginPath(); ctx.arc(c0[0],c0[1],r,0,Math.PI*2); ctx.strokeStyle=col; ctx.lineWidth=w; ctx.stroke(); };
     for(const xw of [CAR.XF,CAR.XR]){
-      const c=toS(xw,0.36), R=0.36*s, a0=roll/0.36;
+      const c=toS(xw,0.36), R=0.36*s, a0=-roll/0.36;   // anticlockwise on screen: contact patch moves with the belt, rim speed = road speed (no slip)
       ctx.beginPath(); ctx.arc(c[0],c[1],R,0,Math.PI*2); ctx.fillStyle='#05131f'; ctx.fill();
       ring(c,R,lw,INK); ring(c,R*0.93,dw,INK3); ring(c,R*0.8,Math.max(1,R*0.03),css('--s1')); ring(c,R*0.7,dw,INK2);
       // sidewall lettering ticks rotate with the tyre
@@ -1303,7 +1303,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
       ctx.beginPath(); ctx.arc(c[0],c[1],R*0.64,0,Math.PI*2); ctx.fillStyle='#0b2030'; ctx.fill();
       ring(c,R*0.64,lw,INK); ring(c,R*0.54,dw,INK2);
       ctx.strokeStyle=INK2; ctx.lineWidth=dw;
-      for(let k=0;k<10;k++){ const a=a0+k*Math.PI/5; ctx.beginPath(); ctx.moveTo(c[0]+Math.cos(a)*R*0.17,c[1]+Math.sin(a)*R*0.17); ctx.lineTo(c[0]+Math.cos(a+0.12)*R*0.52,c[1]+Math.sin(a+0.12)*R*0.52); ctx.stroke(); }
+      for(let k=0;k<10;k++){ const a=a0+k*Math.PI/5; ctx.beginPath(); ctx.moveTo(c[0]+Math.cos(a)*R*0.17,c[1]+Math.sin(a)*R*0.17); ctx.lineTo(c[0]+Math.cos(a-0.12)*R*0.52,c[1]+Math.sin(a-0.12)*R*0.52); ctx.stroke(); }
       for(let k=0;k<5;k++){ const a=a0+k*2*Math.PI/5+0.3; ctx.beginPath(); ctx.arc(c[0]+Math.cos(a)*R*0.3,c[1]+Math.sin(a)*R*0.3,Math.max(1,R*0.03),0,Math.PI*2); ctx.fillStyle='#05131f'; ctx.fill(); ctx.strokeStyle=INK; ctx.lineWidth=dw; ctx.stroke(); }
       ring(c,R*0.15,dw,INK);
       ctx.beginPath(); ctx.arc(c[0],c[1],R*0.08,0,Math.PI*2); ctx.fillStyle=acc; ctx.fill();
