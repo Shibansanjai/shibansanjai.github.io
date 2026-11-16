@@ -1704,7 +1704,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
     let cY=1,sY=0,cP=1,sP=0,FOC=1,CX=0,CY=0,CAM=[0,0,0];
     /* ---------- framing: the car is always fitted inside the free part of the hero (never under the text or the
        control bar). The free area is measured from the page itself, so it adapts to fonts, screen size and phones. ---------- */
-    let STAGE=null, FITPTS=null;
+    let STAGE=null, FITPTS=null, CAMS=null;
     function measureStage(){
       if(!W3) return;
       const hr=hero.getBoundingClientRect(), rel=r=>({l:r.left-hr.left,t:r.top-hr.top,r:r.right-hr.left,b:r.bottom-hr.top});
@@ -1742,17 +1742,21 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
           if(X<B.x0||X>B.x1||Y<B.y0||Y>B.y1) return false;
           for(const o of r.obs) if(X>o.l&&X<o.r&&Y>o.t&&Y<o.b) return false; } return true; };
       let ua=1e9,ub=-1e9; for(const [u] of U){ if(u<ua) ua=u; if(u>ub) ub=u; }
-      for(const mul of [1.3,1.2,1.1,1.0]){
-        const k=f.k*mul, cy=f.cy+(f.cy-(r.y0+r.y1)/2)*0, cx0=B.x1-k*ub;   // start flush right
-        if(!ok(k,cx0,cy)) continue;
-        let cx=cx0; for(let dx=12;;dx+=12){ if(!ok(k,cx0-dx,cy)) break; cx=cx0-dx; }
-        return {k,cx,cy}; }
-      return f;
+      const fits=mul=>ok(f.k*mul,B.x1-f.k*mul*ub,f.cy);
+      if(!fits(1)) return f;
+      let lo=1, hi=1.3; if(fits(hi)) lo=hi; else for(let i=0;i<7;i++){ const m=(lo+hi)/2; if(fits(m)) lo=m; else hi=m; }
+      const k=f.k*lo, cx0=B.x1-k*ub; let cx=cx0;
+      for(let dx=3;dx<1200;dx+=3){ if(!ok(k,cx0-dx,f.cy)) break; cx=cx0-dx; }
+      return {k,cx,cy:f.cy};
     }
     function camera(){
       orient();
       if(!STAGE&&bodyLo) measureStage();
-      if(STAGE){ const f=place(STAGE); FOC=f.k; CX=f.cx; CY=f.cy; }
+      if(STAGE){ const f=place(STAGE), now=performance.now();
+        // ease towards the fitted framing instead of jumping, so rotating stays smooth
+        if(!CAMS||CAMS.stage!==STAGE){ CAMS={k:f.k,cx:f.cx,cy:f.cy,t:now,stage:STAGE}; }
+        else { const a=1-Math.exp(-Math.min(100,now-CAMS.t)/260); CAMS.k+=(f.k-CAMS.k)*a; CAMS.cx+=(f.cx-CAMS.cx)*a; CAMS.cy+=(f.cy-CAMS.cy)*a; CAMS.t=now; }
+        FOC=CAMS.k; CX=CAMS.cx; CY=CAMS.cy; }
       else { FOC=s*DIST; const c=toS(TGT[0],TGT[1]); CX=c[0]; CY=c[1]; }
       CAM=[TGT[0]+DIST*cP*sY, TGT[1]+DIST*sP, TGT[2]+DIST*cP*cY];
     }
