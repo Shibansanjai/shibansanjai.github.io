@@ -1723,6 +1723,7 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
       const save=[view.yaw,view.pitch]; view.yaw=HOME.yaw; view.pitch=HOME.pitch; orient();
       let best=null; for(const r of cand){ const f=fit(r); if(!best||f.k>best.k) best={...f,r}; }
       view.yaw=save[0]; view.pitch=save[1]; STAGE=best.r;
+      const pad=W3<700?10:22; STAGE.obs=kids.map(k=>({l:k.l-pad,t:k.t-pad,r:k.r+pad,b:k.b+pad})); STAGE.B={x0:m,y0:navB+m,x1:W3-m,y1:bottom};
     }
     function orient(){ cY=Math.cos(view.yaw); sY=Math.sin(view.yaw); cP=Math.cos(view.pitch); sP=Math.sin(view.pitch); }
     function fit(r){   // project the car's points with unit focal length, then scale/centre them into rectangle r
@@ -1733,10 +1734,25 @@ footer .wrap { padding-block: 22px 30px; display: flex; justify-content: space-b
       const k=Math.min((r.x1-r.x0)/(b-a),(r.y1-r.y0)/(d-c));
       return {k,cx:(r.x0+r.x1)/2-k*(a+b)/2,cy:(r.y0+r.y1)/2-k*(c+d)/2};
     }
+    // slide the car left (and let it grow a little) into any space the text leaves free, e.g. under the buttons
+    function place(r){
+      const f=fit(r); if(!r.obs) return f;
+      const U=FITPTS.map(([x0,y0,z0])=>{ const x=x0-TGT[0], y=y0-TGT[1], z=z0-TGT[2], x1=x*cY-z*sY, z1=x*sY+z*cY, y2=y*cP-z1*sP, z2=y*sP+z1*cP, dd=DIST-z2; return [x1/dd,-y2/dd]; });
+      const B=r.B, ok=(k,cx,cy)=>{ for(const [u,v] of U){ const X=k*u+cx, Y=k*v+cy;
+          if(X<B.x0||X>B.x1||Y<B.y0||Y>B.y1) return false;
+          for(const o of r.obs) if(X>o.l&&X<o.r&&Y>o.t&&Y<o.b) return false; } return true; };
+      let ua=1e9,ub=-1e9; for(const [u] of U){ if(u<ua) ua=u; if(u>ub) ub=u; }
+      for(const mul of [1.3,1.2,1.1,1.0]){
+        const k=f.k*mul, cy=f.cy+(f.cy-(r.y0+r.y1)/2)*0, cx0=B.x1-k*ub;   // start flush right
+        if(!ok(k,cx0,cy)) continue;
+        let cx=cx0; for(let dx=12;;dx+=12){ if(!ok(k,cx0-dx,cy)) break; cx=cx0-dx; }
+        return {k,cx,cy}; }
+      return f;
+    }
     function camera(){
       orient();
       if(!STAGE&&bodyLo) measureStage();
-      if(STAGE){ const f=fit(STAGE); FOC=f.k; CX=f.cx; CY=f.cy; }
+      if(STAGE){ const f=place(STAGE); FOC=f.k; CX=f.cx; CY=f.cy; }
       else { FOC=s*DIST; const c=toS(TGT[0],TGT[1]); CX=c[0]; CY=c[1]; }
       CAM=[TGT[0]+DIST*cP*sY, TGT[1]+DIST*sP, TGT[2]+DIST*cP*cY];
     }
